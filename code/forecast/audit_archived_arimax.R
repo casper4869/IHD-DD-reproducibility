@@ -1,3 +1,4 @@
+# INTERNAL POST-SUBMISSION FORECAST AUDIT ONLY; does not generate the manuscript Figure 4.
 options(stringsAsFactors = FALSE)
 if (.Platform$OS.type == "windows") suppressWarnings(Sys.setlocale("LC_CTYPE", "English_United States.UTF-8"))
 suppressPackageStartupMessages({library(dplyr); library(tidyr)})

@@ -1,4 +1,4 @@
-# Reproducible forecast audit and balanced Figure 4; R-only workflow.
+# INTERNAL POST-SUBMISSION FORECAST AUDIT ONLY; does not generate the manuscript Figure 4. R-only workflow.
 options(stringsAsFactors = FALSE, width = 120)
 Sys.setenv(LANGUAGE = "en")
 if (.Platform$OS.type == "windows") suppressWarnings(Sys.setlocale("LC_CTYPE", "English_United States.UTF-8"))

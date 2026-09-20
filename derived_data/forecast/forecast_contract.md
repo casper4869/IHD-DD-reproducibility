@@ -1,5 +1,8 @@
 # Forecast and Figure 4 contract
 
+> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+
+
 Locked before execution, 18 September 2026.
 
 ## Objective and fixed quality target

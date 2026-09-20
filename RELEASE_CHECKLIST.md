@@ -29,3 +29,4 @@
 - [x] Record version DOI `10.5281/zenodo.22852369` and concept DOI `10.5281/zenodo.22852368`; cite the version DOI for the exact reviewer release.
 - [x] Test the DOI metadata endpoint and public file response without depositor credentials.
 - [x] Provide the final repository, version DOI, release version, and rights wording in `data_access_protocol.md` for use in the manuscript-facing availability text.
+- [x] Verify that `figures/Figure4.tif` and `figures/Figure5.tif` are byte-identical submitted artifacts and that all alternative displays are isolated under `figures/internal_audit_not_for_submission/`.

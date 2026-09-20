@@ -1,4 +1,7 @@
-# Forecast audit and Figure 4 revision
+# Internal forecast audit and sensitivity report
+
+> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+
 
 ## Decision
 
@@ -6,7 +9,7 @@ The original VARX count of 19 for 2030 is computationally reproducible, but it i
 
 The current reproducible raw-scale ARIMAX implementation yields 13 countries in 2030, compared with 14 in the archived table. The common log1p sensitivity yields 15. The later log1p/clipped ARIMAX block in the legacy script can produce the same archived count, but does not recover its rate vectors; matching an aggregate count does not establish provenance. Historical model/software state is not documented sufficiently to explain this discrepancy.
 
-The revised Figure 4 is an honest audit/sensitivity figure and should not be used to restore a confident policy prediction. Keep scenario language, remove the unsupported 95% bands and all implications of precise forecasts. A replacement stabilized VARX model would be a separately disclosed methodology change and has not been silently substituted.
+The internal audit display documents specification sensitivity and should not be used to replace the submitted Figure 4 or restore a confident policy prediction. Keep scenario language, remove the unsupported 95% bands and all implications of precise forecasts. A replacement stabilized VARX model would be a separately disclosed methodology change and has not been silently substituted.
 
 ## Inputs and target
 
@@ -87,7 +90,7 @@ The fixed-SDI future is a conditional scenario, not a forecast of socioeconomic 
 
 R generated both panels and every export at 183 x 103 mm. Panel a balances original VARX and ARIMAX specifications; panel b reveals sensitivity to common scaling and removal of historical-range clipping. Both panels use the same country denominator, axes, colors and year boundary. Any unavailable complete-denominator count is visibly marked rather than interpolated or reconstructed by ranking infinities. Source data, SVG, PDF, 600-dpi TIFF and PNG preview accompany the scripts.
 
-Deterministic data/reporting gates pass when the input hashes, wrapper-equivalence checks, 204-country denominator and count bound checks pass. The original-code comparison uses a relative tolerance of 1e-7 to accommodate log(1+x) versus log1p floating-point differences; the maximum observed relative difference is below 3e-8 and no count changes. Statistical validity of the original VARX forecast fails because of extensive instability, and credible count intervals remain unavailable. This finding is an audit result, not a reason to relabel the original forecast as validated. The revision decision is to retain the audit figure and remove a precise 2030 headline; independent review is recorded separately in qa/independent_review.md when complete.
+Deterministic data/reporting gates pass when the input hashes, wrapper-equivalence checks, 204-country denominator and count bound checks pass. The original-code comparison uses a relative tolerance of 1e-7 to accommodate log(1+x) versus log1p floating-point differences; the maximum observed relative difference is below 3e-8 and no count changes. Statistical validity of the original VARX forecast fails because of extensive instability, and credible count intervals remain unavailable. This finding is an audit result, not a reason to relabel the original forecast as validated. The audit display is retained only in the reproducibility record and is not used as a manuscript replacement; any manuscript forecast wording must avoid a precise 2030 headline; independent review is recorded separately in qa/independent_review.md when complete.
 
 ## Reproduction
 

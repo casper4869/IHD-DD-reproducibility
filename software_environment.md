@@ -35,7 +35,7 @@ The complete loaded-package record is in `derived_data/forecast/sessionInfo.txt`
 
 Primary attached packages: `data.table 1.18.0`, `sandwich 3.1-1`, `car 3.1-3`, `lmtest 0.9-40`, `tseries 0.10-58`, `vars 1.6-1`, `openxlsx 4.2.8`, `digest 0.6.39`, `countrycode 1.6.1`, `sp 2.2-0`, and `rworldmap 1.3-8`. The complete record is in `environment/sessionInfo_granger.txt`.
 
-The corrected Figure 5 renderer additionally uses `ggplot2 4.0.2`, `maps 3.4.3`, `patchwork 1.3.2`, and `svglite 2.2.2`. Its execution log is included in `derived_data/granger/`.
+The internal Figure 5 specification-sensitivity renderer (not the manuscript figure) additionally uses `ggplot2 4.0.2`, `patchwork 1.3.2`, `sf 1.0-21`, `rworldmap 1.3-8`, `cowplot 1.2.0`, and `svglite 2.2.2`. Its execution log is included in `derived_data/granger/`.
 
 ### GWR verification and small-island sensitivity
 

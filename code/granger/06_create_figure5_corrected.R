@@ -1,10 +1,11 @@
 #!/usr/bin/env Rscript
+# INTERNAL POST-SUBMISSION SENSITIVITY DISPLAY; not the manuscript Figure 5.
 
 suppressPackageStartupMessages({
   library(data.table)
   library(ggplot2)
-  library(maps)
   library(patchwork)
+  library(sf)
   library(svglite)
   library(digest)
 })
@@ -13,6 +14,13 @@ options(stringsAsFactors = FALSE, scipen = 999)
 out_analysis <- "granger_corrected"
 out_figure <- "../03_figures/figure5_corrected"
 dir.create(out_figure, recursive = TRUE, showWarnings = FALSE)
+
+write_utf8_lf <- function(lines, path) {
+  con <- file(path, open = "wb")
+  on.exit(close(con), add = TRUE)
+  writeChar(paste0(paste(lines, collapse = "\n"), "\n"), con,
+            eos = NULL, useBytes = TRUE)
+}
 
 result_file <- file.path(out_analysis, "Supplementary_Table_S2_corrected.csv")
 coordinate_file <- "immutable_part7_source/Country_with_LatLon_Matched.csv"
@@ -63,122 +71,173 @@ source <- dat[, .(
   IHD_to_DD_BG_p, DD_to_IHD_BG_p, diagnostics,
   small_island_excluded
 )]
-fwrite(source, file.path(out_analysis, "Figure5_corrected_source.csv"))
+fwrite(source, file.path(out_analysis, "Figure5_corrected_source.csv"), eol = "\n")
 
-world <- map_data("world")
+# Use the same Natural Earth-derived ISO3 geometry used elsewhere in the
+# revised cartographic workflow. Polygon fills retain the visual language of
+# the submitted map; representative points are reserved for the prespecified
+# small-island/territory set and any unit without polygon geometry.
+world_sp <- rworldmap::getMap(resolution = "low")
+world_sf <- sf::st_as_sf(world_sp)
+world_sf <- world_sf[, c("ISO3", "ADMIN", "geometry")]
+geometry_iso3 <- unique(as.character(world_sf$ISO3))
+point_overlay <- dat[
+  small_island_excluded == TRUE |
+    is.na(ISO3) | !nzchar(ISO3) | !(ISO3 %in% geometry_iso3)
+]
+
 palette <- c(
   "Bidirectional" = "#7B3294",
   "IHD -> DD" = "#2166AC",
   "DD -> IHD" = "#D95F02",
-  "Neither" = "#BDBDBD"
+  "Neither" = "#D4D4D4"
 )
 
-make_panel <- function(direction_col, title, subtitle) {
-  counts <- dat[, .N, by = direction_col]
-  count_lookup <- setNames(counts$N, as.character(counts[[direction_col]]))
-  legend_labels <- vapply(category_levels, function(x) {
-    n_x <- if (x %in% names(count_lookup)) unname(count_lookup[[x]]) else 0L
-    paste0(x, " (n=", n_x, ")")
-  }, character(1))
+make_panel <- function(direction_col) {
+  vals <- as.data.frame(dat[, .(
+    ISO3,
+    map_direction = factor(
+      as.character(get(direction_col)),
+      levels = category_levels
+    )
+  )])
+  map_dat <- merge(world_sf, vals, by = "ISO3", all.x = TRUE, sort = FALSE)
 
-  ggplot() +
-    geom_polygon(
-      data = world,
-      aes(long, lat, group = group),
-      fill = "#F2F2F2", colour = "#FFFFFF", linewidth = 0.15
+  ggplot(map_dat) +
+    geom_sf(
+      aes(fill = map_direction),
+      colour = "#FFFFFF", linewidth = 0.08
     ) +
     geom_point(
-      data = dat,
-      aes(x = longitude, y = latitude, colour = .data[[direction_col]]),
-      size = 2.15, alpha = 0.90, shape = 16
+      data = point_overlay,
+      aes(x = longitude, y = latitude, fill = .data[[direction_col]]),
+      shape = 21, size = 1.45, stroke = 0.22,
+      colour = "#303030", alpha = 0.98, show.legend = FALSE,
+      inherit.aes = FALSE
     ) +
-    scale_colour_manual(
-      values = palette, limits = category_levels, labels = legend_labels,
-      drop = FALSE, name = NULL
+    scale_fill_manual(
+      values = palette,
+      limits = category_levels,
+      breaks = category_levels,
+      labels = c("Bidirectional", "IHD-to-DD", "DD-to-IHD", "No evidence"),
+      drop = FALSE, na.value = "#F2F2F2", name = NULL
     ) +
-    coord_quickmap(xlim = c(-180, 180), ylim = c(-60, 88), expand = FALSE) +
-    labs(title = title, subtitle = subtitle, x = NULL, y = NULL) +
-    theme_void(base_size = 10) +
+    coord_sf(
+      xlim = c(-180, 180), ylim = c(-60, 88),
+      expand = FALSE, datum = NA, clip = "off"
+    ) +
+    theme_void(base_size = 7.0, base_family = "sans") +
     theme(
-      plot.title = element_text(face = "bold", size = 12, margin = margin(b = 3)),
-      plot.subtitle = element_text(size = 9, colour = "#444444", margin = margin(b = 7)),
-      legend.position = "bottom",
-      legend.text = element_text(size = 8.5),
-      legend.key.width = grid::unit(0.65, "cm"),
-      plot.margin = margin(6, 6, 2, 6)
-    ) +
-    guides(colour = guide_legend(nrow = 1, byrow = TRUE, override.aes = list(size = 3)))
+      legend.position = "none",
+      plot.margin = margin(3, 3, 0, 3)
+    )
 }
 
-p_primary <- make_panel(
-  "direction_primary",
-  "A  Primary Newey-West classification (exploratory)",
-  "BIC-selected lags 1-3; SDI exogenous; Newey-West(2); directional BH q < 0.05"
+panel_tag_theme <- theme(
+  plot.tag = element_text(
+    face = "bold", size = 10.5, colour = "#111111",
+    hjust = 0, vjust = 1
+  ),
+  plot.tag.position = c(0.012, 0.985)
 )
-p_hc3 <- make_panel(
-  "direction_HC3",
-  "B  Covariance-estimator sensitivity",
-  "Same models and BH families; HC3 covariance"
-)
+p_primary <- make_panel("direction_primary") +
+  labs(tag = "A") + panel_tag_theme
+p_hc3 <- make_panel("direction_HC3") +
+  labs(tag = "B") + panel_tag_theme
 
-footer <- paste0(
-  "Country-level temporal prediction, not individual-level or mechanistic causation. ",
-  "Representative coordinate points show all 204 units, including small islands. ",
-  "At least one residual serial-correlation flag occurred in 84/204 country analyses (90/408 directional equations); ",
-  "all 408 directional equations had an observation above Cook's D > 4/n."
+legend_data <- data.frame(
+  x = seq_along(category_levels),
+  y = 1,
+  category = factor(category_levels, levels = category_levels)
 )
-footer <- paste(strwrap(footer, width = 175), collapse = "\n")
-fig <- (p_primary / p_hc3) +
-  plot_annotation(
-    title = "Corrected SDI-adjusted directional Granger-type analysis, 1992-2021",
-    subtitle = "Annual log changes; separate target equations ensure each direction tests only the intended outcome",
-    caption = footer,
-    theme = theme(
-      plot.title = element_text(face = "bold", size = 15, hjust = 0),
-      plot.subtitle = element_text(size = 10.5, colour = "#333333"),
-      plot.caption = element_text(size = 8.5, colour = "#444444", hjust = 0, margin = margin(t = 6)),
-      plot.margin = margin(12, 14, 10, 14)
-    )
+legend_plot <- ggplot(legend_data, aes(x = x, y = y, fill = category)) +
+  geom_point(shape = 22, size = 3.1, colour = "#FFFFFF") +
+  scale_fill_manual(
+    values = palette,
+    limits = category_levels,
+    breaks = category_levels,
+    labels = c("Bidirectional", "IHD-to-DD", "DD-to-IHD", "No evidence"),
+    drop = FALSE, name = NULL
+  ) +
+  guides(fill = guide_legend(
+    nrow = 1, byrow = TRUE,
+    override.aes = list(shape = 22, size = 3.1, colour = "#FFFFFF")
+  )) +
+  theme_void(base_size = 7.0, base_family = "sans") +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    legend.text = element_text(size = 6.8, colour = "#111111"),
+    legend.key.size = grid::unit(0.32, "cm"),
+    legend.spacing.x = grid::unit(0.10, "cm"),
+    legend.margin = margin(0, 0, 0, 0)
   )
+legend_grob <- cowplot::get_legend(legend_plot)
+
+# Keep the artwork deliberately minimal. Panel definitions, model details,
+# counts and diagnostic cautions belong in the manuscript figure legend.
+maps <- p_primary | p_hc3
+fig <- maps / wrap_elements(full = legend_grob) +
+  plot_layout(heights = c(1, 0.12))
 
 base <- file.path(out_figure, "Figure5_corrected")
-grDevices::png(paste0(base, ".png"), width = 3600, height = 2550, res = 300,
-               type = "cairo", bg = "white")
+width_px <- 4320L
+height_px <- 1350L
+dpi <- 600L
+width_in <- width_px / dpi
+height_in <- height_px / dpi
+
+grDevices::png(
+  paste0(base, ".png"), width = width_px, height = height_px,
+  units = "px", res = dpi, type = "cairo", bg = "white"
+)
 print(fig)
 grDevices::dev.off()
-grDevices::tiff(paste0(base, ".tif"), width = 3600, height = 2550, res = 300,
-                compression = "lzw", type = "cairo", bg = "white")
+grDevices::tiff(
+  paste0(base, ".tif"), width = width_px, height = height_px,
+  units = "px", res = dpi, compression = "lzw", type = "cairo", bg = "white"
+)
 print(fig)
 grDevices::dev.off()
-ggsave(paste0(base, ".pdf"), fig, width = 12, height = 8.5, units = "in", device = cairo_pdf, bg = "white")
-ggsave(paste0(base, ".svg"), fig, width = 12, height = 8.5, units = "in", device = svglite::svglite, bg = "white")
+ggsave(
+  paste0(base, ".pdf"), fig,
+  width = width_in, height = height_in, units = "in",
+  device = cairo_pdf, bg = "white"
+)
+ggsave(
+  paste0(base, ".svg"), fig,
+  width = width_in, height = height_in, units = "in",
+  device = svglite::svglite, bg = "white"
+)
 
 legend <- c(
-  "Figure 5. Corrected SDI-adjusted directional temporal predictive associations between IHD and DD, 1992-2021.",
-  "Panel A maps an exploratory Newey-West classification from country-specific autoregressive equations fitted to annual log changes. A common lag order of 1-3 was selected by Schwarz BIC for each country, SDI change was included as an exogenous control, and each directional restriction was tested only in its intended target equation using a finite-sample-adjusted Newey-West covariance truncated at lag 2. Benjamini-Hochberg correction was applied separately to 204 IHD-to-DD tests and 204 DD-to-IHD tests. Panel B repeats the classification using HC3 covariance, showing marked estimator sensitivity. Points use the supplied representative coordinates so all 204 countries and territories, including small islands, remain visible. Results indicate temporal predictive association at the ecological country level and do not establish causation or individual comorbidity. At least one residual serial-correlation flag occurred in 84/204 country analyses (90/408 directional equations), and all 408 directional equations had an observation above Cook's D > 4/n; the classification should therefore not be interpreted as a stable predominant direction."
+  "INTERNAL AUDIT/SENSITIVITY DISPLAY - NOT THE SUBMITTED MANUSCRIPT FIGURE 5.",
+  "Figure 5 audit. Alternative SDI-adjusted directional temporal predictive associations between IHD and DD, 1992-2021.",
+  "Panel A maps the exploratory Newey-West classification from country-specific autoregressive equations fitted to annual log changes: bidirectional, n=1; IHD-to-DD only, n=0; DD-to-IHD only, n=182; and no evidence, n=21. A common lag order of 1-3 was selected by Schwarz BIC for each country, SDI change was included as an exogenous control, and each directional restriction was tested only in its intended target equation using a finite-sample-adjusted Newey-West covariance truncated at lag 2. Benjamini-Hochberg correction was applied separately to 204 IHD-to-DD tests and 204 DD-to-IHD tests. Panel B repeats the classification using HC3 covariance: bidirectional, n=0; IHD-to-DD only, n=0; DD-to-IHD only, n=11; and no evidence, n=193. Countries and territories with polygon geometry are displayed as filled areas; representative coordinate markers retain the prespecified small-island and territory set and units without polygon geometry. Results indicate temporal predictive association at the ecological country level and do not establish causation or individual comorbidity. At least one residual serial-correlation flag occurred in 84/204 country analyses (90/408 directional equations), and all 408 directional equations had an observation above Cook's D > 4/n; the classification should therefore not be interpreted as a stable predominant direction."
 )
-writeLines(legend, file.path(out_analysis, "Figure5_corrected_legend.txt"), useBytes = TRUE)
+write_utf8_lf(legend, file.path(out_analysis, "Figure5_corrected_legend.txt"))
 
 geometry <- data.table(
   file = c(paste0(base, ".png"), paste0(base, ".tif")),
-  width_px = c(3600L, 3600L), height_px = c(2550L, 2550L), dpi = 300L,
-  panels = "A-B", mapped_points_per_panel = 204L
+  width_px = width_px, height_px = height_px, dpi = dpi,
+  panels = "A-B", mapped_points_per_panel = nrow(point_overlay)
 )
-fwrite(geometry, file.path(out_analysis, "Figure5_geometry_audit.csv"))
+fwrite(geometry, file.path(out_analysis, "Figure5_geometry_audit.csv"), eol = "\n")
 
 qa_notes <- c(
-  "# Figure 5 visual and geometry QA",
+  "# Internal Figure 5 sensitivity-display visual and geometry QA",
   "",
-  "- Raster exports: 3600 x 2550 pixels at 300 dpi; vector PDF and SVG also exported.",
-  "- Both panels contain 204 coordinate points, including all 45 locations in the cartographic/SIDS sensitivity set.",
+  "> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 5.",
+  "",
+  paste0("- Raster exports: ", width_px, " x ", height_px, " pixels at ", dpi, " dpi; vector PDF and SVG also exported."),
+  paste0("- Both panels use ISO3-linked polygon fills and ", nrow(point_overlay), " representative coordinate overlays for the prespecified small-island/territory set and geometry-unmatched units."),
   "- Panel A exploratory Newey-West counts: Bidirectional 1, IHD -> DD 0, DD -> IHD 182, Neither 21.",
   "- Panel B counts: Bidirectional 0, IHD -> DD 0, DD -> IHD 11, Neither 193.",
-  "- The title and legend use temporal-prediction language; the caption explicitly rejects individual-level and mechanistic causal interpretation.",
-  "- The covariance-estimator sensitivity and diagnostic flags are printed in the figure rather than hidden in supplementary text.",
-  "- Visual inspection: no clipped maps, points, panel titles, legends, or caption; panel labels A-B are present; colors remain distinguishable against the pale basemap.",
-  "- Small islands are rendered as representative coordinate points, avoiding omission caused by low-resolution polygon geometry."
+  "- The artwork contains only uppercase panel labels A-B, the two maps and one shared legend; panel definitions, counts, methods and diagnostic cautions are kept in the figure legend.",
+  "- Visual inspection confirmed no clipped maps, overlay points, uppercase panel labels or shared legend; all four categorical colors remain distinguishable.",
+  "- Small islands and territories are retained as representative coordinate points rather than being omitted by low-resolution polygon geometry."
 )
-writeLines(qa_notes, file.path(out_analysis, "Figure5_visual_QA.md"), useBytes = TRUE)
+write_utf8_lf(qa_notes, file.path(out_analysis, "Figure5_visual_QA.md"))
 
 files <- c(result_file, coordinate_file, paste0(base, c(".png", ".tif", ".pdf", ".svg")),
            file.path(out_analysis, "Figure5_corrected_source.csv"),
@@ -188,7 +247,7 @@ manifest <- data.table(
   bytes = file.info(files)$size,
   sha256 = vapply(files, digest::digest, character(1), algo = "sha256", file = TRUE)
 )
-fwrite(manifest, file.path(out_analysis, "Figure5_checksums_sha256.csv"))
+fwrite(manifest, file.path(out_analysis, "Figure5_checksums_sha256.csv"), eol = "\n")
 
 cat("Figure 5 written to ", normalizePath(out_figure, winslash = "/"), "\n", sep = "")
 print(dat[, .N, by = direction_primary])

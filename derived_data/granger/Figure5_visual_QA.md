@@ -1,10 +1,12 @@
-# Figure 5 visual and geometry QA
+# Internal Figure 5 sensitivity-display visual and geometry QA
 
-- Raster exports: 3600 x 2550 pixels at 300 dpi; vector PDF and SVG also exported.
-- Both panels contain 204 coordinate points, including all 45 locations in the cartographic/SIDS sensitivity set.
+> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 5.
+
+
+- Raster exports: 4320 x 1350 pixels at 600 dpi; vector PDF and SVG also exported.
+- Both panels use ISO3-linked polygon fills and 45 representative coordinate overlays for the prespecified small-island/territory set and geometry-unmatched units.
 - Panel A exploratory Newey-West counts: Bidirectional 1, IHD -> DD 0, DD -> IHD 182, Neither 21.
 - Panel B counts: Bidirectional 0, IHD -> DD 0, DD -> IHD 11, Neither 193.
-- The title and legend use temporal-prediction language; the caption explicitly rejects individual-level and mechanistic causal interpretation.
-- The covariance-estimator sensitivity and diagnostic flags are printed in the figure rather than hidden in supplementary text.
-- Visual inspection: no clipped maps, points, panel titles, legends, or caption; panel labels A-B are present; colors remain distinguishable against the pale basemap.
-- Small islands are rendered as representative coordinate points, avoiding omission caused by low-resolution polygon geometry.
+- The artwork contains only uppercase panel labels A-B, the two maps and one shared legend; panel definitions, counts, methods and diagnostic cautions are kept in the figure legend.
+- Visual inspection confirmed no clipped maps, overlay points, uppercase panel labels or shared legend; all four categorical colors remain distinguishable.
+- Small islands and territories are retained as representative coordinate points rather than being omitted by low-resolution polygon geometry.

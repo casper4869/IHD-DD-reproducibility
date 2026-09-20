@@ -19,20 +19,23 @@ This public repository collects the corrected scripts, machine-readable outputs,
 | Component | Package status | Main evidence |
 |---|---|---|
 | Figure 2 and Supplementary Table S1 | Available and independently checked | Panels A–B regenerated from unrounded sex-specific BH q values (46/204 female and 109/204 male locations displayed), C–D retained from the submitted source, E–F regenerated from corrected weighted correlations, exact 204-row display crosswalk, population merge checks, 45-unit cartographic/SID sensitivity, hashes, session information, and final-state independent review |
-| Figure 4 forecast audit | Available | Original-specification reconstruction, harmonised sensitivity analysis, rolling-origin checks, instability/clipping diagnostics, source tables, final figure, logs, and independent audit |
+| Figure 4 submitted artwork and forecast audit | Submitted TIFF restored; audit available separately | `figures/Figure4.tif` is the byte-identical submitted figure. Forecast reconstruction, validation, instability/clipping diagnostics and the extra common-scale display are retained only as internal audit/sensitivity records under the explicitly non-submission directory. |
 | Exploratory MR reconstruction and final 29-candidate reporting set | Available from preserved aggregate results | Complete 15,703-row catalogue-to-analysis status manifest, 11,988-row outcome-specific schedules, 11,987-row common-candidate table, saved aggregate estimates, source hashes, alternative candidate sets, final 29-candidate Table 1/Figure 7 source tables, and session information |
-| SDI-adjusted temporal-precedence analysis / Supplementary Table S2 / Figure 5 | Available with exploratory interpretation | Corrected directional equations with SDI as exogenous control, unrounded directional BH families, lag, covariance-estimator and 45-unit cartographic/SID sensitivities, diagnostics, checksums, session information, and corrected Figure 5; the final reporting explicitly leads with the large Newey–West/HC3 difference |
+| Figure 5 submitted artwork and temporal-precedence audit | Submitted TIFF restored; audit available separately | `figures/Figure5.tif` is the byte-identical submitted figure. Alternative directional equations, covariance estimators and the two-map display are retained as internal audit/sensitivity records and do not replace the manuscript figure. |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
 | SNP-level MR sensitivity analyses | Not reconstructable from the preserved historical files | The exact historical DD run used for the submitted 50-row table and SNP-level instruments/harmonised objects were not retained; MR-Egger, weighted median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger and instrument-strength analyses therefore cannot be recreated from this archive |
 | Public archival record | Published and archived | GitHub release `v1.0.0` is archived at Zenodo under DOI `10.5281/zenodo.22852369`; the public 82,648,552-byte archive and metadata were verified without depositor credentials |
 
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 
+
+> **Figure 4/5 scope.** The files `figures/Figure4.tif` and `figures/Figure5.tif` are exact copies of the submitted artwork. Additional forecast and temporal-precedence displays are internal audit/sensitivity artifacts and are isolated under `figures/internal_audit_not_for_submission/`; they are not replacement manuscript figures.
+
 ## Directory contents
 
 - `code/`: corrected analysis scripts currently available, including offline MR audit/reporting scripts, an offline-by-default catalogue provenance check, and the disabled-by-default rate-limited optional OpenGWAS sensitivity script. Path-redacted Figure 1, Figure 3, and SDI `.R.txt` files are quarantined under `code/historical_reference/` as non-executable records with explicit limitations.
 - `derived_data/`: machine-readable outputs and QA evidence produced by the corrected scripts.
-- `figures/`: revised figures in publication and preview formats. Historical Figure 1/Figure 3 TIFF and Illustrator assets are omitted because their embedded metadata retains machine-specific source paths.
+- `figures/`: the byte-identical submitted Figure 4 and Figure 5 TIFFs, other revision figures, and an explicitly separated `internal_audit_not_for_submission/` directory for additional sensitivity displays. Historical Figure 1/Figure 3 TIFF and Illustrator assets are omitted because their embedded metadata retains machine-specific source paths.
 - `reports/`: cross-component audit material added during packaging.
 - `environment/`: software and session records.
 - `manifests/`: script, input, legacy-artifact, and package-file inventories.
@@ -62,7 +65,9 @@ Rscript 05_correlation_small_island_sensitivity.R
 
 The first command creates the corrected S1 table, 6,936 estimable country–sex–age temporal-correlation records, an explicit failure table for the three younger age groups with constant IHD series, QA tables, and panels E–F. The second regenerates A–B from corrected unrounded-P sex-specific BH q values, retains only the conceptually valid submitted C–D crop, and inserts corrected E–F. It also exports the exact 204-row GBD-location-to-ISO3-to-geometry crosswalk and cartographic procedure in `derived_data/figure2/`; 203 locations match the bundled geometry and Tokelau is explicitly unmatched. The third excludes 45 pre-specified units (44 `SID`-classified units plus Tokelau, which is absent from the bundled country geometry), re-adjusts S1 within 159 tests per sex, and compares the Figure 2E–F distributions and age-specific medians with the full analysis. The retained-family q < 0.05 counts are 43/159 for females and 90/159 for males; correlations of full versus excluded-set age medians are 0.883 and 0.941, respectively, with the sign preserved for all 17 estimable age groups.
 
-### 2. Recompute directional temporal precedence and Supplementary Table S2
+### 2. Run the optional internal temporal-precedence sensitivity audit
+
+This post-submission audit does not regenerate or replace the manuscript Figure 5. The submitted artwork remains `figures/Figure5.tif`; generated audit maps belong under `figures/internal_audit_not_for_submission/`.
 
 Required inputs are listed as `GR-*` in the input inventory.
 
@@ -71,9 +76,9 @@ Set-Location '<revision-root>/02_analysis'
 Rscript 03_correct_granger_sensitivity.R
 ```
 
-The script models annual log changes, treats SDI change as an exogenous control, tests each direction in its intended equation, and applies BH adjustment separately to 204 unrounded P values per direction. It also runs fixed-lag, HC3 covariance, and 45-unit cartographic/SID-exclusion sensitivities. The excluded-set Newey–West classification is 1 bidirectional, 0 IHD-to-DD, 147 DD-to-IHD, and 11 neither among 159 retained units. The primary 204-unit classification is highly sensitive to covariance choice (182 DD-to-IHD under Newey–West versus 11 under HC3) and to short-series diagnostics, so the included full table and QA files must accompany any narrative statement.
+The script models annual log changes, treats SDI change as an exogenous control, tests each direction in its intended equation, and applies BH adjustment separately to 204 unrounded P values per direction. It also runs fixed-lag, HC3 covariance, and 45-unit cartographic/SID-exclusion sensitivities. The excluded-set Newey–West classification is 1 bidirectional, 0 IHD-to-DD, 147 DD-to-IHD, and 11 neither among 159 retained units. The internal-audit 204-unit classification is highly sensitive to covariance choice (182 DD-to-IHD under Newey–West versus 11 under HC3) and to short-series diagnostics, so the included full table and QA files must accompany any narrative statement.
 
-Rebuild the corrected exploratory Figure 5 after the table is regenerated:
+Optionally rebuild the two-map internal audit display after the sensitivity table is regenerated (this is not the manuscript Figure 5):
 
 ```powershell
 Rscript 06_create_figure5_corrected.R
@@ -99,7 +104,9 @@ Rscript code/gwr/05_build_figure6.R `
   derived_data/figure6
 ```
 
-### 4. Reproduce and audit the forecast analysis
+### 4. Run the optional internal forecast audit
+
+This post-submission audit does not regenerate or replace the manuscript Figure 4. The submitted artwork remains `figures/Figure4.tif`; the common-scale diagnostic display belongs under `figures/internal_audit_not_for_submission/`.
 
 Required inputs are the three 204-country matrices listed as `FC-*` in the input inventory.
 

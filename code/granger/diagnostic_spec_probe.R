@@ -1,3 +1,4 @@
+# INTERNAL POST-SUBMISSION DIAGNOSTIC PROBE; not a manuscript analysis entry point.
 suppressPackageStartupMessages({library(data.table); library(lmtest)})
 i <- fread("immutable_part4_source/IHD_1992_2021_matrix.csv")
 d <- fread("immutable_part4_source/DD_1992_2021_matrix.csv")

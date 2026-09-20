@@ -10,3 +10,9 @@ This `v1.0.0` public release differs from the internal revision workspace in the
 6. The top-level `manifests/package_file_manifest_sha256.csv` is the authoritative checksum inventory for the public release. Older component checksum tables are retained as execution-time provenance records and may contain hashes from the pre-sanitised internal workspace.
 
 The public repository is https://github.com/casper4869/IHD-DD-reproducibility and this release is version `1.0.0`, archived at https://doi.org/10.5281/zenodo.22852369. Creator metadata and the rights-retained, mixed-rights statement are recorded in `.zenodo.json`, `CITATION.cff`, and `RIGHTS_AND_LICENSING.md`. The PM2.5/coordinate provenance and release-specific FinnGen/Risteys metadata remain disclosed source limitations rather than silently inferred fields. See `RELEASE_CHECKLIST.md`.
+
+<!-- BEGIN UNRELEASED_FIGURE_ROLE_CLARIFICATION -->
+## Unreleased Figure 4/Figure 5 role clarification
+
+The working tree restores the byte-identical submitted Figure 4 and Figure 5 TIFF files as the authoritative manuscript artwork. Post-submission forecast and temporal-precedence reanalyses remain available only under `figures/internal_audit_not_for_submission/`; they are sensitivity/audit records and are not replacement manuscript figures. This working-tree change does not alter the immutable Zenodo `v1.0.0` archive.
+<!-- END UNRELEASED_FIGURE_ROLE_CLARIFICATION -->

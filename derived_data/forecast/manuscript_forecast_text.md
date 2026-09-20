@@ -1,4 +1,7 @@
-# Forecast replacement text for review
+# Internal forecast-audit interpretation draft
+
+> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+
 
 ## Results
 

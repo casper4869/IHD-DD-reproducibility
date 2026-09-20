@@ -48,4 +48,14 @@ QA date: 2026-09-20
 
 The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The verified version DOI is `10.5281/zenodo.22852369`.
 
-The final `v1.0.0` tree contains 251 files including the manifest; its 250 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
+The immutable `v1.0.0` archive contained 251 files including its manifest. The current working tree contains 260 files including the manifest; its 259 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
+
+<!-- BEGIN FIGURE4_FIGURE5_ROLE_QA -->
+## Figure 4 and Figure 5 role-separation checks
+
+- `figures/Figure4.tif` and `figures/Figure5.tif` are byte-identical to the original submitted artifacts. Their SHA-256 values are `2605ef5fa618dc7f20d8cd7af36922ed52bee3983562b39415dd6e05d565240c` and `4563e52bc9e13400f459be8bf750a404e6c0e3f8ef5a0480cb86e888e40b2ac3`, respectively.
+- The submitted Figure 4 is 6,106 × 2,148 pixels at 300 dpi; the submitted Figure 5 is 6,820 × 3,388 pixels at 300 dpi.
+- All post-submission forecast and temporal-precedence displays are isolated under `figures/internal_audit_not_for_submission/`. They are labelled as internal audit/sensitivity artifacts and are not manuscript figures.
+- `manifests/figure4_figure5_roles_and_checksums.csv` gives a machine-readable role and checksum for every packaged Figure 4/5 artifact.
+- A binary string scan of the two submitted TIFF files found no local Windows project path or user-profile path.
+<!-- END FIGURE4_FIGURE5_ROLE_QA -->

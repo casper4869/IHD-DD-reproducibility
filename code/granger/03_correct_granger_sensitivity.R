@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Corrected country-level directional temporal-prediction analysis.
+# INTERNAL POST-SUBMISSION TEMPORAL-PRECEDENCE AUDIT; does not replace the manuscript Figure 5.
 #
 # Primary estimand:
 #   Does the previous annual change in IHD (DD) improve prediction of the
@@ -435,7 +435,9 @@ writeDataTable(wb, "SID_exclusion_list", small_island_list)
 saveWorkbook(wb, file.path(out_dir, "Supplementary_Table_S2_corrected.xlsx"), overwrite = TRUE)
 
 method_text <- c(
-  "# Corrected directional temporal-prediction analysis",
+  "# Internal audit: alternative directional temporal-prediction specification",
+  "",
+  "> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 5.",
   "",
   "The primary analysis used annual log changes in age-standardised incidence (1992-2021; 29 changes per country) to reduce deterministic level trends. For each country, a common lag order for IHD and DD was selected by Schwarz BIC from 1-3 with SDI change supplied as an exogenous regressor. Two separate autoregressive equations were then fitted: current DD change was regressed on its own selected lags, selected lags of IHD change, and contemporaneous SDI change; current IHD change was analogously regressed on its own selected lags, selected lags of DD change, and contemporaneous SDI change. Thus SDI was an exogenous control and each directional test concerned only its intended target equation.",
   "",
