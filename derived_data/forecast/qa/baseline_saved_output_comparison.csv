@@ -1,0 +1,3 @@
+"model","reproduced_2030_count","saved_2030_count","max_IHD_abs_difference","max_DD_abs_difference","country_set_equal"
+"VARX",19,19,5.00222085975111e-12,4.91127138957381e-11,TRUE
+"ARIMAX",13,14,41.6427007087003,2617.12702337653,TRUE

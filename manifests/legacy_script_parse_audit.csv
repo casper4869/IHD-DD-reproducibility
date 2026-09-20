@@ -1,0 +1,13 @@
+workspace_path,parse_status,verification_note
+<LOCAL_PROJECT_ROOT>/Part0/Data preprocessing.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_1_Female.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_1_Male.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_2_Female.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_2_Male.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_3_Female.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_3_Male.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part1/IHD_DD_New/GBD_4_ALL.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part3/GBD_1_Female.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/Part3/GBD_1_Male.R,PASS,R 4.5.0 parse succeeded
+<LOCAL_PROJECT_ROOT>/数据整理/SDI/204_SDI.R,PASS,"R 4.5.0 parse succeeded after a byte-identical copy to an ASCII-only path because the current R locale could not open the non-ASCII path"
+<LOCAL_PROJECT_ROOT>/Part7/GBD_9_DD&IHD.R,PASS,R 4.5.0 parse succeeded

@@ -1,0 +1,15 @@
+﻿metric,value
+catalog_records,15703
+european_catalog_records,11989
+fixed_BH_family_size_per_outcome,11988
+IHD_saved_primary_results,5880
+DD_saved_primary_results,11775
+set_A_count,49
+set_A_old50_overlap,18
+set_B_count,29
+set_B_old50_overlap,18
+set_C_count,18
+set_C_old50_overlap,11
+set_C_excluded_marker_count,11
+set_A_positive_direction,40
+set_A_negative_direction,9

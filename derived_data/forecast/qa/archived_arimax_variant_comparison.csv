@@ -1,0 +1,3 @@
+"specification","count_2030","max_IHD_abs_difference_from_archive","max_DD_abs_difference_from_archive","root_mean_square_IHD_difference","root_mean_square_DD_difference"
+"log1p_unclipped",15,411.504712552263,976.04831594383,48.3151335460088,232.906412090859
+"log1p_clipped",14,508.442555759366,976.04831594383,65.570008365407,232.793678714804

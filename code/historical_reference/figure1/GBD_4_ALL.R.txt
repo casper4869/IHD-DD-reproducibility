@@ -1,0 +1,108 @@
+# HISTORICAL REFERENCE ONLY — DO NOT USE AS A CORRECTED ENTRY POINT
+# This copy is supplied for transparent code provenance. Machine-specific
+# paths were replaced with placeholders. Scientific and workflow limitations
+# are documented in the adjacent README and the repository audit reports.
+
+# 加载必要的包
+library(readxl)
+library(readr)
+library(dplyr)
+library(stringr)
+
+# 步骤1：从HHfemale.xls读取国家列表
+hh_data <- read_excel("HHfemale.xls", sheet = 1, col_names = TRUE)
+hh_countries <- hh_data$location_name
+
+# 步骤2：读取DD发病率数据
+dd_data <- read_csv("ASMR_204_DD_Female.csv", skip = 1, col_names = FALSE)
+colnames(dd_data) <- c("index", "location_name", "dd_val", "dd_upper", "dd_lower", "location_code")
+
+# 步骤3：读取IHD发病率数据
+ihd_data <- read_csv("ASMR_204_IHD_Female.csv", skip = 1, col_names = FALSE)
+colnames(ihd_data) <- c("index", "location_name", "ihd_val", "ihd_upper", "ihd_lower", "location_code")
+
+# 筛选DD数据（保留点估计值和置信区间）
+dd_subset <- dd_data %>%
+  filter(location_name %in% hh_countries) %>%
+  select(location_name, dd_val, dd_lower, dd_upper)
+
+# 筛选IHD数据（保留点估计值和置信区间）
+ihd_subset <- ihd_data %>%
+  filter(location_name %in% hh_countries) %>%
+  select(location_name, ihd_val, ihd_lower, ihd_upper)
+
+# 合并两个数据集
+final_data <- full_join(dd_subset, ihd_subset, by = "location_name") %>%
+  arrange(location_name) %>%  # 按国家名称排序
+  mutate(
+    # 格式化DD置信区间
+    dd_ci = sprintf("%.2f (%.2f-%.2f)", dd_val, dd_lower, dd_upper),
+    # 格式化IHD置信区间
+    ihd_ci = sprintf("%.2f (%.2f-%.2f)", ihd_val, ihd_lower, ihd_upper)
+  )
+
+# 查看最终结果
+print(final_data, n = Inf)
+
+# 保存结果到CSV文件
+write_csv(final_data, "Incidence_Female_Results_With_CI.csv.csv")
+
+# 可选：保存为制表符分隔的文本文件（便于粘贴）
+write_delim(select(final_data, location_name, dd_ci, ihd_ci), 
+            "Results_Female_Formatted.txt", 
+            delim = "\t")
+
+
+
+
+
+
+
+# 加载必要的包
+library(readxl)
+library(readr)
+library(dplyr)
+library(stringr)
+
+# 步骤1：从HHfemale.xls读取国家列表
+hh_data <- read_excel("HHmale.xls", sheet = 1, col_names = TRUE)
+hh_countries <- hh_data$location_name
+
+# 步骤2：读取DD发病率数据
+dd_data <- read_csv("ASMR_204_DD_Male.csv", skip = 1, col_names = FALSE)
+colnames(dd_data) <- c("index", "location_name", "dd_val", "dd_upper", "dd_lower", "location_code")
+
+# 步骤3：读取IHD发病率数据
+ihd_data <- read_csv("ASMR_204_IHD_Male.csv", skip = 1, col_names = FALSE)
+colnames(ihd_data) <- c("index", "location_name", "ihd_val", "ihd_upper", "ihd_lower", "location_code")
+
+# 筛选DD数据（保留点估计值和置信区间）
+dd_subset <- dd_data %>%
+  filter(location_name %in% hh_countries) %>%
+  select(location_name, dd_val, dd_lower, dd_upper)
+
+# 筛选IHD数据（保留点估计值和置信区间）
+ihd_subset <- ihd_data %>%
+  filter(location_name %in% hh_countries) %>%
+  select(location_name, ihd_val, ihd_lower, ihd_upper)
+
+# 合并两个数据集
+final_data <- full_join(dd_subset, ihd_subset, by = "location_name") %>%
+  arrange(location_name) %>%  # 按国家名称排序
+  mutate(
+    # 格式化DD置信区间
+    dd_ci = sprintf("%.2f (%.2f-%.2f)", dd_val, dd_lower, dd_upper),
+    # 格式化IHD置信区间
+    ihd_ci = sprintf("%.2f (%.2f-%.2f)", ihd_val, ihd_lower, ihd_upper)
+  )
+
+# 查看最终结果
+print(final_data, n = Inf)
+
+# 保存结果到CSV文件
+write_csv(final_data, "Incidence_Male_Results_With_CI.csv")
+
+# 可选：保存为制表符分隔的文本文件（便于粘贴）
+write_delim(select(final_data, location_name, dd_ci, ihd_ci), 
+            "Results_Male_Formatted.txt", 
+            delim = "\t")

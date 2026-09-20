@@ -1,0 +1,228 @@
+# HISTORICAL REFERENCE ONLY — DO NOT USE AS A CORRECTED ENTRY POINT
+# This copy is supplied for transparent code provenance. Machine-specific
+# paths were replaced with placeholders. Scientific and workflow limitations
+# are documented in the adjacent README and the repository audit reports.
+
+library(dplyr)
+library(readr)
+library(stringr)
+
+# 读入数据
+country_list <- read.csv("Country.csv", stringsAsFactors = FALSE)
+
+# 先读入原始文件
+sdi_data <- read.csv("SDI_2021.csv", stringsAsFactors = FALSE)
+
+# 删除第105行
+sdi_data <- sdi_data[-105, ]
+
+# 标准化国家名
+country_list$country_norm <- tolower(str_trim(country_list$location_name))
+sdi_data$country_norm <- tolower(str_trim(sdi_data$Location))
+
+# 用manual_map修正
+manual_map <- c(
+  "Kingdom of Cambodia" = "Cambodia",
+  "Democratic Socialist Republic of Sri Lanka" = "Sri Lanka",
+  "Independent State of Papua New Guinea" = "Papua New Guinea",
+  "Republic of Armenia" = "Armenia",
+  "Democratic Republic of Timor-Leste" = "Timor-Leste",
+  "Lao People's Democratic Republic" = "Laos",
+  "Republic of Maldives" = "Maldives",
+  "Democratic People's Republic of Korea" = "North Korea",
+  "Kyrgyz Republic" = "Kyrgyzstan",
+  "Republic of Vanuatu" = "Vanuatu",
+  "Republic of Kiribati" = "Kiribati",
+  "Republic of the Philippines" = "Philippines",
+  "Republic of Croatia" = "Croatia",
+  "Republic of Tajikistan" = "Tajikistan",
+  "Kingdom of Thailand" = "Thailand",
+  "Kingdom of Norway" = "Norway",
+  "Republic of Uzbekistan" = "Uzbekistan",
+  "Socialist Republic of Viet Nam" = "Viet Nam",
+  "Republic of Albania" = "Albania",
+  "Republic of Indonesia" = "Indonesia",
+  "Republic of Azerbaijan" = "Azerbaijan",
+  "People's Republic of China" = "China",
+  "Independent State of Samoa" = "Samoa",
+  "Republic of Fiji" = "Fiji",
+  "Republic of Bulgaria" = "Bulgaria",
+  "Kingdom of Tonga" = "Tonga",
+  "Republic of Kazakhstan" = "Kazakhstan",
+  "Republic of the Union of Myanmar" = "Myanmar",
+  "Republic of the Marshall Islands" = "Marshall Islands",
+  "Taiwan (Province of China)" = "Taiwan (province of China)",
+  "Republic of Poland" = "Poland",
+  "Republic of Estonia" = "Estonia",
+  "Republic of Lithuania" = "Lithuania",
+  "Federal Republic of Germany" = "Germany",
+  "Principality of Andorra" = "Andorra",
+  "Republic of Serbia" = "Serbia",
+  "Republic of Iceland" = "Iceland",
+  "Kingdom of Belgium" = "Belgium",
+  "Republic of Singapore" = "Singapore",
+  "State of Israel" = "Israel",
+  "Russian Federation" = "Russia",
+  "French Republic" = "France",
+  "Kingdom of Denmark" = "Denmark",
+  "Grand Duchy of Luxembourg" = "Luxembourg",
+  "Republic of Austria" = "Austria",
+  "Hellenic Republic" = "Greece",
+  "Republic of Malta" = "Malta",
+  "Kingdom of the Netherlands" = "Netherlands",
+  "Republic of Cyprus" = "Cyprus",
+  "Republic of Guyana" = "Guyana",
+  "Republic of Finland" = "Finland",
+  "Republic of Italy" = "Italy",
+  "Commonwealth of Dominica" = "Dominica",
+  "Saint Vincent and the Grenadines" = "Saint Vincent and the Grenadines",
+  "Plurinational State of Bolivia" = "Bolivia",
+  "Republic of Ecuador" = "Ecuador",
+  "Republic of Trinidad and Tobago" = "Trinidad and Tobago",
+  "Saint Lucia" = "Saint Lucia",
+  "Republic of Suriname" = "Suriname",
+  "Republic of Peru" = "Peru",
+  "Dominican Republic" = "Dominican Republic",
+  "Republic of Haiti" = "Haiti",
+  "United Mexican States" = "Mexico",
+  "Republic of Slovenia" = "Slovenia",
+  "Republic of Belarus" = "Belarus",
+  "Czech Republic" = "Czechia",
+  "Slovak Republic" = "Slovakia",
+  "Republic of Moldova" = "Moldova",
+  "Brunei Darussalam" = "Brunei",
+  "Republic of Latvia" = "Latvia",
+  "Republic of Korea" = "South Korea",
+  "Swiss Confederation" = "Switzerland",
+  "Kingdom of Spain" = "Spain",
+  "Argentine Republic" = "Argentina",
+  "Portuguese Republic" = "Portugal",
+  "Republic of Honduras" = "Honduras",
+  "Eastern Republic of Uruguay" = "Uruguay",
+  "Commonwealth of the Bahamas" = "The Bahamas",
+  "Republic of Guatemala" = "Guatemala",
+  "Republic of Costa Rica" = "Costa Rica",
+  "United States of America" = "USA",
+  "Republic of Chile" = "Chile",
+  "Republic of Colombia" = "Colombia",
+  "Republic of Cuba" = "Cuba",
+  "Kingdom of Sweden" = "Sweden",
+  "Republic of Nicaragua" = "Nicaragua",
+  "Bolivarian Republic of Venezuela" = "Venezuela",
+  "Federative Republic of Brazil" = "Brazil",
+  "Republic of El Salvador" = "El Salvador",
+  "Republic of Panama" = "Panama",
+  "United Kingdom of Great Britain and Northern Ireland" = "UK",
+  "Republic of Tunisia" = "Tunisia",
+  "Kingdom of Saudi Arabia" = "Saudi Arabia",
+  "Kingdom of Morocco" = "Morocco",
+  "Republic of Djibouti" = "Djibouti",
+  "Republic of Iraq" = "Iraq",
+  "Federal Democratic Republic of Nepal" = "Nepal",
+  "Islamic Republic of Pakistan" = "Pakistan",
+  "Republic of Equatorial Guinea" = "Equatorial Guinea",
+  "Republic of Paraguay" = "Paraguay",
+  "Syrian Arab Republic" = "Syria",
+  "Kingdom of Bhutan" = "Bhutan",
+  "State of Qatar" = "Qatar",
+  "Arab Republic of Egypt" = "Egypt",
+  "Hashemite Kingdom of Jordan" = "Jordan",
+  "Islamic Republic of Afghanistan" = "Afghanistan",
+  "Sultanate of Oman" = "Oman",
+  "People's Republic of Bangladesh" = "Bangladesh",
+  "Republic of India" = "India",
+  "Gabonese Republic" = "Gabon",
+  "United Arab Emirates" = "United Arab Emirates",
+  "Central African Republic" = "Central African Republic",
+  "Lebanese Republic" = "Lebanon",
+  "State of Kuwait" = "Kuwait",
+  "State of Libya" = "Libya",
+  "Republic of Yemen" = "Yemen",
+  "Kingdom of Bahrain" = "Bahrain",
+  "Federal Democratic Republic of Ethiopia" = "Ethiopia",
+  "People's Democratic Republic of Algeria" = "Algeria",
+  "Islamic Republic of Iran" = "Iran",
+  "Republic of the Congo" = "Congo (Brazzaville)",
+  "Republic of Madagascar" = "Madagascar",
+  "Republic of Côte d'Ivoire" = "Côte d'Ivoire",
+  "Federal Republic of Nigeria" = "Nigeria",
+  "Republic of Malawi" = "Malawi",
+  "Republic of Angola" = "Angola",
+  "Democratic Republic of the Congo" = "DR Congo",
+  "Republic of Cameroon" = "Cameroon",
+  "Republic of Kenya" = "Kenya",
+  "Islamic Republic of Mauritania" = "Mauritania",
+  "State of Eritrea" = "Eritrea",
+  "Republic of Mauritius" = "Mauritius",
+  "Principality of Monaco" = "Monaco",
+  "United Republic of Tanzania" = "Tanzania",
+  "Republic of Rwanda" = "Rwanda",
+  "Republic of Sierra Leone" = "Sierra Leone",
+  "Republic of Namibia" = "Namibia",
+  "Union of the Comoros" = "Comoros",
+  "Republic of Senegal" = "Senegal",
+  "Republic of Benin" = "Benin",
+  "Togolese Republic" = "Togo",
+  "Republic of Nauru" = "Nauru",
+  "Kingdom of Eswatini" = "Eswatini",
+  "Republic of Zambia" = "Zambia",
+  "Kingdom of Lesotho" = "Lesotho",
+  "Republic of Guinea-Bissau" = "Guinea-Bissau",
+  "Republic of South Africa" = "South Africa",
+  "Republic of Ghana" = "Ghana",
+  "Tuvalu" = "Tuvalu",
+  "Republic of Mali" = "Mali",
+  "Democratic Republic of Sao Tome and Principe" = "São Tomé and Príncipe",
+  "United States Virgin Islands" = "Virgin Islands",
+  "Puerto Rico" = "Puerto Rico",
+  "Republic of Chad" = "Chad",
+  "Republic of Burundi" = "Burundi",
+  "American Samoa" = "American Samoa",
+  "Republic of Seychelles" = "Seychelles",
+  "Republic of Liberia" = "Liberia",
+  "Republic of the Niger" = "Niger",
+  "Burkina Faso" = "Burkina Faso",
+  "Republic of Guinea" = "Guinea",
+  "Republic of Sudan" = "Sudan",
+  "Republic of Cabo Verde" = "Cabo Verde",
+  "Republic of San Marino" = "San Marino",
+  "Republic of the Gambia" = "The Gambia",
+  "Greenland" = "Greenland",
+  "Tokelau" = "Tokelau",
+  "Northern Mariana Islands" = "Northern Mariana Islands",
+  "Guam" = "Guam",
+  "Saint Kitts and Nevis" = "Saint Kitts and Nevis",
+  "Republic of Mozambique" = "Mozambique",
+  "Federal Republic of Somalia" = "Somalia",
+  "Republic of Botswana" = "Botswana",
+  "Cook Islands" = "Cook Islands",
+  "Republic of Niue" = "Niue",
+  "Republic of South Sudan" = "South Sudan",
+  "Republic of Uganda" = "Uganda",
+  "Republic of Zimbabwe" = "Zimbabwe",
+  "Republic of Turkey" = "Türkiye",
+  "Republic of Palau" = "Palau"
+)
+
+
+country_list$country_norm2 <- ifelse(
+  country_list$location_name %in% names(manual_map),
+  tolower(str_trim(manual_map[country_list$location_name])),
+  country_list$country_norm
+)
+
+# 左连接保留204个目标国家
+sdi_selected <- country_list %>%
+  left_join(sdi_data, by = c("country_norm2" = "country_norm"))
+
+# 保留关键列
+sdi_out <- sdi_selected %>%
+  select(location_name, starts_with("X19"), starts_with("X20"))
+
+cat("最终国家数：", nrow(sdi_out), "\n")
+# 检查哪些还有NA（极少数是表本身缺失）
+na_countries <- sdi_out %>% filter(rowSums(is.na(.)) == (ncol(sdi_out)-1))
+print(na_countries$location_name)
+
+write.csv(sdi_out, "SDI_1992_2021_204countries.csv", row.names = FALSE, fileEncoding = "UTF-8")
+

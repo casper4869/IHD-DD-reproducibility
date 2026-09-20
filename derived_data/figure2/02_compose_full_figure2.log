@@ -1,0 +1,22 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Warning: package 'data.table' was built under R version 4.5.2
+Warning: package 'ggplot2' was built under R version 4.5.3
+Warning: package 'ggridges' was built under R version 4.5.2
+Warning: package 'patchwork' was built under R version 4.5.3
+Picking joint bandwidth of 0.153
+Picking joint bandwidth of 0.156
+null device 
+          1 
+Picking joint bandwidth of 0.153
+Picking joint bandwidth of 0.156
+null device 
+          1 
+Picking joint bandwidth of 0.153
+Picking joint bandwidth of 0.156
+null device 
+          1 
+Created full corrected Figure 2 at: ../03_figures/figure2_corrected/Figure2_corrected_full.png 

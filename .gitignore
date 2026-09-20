@@ -1,0 +1,28 @@
+# Credentials and local configuration
+.Renviron
+.Rprofile
+*.pem
+*.key
+*.p12
+*.pfx
+*token*
+*secret*
+*credential*
+
+# R/Python/editor artefacts
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+
+# Optional network rerun caches and logs
+optional_opengwas_rerun_output/
+**/optional_rate_limited_rerun/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+

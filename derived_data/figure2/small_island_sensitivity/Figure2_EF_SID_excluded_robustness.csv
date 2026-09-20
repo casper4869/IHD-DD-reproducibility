@@ -1,0 +1,3 @@
+sex_name,estimable_age_groups,Pearson_r_of_age_specific_medians,median_absolute_change_in_age_median,max_absolute_change_in_age_median,sign_agreement_age_medians_n,sign_agreement_age_medians_percent
+Female,17,0.882734669059675,0.0364082429796735,0.0972538991772195,17,100
+Male,17,0.941313572065892,0.0146364054007758,0.083931567308865,17,100

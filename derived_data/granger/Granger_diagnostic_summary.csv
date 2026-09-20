@@ -1,0 +1,8 @@
+metric,value
+Countries,204
+Primary fits failed in either direction,0
+BG serial-correlation flags in either direction,84
+Influence flags without BG flag,120
+No pre-specified diagnostic flag,0
+Small-island units excluded,45
+Primary vs submitted classification changed,128

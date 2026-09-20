@@ -1,0 +1,5 @@
+# Correlation small-island sensitivity
+
+The same 45 study units defined a priori for the cartographic/SIDS sensitivity were removed, leaving 159 countries/territories: units with the rworldmap/Natural Earth SID attribute plus Tokelau, which has no country feature in that bundled geometry. SID is a Small Island Developing States metadata classification, not a polygon-area or land-size threshold, and includes several coastal states. For Supplementary Table S1, the original unrounded 2021 P values were re-adjusted by BH separately within each sex (m=159). For Figure 2E-F, descriptive population-weighted country-age temporal correlations were not significance-filtered; their distributions and age-specific medians were compared with the full 204-country analysis.
+
+The three younger groups (<5, 5-9, and 10-14 years) remain non-estimable because their IHD annual series are constant in every country and sex. Seventeen age groups are therefore included in the Figure 2E-F sensitivity summaries.

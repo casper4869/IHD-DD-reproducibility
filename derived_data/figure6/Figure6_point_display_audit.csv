@@ -1,0 +1,205 @@
+location_name,ISO3,longitude,latitude,small_island_excluded,inferential_unit,display_method,value_duplicated_across_polygons
+American Samoa,ASM,-170.7046,-14.274,TRUE,one country or territory,recorded representative coordinate,FALSE
+Antigua and Barbuda,ATG,-61.85,17.1167,TRUE,one country or territory,recorded representative coordinate,FALSE
+Arab Republic of Egypt,EGY,31.2358,30.0444,FALSE,one country or territory,recorded representative coordinate,FALSE
+Argentine Republic,ARG,-58.3814,-34.6036,FALSE,one country or territory,recorded representative coordinate,FALSE
+Australia,AUS,144.9631,-37.8142,FALSE,one country or territory,recorded representative coordinate,FALSE
+Barbados,BRB,-59.6131,13.0969,TRUE,one country or territory,recorded representative coordinate,FALSE
+Belize,BLZ,-88.1886,17.4986,TRUE,one country or territory,recorded representative coordinate,FALSE
+Bermuda,BMU,-64.7819,32.2942,FALSE,one country or territory,recorded representative coordinate,FALSE
+Bolivarian Republic of Venezuela,VEN,-66.9036,10.4806,FALSE,one country or territory,recorded representative coordinate,FALSE
+Bosnia and Herzegovina,BIH,18.4131,43.8564,FALSE,one country or territory,recorded representative coordinate,FALSE
+Brunei Darussalam,BRN,114.9422,4.8903,FALSE,one country or territory,recorded representative coordinate,FALSE
+Burkina Faso,BFA,-1.5275,12.3686,FALSE,one country or territory,recorded representative coordinate,FALSE
+Canada,CAN,-79.3733,43.7417,FALSE,one country or territory,recorded representative coordinate,FALSE
+Central African Republic,CAF,18.5628,4.3733,FALSE,one country or territory,recorded representative coordinate,FALSE
+Commonwealth of Dominica,DMA,-61.3883,15.3014,TRUE,one country or territory,recorded representative coordinate,FALSE
+Commonwealth of the Bahamas,BHS,-77.3503,25.0442,TRUE,one country or territory,recorded representative coordinate,FALSE
+Cook Islands,COK,-159.771,-21.207,TRUE,one country or territory,recorded representative coordinate,FALSE
+Czech Republic,CZE,14.4214,50.0875,FALSE,one country or territory,recorded representative coordinate,FALSE
+Democratic People's Republic of Korea,PRK,125.7475,39.0167,FALSE,one country or territory,recorded representative coordinate,FALSE
+Democratic Republic of Sao Tome and Principe,STP,6.7306,0.3361,TRUE,one country or territory,recorded representative coordinate,FALSE
+Democratic Republic of Timor-Leste,TLS,125.5795,-8.5594,FALSE,one country or territory,recorded representative coordinate,FALSE
+Democratic Republic of the Congo,COD,15.3119,-4.3219,FALSE,one country or territory,recorded representative coordinate,FALSE
+Democratic Socialist Republic of Sri Lanka,LKA,79.8333,6.9167,FALSE,one country or territory,recorded representative coordinate,FALSE
+Dominican Republic,DOM,-70.6889,19.4572,TRUE,one country or territory,recorded representative coordinate,FALSE
+Eastern Republic of Uruguay,URY,-56.1842,-34.9056,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federal Democratic Republic of Ethiopia,ETH,38.74,9.03,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federal Democratic Republic of Nepal,NPL,85.32,27.71,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federal Republic of Germany,DEU,13.405,52.52,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federal Republic of Nigeria,NGA,3.3841,6.455,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federal Republic of Somalia,SOM,45.3419,2.0392,FALSE,one country or territory,recorded representative coordinate,FALSE
+Federated States of Micronesia,FSM,151.8583,7.4417,TRUE,one country or territory,recorded representative coordinate,FALSE
+Federative Republic of Brazil,BRA,-46.6339,-23.5504,FALSE,one country or territory,recorded representative coordinate,FALSE
+French Republic,FRA,2.3522,48.8567,FALSE,one country or territory,recorded representative coordinate,FALSE
+Gabonese Republic,GAB,9.4544,0.3901,FALSE,one country or territory,recorded representative coordinate,FALSE
+Georgia,GEO,44.7925,41.7225,FALSE,one country or territory,recorded representative coordinate,FALSE
+Grand Duchy of Luxembourg,LUX,6.1319,49.6117,FALSE,one country or territory,recorded representative coordinate,FALSE
+Greenland,GRL,-51.7361,64.1767,FALSE,one country or territory,recorded representative coordinate,FALSE
+Grenada,GRD,-61.75,12.05,TRUE,one country or territory,recorded representative coordinate,FALSE
+Guam,GUM,144.7332,13.4692,TRUE,one country or territory,recorded representative coordinate,FALSE
+Hashemite Kingdom of Jordan,JOR,35.9328,31.9497,FALSE,one country or territory,recorded representative coordinate,FALSE
+Hellenic Republic,GRC,23.7281,37.9842,FALSE,one country or territory,recorded representative coordinate,FALSE
+Hungary,HUN,19.0408,47.4983,FALSE,one country or territory,recorded representative coordinate,FALSE
+Independent State of Papua New Guinea,PNG,147.14940000000001,-9.4789,TRUE,one country or territory,recorded representative coordinate,FALSE
+Independent State of Samoa,WSM,-171.75,-13.8333,TRUE,one country or territory,recorded representative coordinate,FALSE
+Ireland,IRL,-6.2603,53.3497,FALSE,one country or territory,recorded representative coordinate,FALSE
+Islamic Republic of Afghanistan,AFG,69.1783,34.5253,FALSE,one country or territory,recorded representative coordinate,FALSE
+Islamic Republic of Iran,IRN,51.3897,35.6889,FALSE,one country or territory,recorded representative coordinate,FALSE
+Islamic Republic of Mauritania,MRT,-15.9785,18.0858,FALSE,one country or territory,recorded representative coordinate,FALSE
+Islamic Republic of Pakistan,PAK,67.01,24.86,FALSE,one country or territory,recorded representative coordinate,FALSE
+Jamaica,JAM,-76.7931,17.9714,TRUE,one country or territory,recorded representative coordinate,FALSE
+Japan,JPN,139.7495,35.687,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Bahrain,BHR,50.5875,26.2233,TRUE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Belgium,BEL,4.3525,50.8467,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Bhutan,BTN,89.6361,27.4722,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Cambodia,KHM,104.921,11.5696,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Denmark,DNK,12.5615,55.6805,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Eswatini,SWZ,31.388,-26.495,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Lesotho,LSO,27.48,-29.31,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Morocco,MAR,-7.5833,33.5333,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Norway,NOR,10.7389,59.9133,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Saudi Arabia,SAU,46.71,24.65,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Spain,ESP,-3.7033,40.4169,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Sweden,SWE,18.0547,59.3275,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Thailand,THA,100.4942,13.7525,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of Tonga,TON,-175.2,-21.1333,TRUE,one country or territory,recorded representative coordinate,FALSE
+Kingdom of the Netherlands,NLD,5.0911,51.5572,FALSE,one country or territory,recorded representative coordinate,FALSE
+Kyrgyz Republic,KGZ,74.5667,42.8667,FALSE,one country or territory,recorded representative coordinate,FALSE
+Lao People's Democratic Republic,LAO,102.63,17.98,FALSE,one country or territory,recorded representative coordinate,FALSE
+Lebanese Republic,LBN,35.5058,33.8981,FALSE,one country or territory,recorded representative coordinate,FALSE
+Malaysia,MYS,101.698,3.1686,FALSE,one country or territory,recorded representative coordinate,FALSE
+Mongolia,MNG,106.9055,47.9214,FALSE,one country or territory,recorded representative coordinate,FALSE
+Montenegro,MNE,19.2628,42.4414,FALSE,one country or territory,recorded representative coordinate,FALSE
+New Zealand,NZL,174.7653,-36.8492,FALSE,one country or territory,recorded representative coordinate,FALSE
+North Macedonia,MKD,21.4317,41.9961,FALSE,one country or territory,recorded representative coordinate,FALSE
+Northern Mariana Islands,MNP,145.7546,15.2137,TRUE,one country or territory,recorded representative coordinate,FALSE
+Palestine,PSE,34.456,31.5069,FALSE,one country or territory,recorded representative coordinate,FALSE
+People's Democratic Republic of Algeria,DZA,3.0872,36.7325,FALSE,one country or territory,recorded representative coordinate,FALSE
+People's Republic of Bangladesh,BGD,90.3944,23.7289,FALSE,one country or territory,recorded representative coordinate,FALSE
+People's Republic of China,CHN,113.26,23.13,FALSE,one country or territory,recorded representative coordinate,FALSE
+Plurinational State of Bolivia,BOL,-63.1975,-17.7892,FALSE,one country or territory,recorded representative coordinate,FALSE
+Portuguese Republic,PRT,-9.134,38.7122,FALSE,one country or territory,recorded representative coordinate,FALSE
+Principality of Andorra,AND,1.5,42.5,FALSE,one country or territory,recorded representative coordinate,FALSE
+Principality of Monaco,MCO,7.4167,43.7333,FALSE,one country or territory,recorded representative coordinate,FALSE
+Puerto Rico,PRI,-66.061,18.3985,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Albania,ALB,19.8186,41.3272,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Angola,AGO,13.2344,-8.8383,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Armenia,ARM,44.5144,40.1814,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Austria,AUT,16.3725,48.2083,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Azerbaijan,AZE,49.8352,40.3667,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Belarus,BLR,27.5586,53.9006,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Benin,BEN,2.4333,6.3667,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Botswana,BWA,25.9086,-24.6569,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Bulgaria,BGR,23.3217,42.6979,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Burundi,BDI,29.3667,-3.3833,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Cabo Verde,CPV,-24.988,16.886,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Cameroon,CMR,9.7,4.05,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Chad,TCD,15.0447,12.1053,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Chile,CHL,-70.6506,-33.4372,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Colombia,COL,-74.0722,4.7111,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Costa Rica,CRI,-84.08,9.9325,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Cote d'Ivoire,CIV,-4.0267,5.3364,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Croatia,HRV,15.9772,45.8131,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Cuba,CUB,-82.3589,23.1367,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Cyprus,CYP,33.365,35.1725,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Djibouti,DJI,43.1481,11.5944,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Ecuador,ECU,-79.8875,-2.19,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of El Salvador,SLV,-89.1914,13.6989,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Equatorial Guinea,GNQ,8.7744,3.7456,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Estonia,EST,24.7453,59.4372,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Fiji,FJI,178.4333,-18.1333,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Finland,FIN,24.9375,60.1708,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Ghana,GHA,-1.625,6.7,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Guatemala,GTM,-90.5133,14.6417,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Guinea,GIN,-13.7122,9.5092,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Guinea-Bissau,GNB,-15.5667,11.85,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Guyana,GUY,-58.155,6.8011,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Haiti,HTI,-72.3386,18.5425,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Honduras,HND,-87.21,14.098,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Iceland,ISL,-21.9425,64.1458,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of India,IND,77.23,28.61,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Indonesia,IDN,106.8275,-6.175,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Iraq,IRQ,44.3661,33.3153,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Italy,ITA,12.4828,41.8931,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Kazakhstan,KAZ,76.915,43.24,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Kenya,KEN,36.8172,-1.2864,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Kiribati,KIR,173.0176,1.3382,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Korea,KOR,126.9833,37.5667,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Latvia,LVA,24.1069,56.9475,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Liberia,LBR,-10.8014,6.3133,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Lithuania,LTU,25.28,54.6872,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Madagascar,MDG,47.525,-18.91,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Malawi,MWI,33.7873,-13.9669,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Maldives,MDV,73.5089,4.1753,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Mali,MLI,-7.9922,12.6458,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Malta,MLT,14.5125,35.8983,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Mauritius,MUS,57.5042,-20.1644,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Moldova,MDA,28.8353,47.0228,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Mozambique,MOZ,32.5764,-25.9153,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Namibia,NAM,17.0836,-22.57,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Nauru,NRU,166.925,-0.5456,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Nicaragua,NIC,-86.2514,12.1364,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Niue,NIU,-169.921,-19.056,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Palau,PLW,134.4792,7.3419,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Panama,PAN,-79.5347,8.9711,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Paraguay,PRY,-57.6435,-25.2945,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Peru,PER,-77.0375,-12.06,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Poland,POL,21.0111,52.23,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Rwanda,RWA,30.0606,-1.9536,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of San Marino,SMR,12.4817,43.9717,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Senegal,SEN,-17.432,14.6726,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Serbia,SRB,20.4569,44.8178,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Seychelles,SYC,55.4525,-4.6231,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Sierra Leone,SLE,-13.2331,8.4833,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Singapore,SGP,103.8,1.3,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Slovenia,SVN,14.5061,46.0514,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of South Africa,ZAF,28.0456,-26.2044,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of South Sudan,SSD,31.58,4.83,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Sudan,SDN,32.5265,15.6031,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Suriname,SUR,-55.2039,5.8522,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Tajikistan,TJK,68.78,38.5367,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Trinidad and Tobago,TTO,-61.4,10.5167,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Tunisia,TUN,10.1817,36.8064,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Turkey,TUR,28.955,41.0136,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Uganda,UGA,32.5811,0.3136,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Uzbekistan,UZB,69.2797,41.3111,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Vanuatu,VUT,168.3167,-17.7333,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of Yemen,YEM,44.2064,15.3483,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Zambia,ZMB,28.2833,-15.4167,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of Zimbabwe,ZWE,31.0522,-17.8292,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Congo,COG,15.2667,-4.2667,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Gambia,GMB,-16.5786,13.4581,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Marshall Islands,MHL,171.3833,7.0833,TRUE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Niger,NER,2.1175,13.515,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Philippines,PHL,120.9772,14.5958,FALSE,one country or territory,recorded representative coordinate,FALSE
+Republic of the Union of Myanmar,MMR,96.16,16.795,FALSE,one country or territory,recorded representative coordinate,FALSE
+Romania,ROU,26.1039,44.4325,FALSE,one country or territory,recorded representative coordinate,FALSE
+Russian Federation,RUS,37.6175,55.7506,FALSE,one country or territory,recorded representative coordinate,FALSE
+Saint Kitts and Nevis,KNA,-62.7333,17.3,TRUE,one country or territory,recorded representative coordinate,FALSE
+Saint Lucia,LCA,-60.9894,14.0108,TRUE,one country or territory,recorded representative coordinate,FALSE
+Saint Vincent and the Grenadines,VCT,-61.1928,13.1308,TRUE,one country or territory,recorded representative coordinate,FALSE
+Slovak Republic,SVK,17.1128,48.1447,FALSE,one country or territory,recorded representative coordinate,FALSE
+Socialist Republic of Viet Nam,VNM,106.7019,10.7756,FALSE,one country or territory,recorded representative coordinate,FALSE
+Solomon Islands,SLB,159.95,-9.4333,TRUE,one country or territory,recorded representative coordinate,FALSE
+State of Eritrea,ERI,38.9411,15.3358,FALSE,one country or territory,recorded representative coordinate,FALSE
+State of Israel,ISR,35.2256,31.7789,FALSE,one country or territory,recorded representative coordinate,FALSE
+State of Kuwait,KWT,47.9783,29.3697,FALSE,one country or territory,recorded representative coordinate,FALSE
+State of Libya,LBY,13.1914,32.8872,FALSE,one country or territory,recorded representative coordinate,FALSE
+State of Qatar,QAT,51.5333,25.2867,FALSE,one country or territory,recorded representative coordinate,FALSE
+Sultanate of Oman,OMN,58.5911,23.614,FALSE,one country or territory,recorded representative coordinate,FALSE
+Swiss Confederation,CHE,8.5411,47.3744,FALSE,one country or territory,recorded representative coordinate,FALSE
+Syrian Arab Republic,SYR,36.2981,33.502,FALSE,one country or territory,recorded representative coordinate,FALSE
+Taiwan (Province of China),TWN,120.6794,24.1439,FALSE,one country or territory,recorded representative coordinate,FALSE
+Togolese Republic,TGO,1.2153,6.1308,FALSE,one country or territory,recorded representative coordinate,FALSE
+Tokelau,TKL,-172.51591,-8.54212,TRUE,one country or territory,recorded representative coordinate,FALSE
+Turkmenistan,TKM,58.38,37.9375,FALSE,one country or territory,recorded representative coordinate,FALSE
+Tuvalu,TUV,179.2,-8.5167,TRUE,one country or territory,recorded representative coordinate,FALSE
+Ukraine,UKR,30.5233,50.45,FALSE,one country or territory,recorded representative coordinate,FALSE
+Union of the Comoros,COM,44.3939,-12.1675,TRUE,one country or territory,recorded representative coordinate,FALSE
+United Arab Emirates,ARE,55.2972,25.2631,FALSE,one country or territory,recorded representative coordinate,FALSE
+United Kingdom of Great Britain and Northern Ireland,GBR,-0.1275,51.5072,FALSE,one country or territory,recorded representative coordinate,FALSE
+United Mexican States,MEX,-99.1333,19.4333,FALSE,one country or territory,recorded representative coordinate,FALSE
+United Republic of Tanzania,TZA,39.2803,-6.8161,FALSE,one country or territory,recorded representative coordinate,FALSE
+United States Virgin Islands,VIR,-64.9331,18.342,TRUE,one country or territory,recorded representative coordinate,FALSE
+United States of America,USA,-73.9249,40.6943,FALSE,one country or territory,recorded representative coordinate,FALSE

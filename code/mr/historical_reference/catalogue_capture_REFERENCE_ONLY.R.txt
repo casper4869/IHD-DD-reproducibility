@@ -1,0 +1,21 @@
+# REFERENCE ONLY; DO NOT EXECUTE THIS HISTORICAL RETRY LOOP.
+#
+# This is the preserved catalogue-capture logic that explains how ao.csv was
+# created. It called available_outcomes() only when ao.csv was absent and then
+# cached the returned catalogue. The unbounded retry loop is retained here for
+# provenance, not as a recommended current workflow. Use
+# ../00_catalogue_snapshot_provenance.R for offline validation and any deliberate
+# one-shot refresh under current provider terms.
+
+if(file.exists("ao.csv")){ao<-read.csv(file = "ao.csv")}else{
+while(TRUE){
+message_to_next <<- TRUE
+error_to_next <<- FALSE
+try({withCallingHandlers(ao <- available_outcomes(),
+message = function(c) if (stringr::str_detect(as.character(c),"Failed to")) message_to_next <<- FALSE)
+error_to_next <<- TRUE})
+if(message_to_next == TRUE&error_to_next == TRUE) { break }
+}
+write.csv(ao,file = "ao.csv")
+}
+

@@ -1,0 +1,108 @@
+$y
+
+
+$d
+[1] NA
+
+$D
+[1] NA
+
+$max.p
+[1] 5
+
+$max.q
+[1] 5
+
+$max.P
+[1] 2
+
+$max.Q
+[1] 2
+
+$max.order
+[1] 5
+
+$max.d
+[1] 2
+
+$max.D
+[1] 1
+
+$start.p
+[1] 2
+
+$start.q
+[1] 2
+
+$start.P
+[1] 1
+
+$start.Q
+[1] 1
+
+$stationary
+[1] FALSE
+
+$seasonal
+[1] TRUE
+
+$ic
+c("aicc", "aic", "bic")
+
+$stepwise
+[1] TRUE
+
+$nmodels
+[1] 94
+
+$trace
+[1] FALSE
+
+$approximation
+(length(x) > 150 | frequency(x) > 12)
+
+$method
+NULL
+
+$truncate
+NULL
+
+$xreg
+NULL
+
+$test
+c("kpss", "adf", "pp")
+
+$test.args
+list()
+
+$seasonal.test
+c("seas", "ocsb", "hegy", "ch")
+
+$seasonal.test.args
+list()
+
+$allowdrift
+[1] TRUE
+
+$allowmean
+[1] TRUE
+
+$lambda
+NULL
+
+$biasadj
+[1] FALSE
+
+$parallel
+[1] FALSE
+
+$num.cores
+[1] 2
+
+$x
+y
+
+$...
+
+

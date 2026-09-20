@@ -1,0 +1,63 @@
+"location_name","origin","specification","model","year","horizon","IHD_pred","DD_pred","high_high_pred"
+"Federal Democratic Republic of Nepal",2021,"Benchmark","Persistence",2030,9,511.87,7482.7,TRUE
+"Islamic Republic of Afghanistan",2021,"Benchmark","Persistence",2030,9,964.61,7277.55,TRUE
+"Islamic Republic of Iran",2021,"Benchmark","Persistence",2030,9,887.06,6807.71,TRUE
+"Kingdom of Bahrain",2021,"Benchmark","Persistence",2030,9,1023.47,6514.65,TRUE
+"Kingdom of Morocco",2021,"Benchmark","Persistence",2030,9,995.04,7446.24,TRUE
+"Lebanese Republic",2021,"Benchmark","Persistence",2030,9,931.42,7687.95,TRUE
+"Palestine",2021,"Benchmark","Persistence",2030,9,942.08,9361.05,TRUE
+"People's Republic of Bangladesh",2021,"Benchmark","Persistence",2030,9,469.75,6512.3,TRUE
+"Republic of Belarus",2021,"Benchmark","Persistence",2030,9,606.69,6256.58,TRUE
+"Republic of Lithuania",2021,"Benchmark","Persistence",2030,9,413.59,6530.74,TRUE
+"Republic of Sudan",2021,"Benchmark","Persistence",2030,9,973.5,5981.14,TRUE
+"Republic of Tunisia",2021,"Benchmark","Persistence",2030,9,847.53,8561.61,TRUE
+"Republic of Yemen",2021,"Benchmark","Persistence",2030,9,948.5,6135.05,TRUE
+"Republic of the Gambia",2021,"Benchmark","Persistence",2030,9,416.26,7623.84,TRUE
+"State of Libya",2021,"Benchmark","Persistence",2030,9,922.52,5950.16,TRUE
+"Federal Democratic Republic of Nepal",2021,"Harmonized","ARIMAX",2030,9,497.0981965034,7024.18795393355,TRUE
+"Islamic Republic of Afghanistan",2021,"Harmonized","ARIMAX",2030,9,954.734164322296,6413.10335701916,TRUE
+"Islamic Republic of Iran",2021,"Harmonized","ARIMAX",2030,9,1094.16916582109,6424.62942440681,TRUE
+"Kingdom of Bahrain",2021,"Harmonized","ARIMAX",2030,9,1039.10882917634,5795.3958612795,TRUE
+"Kingdom of Morocco",2021,"Harmonized","ARIMAX",2030,9,994.691045138009,6566.16631099901,TRUE
+"Lebanese Republic",2021,"Harmonized","ARIMAX",2030,9,916.034722500061,6819.04416628697,TRUE
+"Palestine",2021,"Harmonized","ARIMAX",2030,9,971.200861123705,9020.07185415432,TRUE
+"People's Republic of Bangladesh",2021,"Harmonized","ARIMAX",2030,9,464.043009974,6152.48951916406,TRUE
+"Republic of Sudan",2021,"Harmonized","ARIMAX",2030,9,954.816253559352,5486.92944628892,TRUE
+"Republic of Suriname",2021,"Harmonized","ARIMAX",2030,9,407.155313213811,5870.99054459344,TRUE
+"Republic of Tunisia",2021,"Harmonized","ARIMAX",2030,9,877.353430487661,6669.31989084754,TRUE
+"Republic of Yemen",2021,"Harmonized","ARIMAX",2030,9,944.466512570392,6031.7127332125,TRUE
+"Republic of the Gambia",2021,"Harmonized","ARIMAX",2030,9,417.995978993557,7412.61749267004,TRUE
+"State of Libya",2021,"Harmonized","ARIMAX",2030,9,923.919699284526,5461.13508260892,TRUE
+"United States of America",2021,"Harmonized","ARIMAX",2030,9,514.375402930028,6321.93406987197,TRUE
+"Federal Democratic Republic of Nepal",2021,"Original","ARIMAX",2030,9,496.818500682312,7017.33510140905,TRUE
+"Islamic Republic of Afghanistan",2021,"Original","ARIMAX",2030,9,961.782682704185,6432.96755568465,TRUE
+"Islamic Republic of Iran",2021,"Original","ARIMAX",2030,9,1232.05023915116,6417.49581399305,TRUE
+"Kingdom of Bahrain",2021,"Original","ARIMAX",2030,9,1058.44495271472,5815.34794532467,TRUE
+"Kingdom of Morocco",2021,"Original","ARIMAX",2030,9,994.68531685928,6596.15254526832,TRUE
+"Lebanese Republic",2021,"Original","ARIMAX",2030,9,915.11061905413,7310.89736861262,TRUE
+"Palestine",2021,"Original","ARIMAX",2030,9,946.952488680853,9031.37760918295,TRUE
+"People's Republic of Bangladesh",2021,"Original","ARIMAX",2030,9,464.694640265884,6157.9243428983,TRUE
+"Republic of South Africa",2021,"Original","ARIMAX",2030,9,522.373918803019,5777.20922142664,TRUE
+"Republic of Suriname",2021,"Original","ARIMAX",2030,9,407.174546956632,6174.11692469485,TRUE
+"Republic of Tunisia",2021,"Original","ARIMAX",2030,9,876.885841696774,6672.75095548804,TRUE
+"Republic of Yemen",2021,"Original","ARIMAX",2030,9,927.192752257585,6033.1744275324,TRUE
+"Republic of the Gambia",2021,"Original","ARIMAX",2030,9,417.958236898423,7415.75243056704,TRUE
+"Islamic Republic of Afghanistan",2021,"Original","VARX",2030,9,964.61,10916.325,TRUE
+"Islamic Republic of Pakistan",2021,"Original","VARX",2030,9,658.425933758535,8149.71,TRUE
+"Kingdom of Bahrain",2021,"Original","VARX",2030,9,1380.35076998336,9771.975,TRUE
+"Kingdom of Saudi Arabia",2021,"Original","VARX",2030,9,888.28,8875.005,TRUE
+"Palestine",2021,"Original","VARX",2030,9,935.190052959417,12910.546361452,TRUE
+"People's Democratic Republic of Algeria",2021,"Original","VARX",2030,9,1693.185,8548.845,TRUE
+"People's Republic of Bangladesh",2021,"Original","VARX",2030,9,750.975,9818.49,TRUE
+"Republic of Belarus",2021,"Original","VARX",2030,9,1076.055,9384.87,TRUE
+"Republic of Cuba",2021,"Original","VARX",2030,9,644.415,8584.74,TRUE
+"Republic of Estonia",2021,"Original","VARX",2030,9,918.18,8530.305,TRUE
+"Republic of South Africa",2021,"Original","VARX",2030,9,619.515,9277.275,TRUE
+"Republic of Sudan",2021,"Original","VARX",2030,9,972.85,9250.56,TRUE
+"Republic of Trinidad and Tobago",2021,"Original","VARX",2030,9,687.435,8749.2,TRUE
+"Republic of Tunisia",2021,"Original","VARX",2030,9,835.14,12842.415,TRUE
+"State of Libya",2021,"Original","VARX",2030,9,1383.78,9182.43,TRUE
+"Sultanate of Oman",2021,"Original","VARX",2030,9,1027.08,8303.13,TRUE
+"Syrian Arab Republic",2021,"Original","VARX",2030,9,1122.52,8538.51,TRUE
+"Togolese Republic",2021,"Original","VARX",2030,9,606.03,8424.225,TRUE
+"Ukraine",2021,"Original","VARX",2030,9,728.72,8780.76,TRUE

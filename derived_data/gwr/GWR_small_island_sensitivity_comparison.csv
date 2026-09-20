@@ -1,0 +1,3 @@
+direction,retained_n,full_bandwidth_km,SID_excluded_bandwidth_km,bandwidth_percent_change,local_beta_Pearson_r,median_absolute_beta_change,max_absolute_beta_change,sign_agreement_n,sign_agreement_percent
+DD association with IHD,159,942.565312830121,930.063931607059,-1.32631458562013,0.882242423506026,0.00494867156203638,1.15043312300597,140,88.0503144654088
+IHD association with DD,159,1996.26309064423,1962.10778797285,-1.7109619885003,0.829271964310372,0.00686145643237363,3.05403344525298,148,93.0817610062893

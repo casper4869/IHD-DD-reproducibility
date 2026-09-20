@@ -1,0 +1,14 @@
+check,observed,acceptance_rule,pass
+S1 unique country-sex rows,408,408,TRUE
+Female BH q<0.05 count,46,46,TRUE
+Male BH q<0.05 count,109,109,TRUE
+q>=0.05 values masked,0,0,TRUE
+study units with map geometry,203,203 (Tokelau absent),TRUE
+PNG dimensions,2227x2800x3,2227x2800x3,TRUE
+TIFF dimensions,2227x2800x3,2227x2800x3,TRUE
+PNG versus TIFF decoded max difference,0e+00,0,TRUE
+retained C-D PNG versus source max difference,0e+00,0,TRUE
+retained C-D TIFF versus source max difference,0e+00,0,TRUE
+Female estimable E-F coefficients,3468,3468,TRUE
+Male estimable E-F coefficients,3468,3468,TRUE
+PDF non-empty,1892905,>0 bytes,TRUE

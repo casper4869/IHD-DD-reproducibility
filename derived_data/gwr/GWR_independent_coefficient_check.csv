@@ -1,0 +1,5 @@
+analysis,n,max_absolute_difference,mean_absolute_difference,tolerance,pass
+Full 204: DD association with IHD,204,0,0,0.00000001,TRUE
+Full 204: IHD association with DD,204,0,0,0.00000001,TRUE
+Cartographic/SIDS-excluded 159: DD association with IHD,159,0,0,0.00000001,TRUE
+Cartographic/SIDS-excluded 159: IHD association with DD,159,0,0,0.00000001,TRUE

@@ -1,0 +1,42 @@
+{
+  "completed_at": "2026-09-18 04:10:53 +0800",
+  "seed": 20260918,
+  "origin_years": [2012, 2015, 2018],
+  "endpoint_counts": [
+    {
+      "specification": "Harmonized",
+      "model": "ARIMAX",
+      "year": 2030,
+      "n_countries": 204,
+      "n_valid": 204,
+      "n_high": 15
+    },
+    {
+      "specification": "Harmonized",
+      "model": "VARX",
+      "year": 2030,
+      "n_countries": 204,
+      "n_valid": 191
+    },
+    {
+      "specification": "Original",
+      "model": "ARIMAX",
+      "year": 2030,
+      "n_countries": 204,
+      "n_valid": 204,
+      "n_high": 13
+    },
+    {
+      "specification": "Original",
+      "model": "VARX",
+      "year": 2030,
+      "n_countries": 204,
+      "n_valid": 204,
+      "n_high": 19
+    }
+  ],
+  "uncertainty_bands": false,
+  "figure_mm": [183, 103],
+  "tiff_dpi": 600,
+  "independent_review": "pending"
+}

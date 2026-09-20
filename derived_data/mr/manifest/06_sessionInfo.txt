@@ -1,0 +1,31 @@
+generated_at: 2026-09-20 00:05:26 CST
+script_path: <LOCAL_REVISION_WORKSPACE>/02_analysis/mr_recovery/01_build_exploratory_mr_audit.R
+script_sha256: 35761c97c544d0b8c61888f7fe40959e20c767e5f59d3aa88c3d0ec22a22babc
+input_root: <LOCAL_PROJECT_ROOT>/MR
+output_dir: <LOCAL_REVISION_WORKSPACE>/02_analysis/mr_recovery/run_2026-09-20_exploratory_manifest_final
+command: <R_INSTALLATION_PATH>/bin/Rterm.exe --no-echo --no-restore --file=<LOCAL_REVISION_WORKSPACE>/02_analysis/mr_recovery/01_build_exploratory_mr_audit.R --args <LOCAL_PROJECT_ROOT>/MR <LOCAL_REVISION_WORKSPACE>/02_analysis/mr_recovery/run_2026-09-20_exploratory_manifest_final
+
+R version 4.5.0 (2025-04-11 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26100)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=C               LC_CTYPE=Chinese_China.936
+[3] LC_MONETARY=C              LC_NUMERIC=C              
+[5] LC_TIME=C                 
+system code page: 65001
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] data.table_1.18.0
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.0 digest_0.6.39 

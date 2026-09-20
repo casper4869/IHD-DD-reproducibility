@@ -1,0 +1,7 @@
+"check","result"
+"equal_panel_x_ranges","pass"
+"equal_panel_y_ranges","pass"
+"no_inferential_ribbon","pass"
+"editable_svg_text","pass"
+"backend_R_only","pass"
+"connectors_not_applicable","na: no connectors"

@@ -1,0 +1,11 @@
+item,value,acceptance_rule
+original_height_px,2227,must equal 2227
+original_width_px,2800,must equal 2800
+regenerated_AB_rows,680,A-B regenerated from corrected S1 BH q values
+retained_CD_start_row,681,starts above original panel C tag
+retained_CD_end_row,1425,ends below original panel D and above original E label
+retained_CD_rows,745,contains only retained C-D row
+regenerated_EF_rows,802,contains only regenerated E-F row
+output_height_px,2227,must equal original height
+output_width_px,2800,must equal original width
+output_dpi,300,preserves original pixel dimensions at 300 dpi

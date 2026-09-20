@@ -1,0 +1,9 @@
+# spgwr::gwr.sel bandwidth traces
+
+## Full 204: DD association with IHD
+
+## Full 204: IHD association with DD
+
+## Cartographic/SIDS-excluded 159: DD association with IHD
+
+## Cartographic/SIDS-excluded 159: IHD association with DD

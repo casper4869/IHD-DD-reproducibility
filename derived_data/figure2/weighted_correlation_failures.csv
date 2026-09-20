@@ -1,0 +1,1225 @@
+location_name,location_id,sex_name,age_name,n_years,weighted_r,weighted_se,weighted_t,weighted_p,fit_status
+American Samoa,298,Female,10-14 years,30,,,,,not_estimable_constant_series
+American Samoa,298,Female,5-9 years,30,,,,,not_estimable_constant_series
+American Samoa,298,Female,<5 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Female,10-14 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Female,5-9 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Female,<5 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Female,10-14 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Female,5-9 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Female,<5 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Female,10-14 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Female,5-9 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Female,<5 years,30,,,,,not_estimable_constant_series
+Australia,71,Female,10-14 years,30,,,,,not_estimable_constant_series
+Australia,71,Female,5-9 years,30,,,,,not_estimable_constant_series
+Australia,71,Female,<5 years,30,,,,,not_estimable_constant_series
+Barbados,107,Female,10-14 years,30,,,,,not_estimable_constant_series
+Barbados,107,Female,5-9 years,30,,,,,not_estimable_constant_series
+Barbados,107,Female,<5 years,30,,,,,not_estimable_constant_series
+Belize,108,Female,10-14 years,30,,,,,not_estimable_constant_series
+Belize,108,Female,5-9 years,30,,,,,not_estimable_constant_series
+Belize,108,Female,<5 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Female,10-14 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Female,5-9 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Female,<5 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Female,10-14 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Female,5-9 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Female,<5 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Female,10-14 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Female,5-9 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Female,<5 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Female,10-14 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Female,5-9 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Female,<5 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Female,10-14 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Female,5-9 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Female,<5 years,30,,,,,not_estimable_constant_series
+Canada,101,Female,10-14 years,30,,,,,not_estimable_constant_series
+Canada,101,Female,5-9 years,30,,,,,not_estimable_constant_series
+Canada,101,Female,<5 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Female,10-14 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Female,5-9 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Female,<5 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Female,10-14 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Female,5-9 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Female,<5 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Female,10-14 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Female,5-9 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Female,<5 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Female,10-14 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Female,5-9 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Female,<5 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Female,10-14 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Female,5-9 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Female,<5 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Female,10-14 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Female,5-9 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Female,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Female,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Female,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Female,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Female,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Female,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Female,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Female,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Female,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Female,<5 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Female,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Female,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Female,<5 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Female,10-14 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Female,5-9 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Female,<5 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Female,10-14 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Female,5-9 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Female,<5 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Female,<5 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Female,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Female,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Female,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Female,<5 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Female,<5 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Female,10-14 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Female,5-9 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Female,<5 years,30,,,,,not_estimable_constant_series
+French Republic,80,Female,10-14 years,30,,,,,not_estimable_constant_series
+French Republic,80,Female,5-9 years,30,,,,,not_estimable_constant_series
+French Republic,80,Female,<5 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Female,10-14 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Female,5-9 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Female,<5 years,30,,,,,not_estimable_constant_series
+Georgia,35,Female,10-14 years,30,,,,,not_estimable_constant_series
+Georgia,35,Female,5-9 years,30,,,,,not_estimable_constant_series
+Georgia,35,Female,<5 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Female,10-14 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Female,5-9 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Female,<5 years,30,,,,,not_estimable_constant_series
+Greenland,349,Female,10-14 years,30,,,,,not_estimable_constant_series
+Greenland,349,Female,5-9 years,30,,,,,not_estimable_constant_series
+Greenland,349,Female,<5 years,30,,,,,not_estimable_constant_series
+Grenada,112,Female,10-14 years,30,,,,,not_estimable_constant_series
+Grenada,112,Female,5-9 years,30,,,,,not_estimable_constant_series
+Grenada,112,Female,<5 years,30,,,,,not_estimable_constant_series
+Guam,351,Female,10-14 years,30,,,,,not_estimable_constant_series
+Guam,351,Female,5-9 years,30,,,,,not_estimable_constant_series
+Guam,351,Female,<5 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Female,10-14 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Female,5-9 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Female,<5 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Female,10-14 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Female,5-9 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Female,<5 years,30,,,,,not_estimable_constant_series
+Hungary,48,Female,10-14 years,30,,,,,not_estimable_constant_series
+Hungary,48,Female,5-9 years,30,,,,,not_estimable_constant_series
+Hungary,48,Female,<5 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Female,10-14 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Female,5-9 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Female,<5 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Female,10-14 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Female,5-9 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Female,<5 years,30,,,,,not_estimable_constant_series
+Ireland,84,Female,10-14 years,30,,,,,not_estimable_constant_series
+Ireland,84,Female,5-9 years,30,,,,,not_estimable_constant_series
+Ireland,84,Female,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Female,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Female,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Female,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Female,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Female,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Female,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Female,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Female,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Female,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Female,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Female,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Female,<5 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Female,10-14 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Female,5-9 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Female,<5 years,30,,,,,not_estimable_constant_series
+Japan,67,Female,10-14 years,30,,,,,not_estimable_constant_series
+Japan,67,Female,5-9 years,30,,,,,not_estimable_constant_series
+Japan,67,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Female,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Female,<5 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Female,10-14 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Female,5-9 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Female,<5 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Female,10-14 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Female,5-9 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Female,<5 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Female,10-14 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Female,5-9 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Female,<5 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Female,10-14 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Female,5-9 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Female,<5 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Female,10-14 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Female,5-9 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Female,<5 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Female,10-14 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Female,5-9 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Female,<5 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Female,10-14 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Female,5-9 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Female,<5 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Female,10-14 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Female,5-9 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Female,<5 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Female,10-14 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Female,5-9 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Female,<5 years,30,,,,,not_estimable_constant_series
+Palestine,149,Female,10-14 years,30,,,,,not_estimable_constant_series
+Palestine,149,Female,5-9 years,30,,,,,not_estimable_constant_series
+Palestine,149,Female,<5 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Female,10-14 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Female,5-9 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Female,<5 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Female,10-14 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Female,5-9 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Female,<5 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Female,10-14 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Female,5-9 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Female,<5 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Female,10-14 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Female,5-9 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Female,<5 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Female,10-14 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Female,5-9 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Female,<5 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Female,10-14 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Female,5-9 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Female,<5 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Female,10-14 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Female,5-9 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Female,<5 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Female,10-14 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Female,5-9 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Female,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Female,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Female,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Female,<5 years,30,,,,,not_estimable_constant_series
+Romania,52,Female,10-14 years,30,,,,,not_estimable_constant_series
+Romania,52,Female,5-9 years,30,,,,,not_estimable_constant_series
+Romania,52,Female,<5 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Female,10-14 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Female,5-9 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Female,<5 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Female,10-14 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Female,5-9 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Female,<5 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Female,10-14 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Female,5-9 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Female,<5 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Female,10-14 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Female,5-9 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Female,<5 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Female,10-14 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Female,5-9 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Female,<5 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Female,10-14 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Female,5-9 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Female,<5 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Female,10-14 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Female,5-9 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Female,<5 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Female,10-14 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Female,5-9 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Female,<5 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Female,10-14 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Female,5-9 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Female,<5 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Female,10-14 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Female,5-9 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Female,<5 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Female,10-14 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Female,5-9 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Female,<5 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Female,10-14 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Female,5-9 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Female,<5 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Female,10-14 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Female,5-9 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Female,<5 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Female,10-14 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Female,5-9 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Female,<5 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Female,10-14 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Female,5-9 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Female,<5 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Female,10-14 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Female,5-9 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Female,<5 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Female,10-14 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Female,5-9 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Female,<5 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Female,10-14 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Female,5-9 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Female,<5 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Female,10-14 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Female,5-9 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Female,<5 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Female,10-14 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Female,5-9 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Female,<5 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Female,10-14 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Female,5-9 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Female,<5 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Female,10-14 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Female,5-9 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Female,<5 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Female,10-14 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Female,5-9 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Female,<5 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Female,10-14 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Female,5-9 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Female,<5 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Female,10-14 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Female,5-9 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Female,<5 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Female,10-14 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Female,5-9 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Female,<5 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Female,10-14 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Female,5-9 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Female,<5 years,30,,,,,not_estimable_constant_series
+United States of America,102,Female,10-14 years,30,,,,,not_estimable_constant_series
+United States of America,102,Female,5-9 years,30,,,,,not_estimable_constant_series
+United States of America,102,Female,<5 years,30,,,,,not_estimable_constant_series
+American Samoa,298,Male,10-14 years,30,,,,,not_estimable_constant_series
+American Samoa,298,Male,5-9 years,30,,,,,not_estimable_constant_series
+American Samoa,298,Male,<5 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Male,10-14 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Male,5-9 years,30,,,,,not_estimable_constant_series
+Antigua and Barbuda,105,Male,<5 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Male,10-14 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Male,5-9 years,30,,,,,not_estimable_constant_series
+Arab Republic of Egypt,141,Male,<5 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Male,10-14 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Male,5-9 years,30,,,,,not_estimable_constant_series
+Argentine Republic,97,Male,<5 years,30,,,,,not_estimable_constant_series
+Australia,71,Male,10-14 years,30,,,,,not_estimable_constant_series
+Australia,71,Male,5-9 years,30,,,,,not_estimable_constant_series
+Australia,71,Male,<5 years,30,,,,,not_estimable_constant_series
+Barbados,107,Male,10-14 years,30,,,,,not_estimable_constant_series
+Barbados,107,Male,5-9 years,30,,,,,not_estimable_constant_series
+Barbados,107,Male,<5 years,30,,,,,not_estimable_constant_series
+Belize,108,Male,10-14 years,30,,,,,not_estimable_constant_series
+Belize,108,Male,5-9 years,30,,,,,not_estimable_constant_series
+Belize,108,Male,<5 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Male,10-14 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Male,5-9 years,30,,,,,not_estimable_constant_series
+Bermuda,305,Male,<5 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Male,10-14 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Male,5-9 years,30,,,,,not_estimable_constant_series
+Bolivarian Republic of Venezuela,133,Male,<5 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Male,10-14 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Male,5-9 years,30,,,,,not_estimable_constant_series
+Bosnia and Herzegovina,44,Male,<5 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Male,10-14 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Male,5-9 years,30,,,,,not_estimable_constant_series
+Brunei Darussalam,66,Male,<5 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Male,10-14 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Male,5-9 years,30,,,,,not_estimable_constant_series
+Burkina Faso,201,Male,<5 years,30,,,,,not_estimable_constant_series
+Canada,101,Male,10-14 years,30,,,,,not_estimable_constant_series
+Canada,101,Male,5-9 years,30,,,,,not_estimable_constant_series
+Canada,101,Male,<5 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Male,10-14 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Male,5-9 years,30,,,,,not_estimable_constant_series
+Central African Republic,169,Male,<5 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Male,10-14 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Male,5-9 years,30,,,,,not_estimable_constant_series
+Commonwealth of Dominica,110,Male,<5 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Male,10-14 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Male,5-9 years,30,,,,,not_estimable_constant_series
+Commonwealth of the Bahamas,106,Male,<5 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Male,10-14 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Male,5-9 years,30,,,,,not_estimable_constant_series
+Cook Islands,320,Male,<5 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Male,10-14 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Male,5-9 years,30,,,,,not_estimable_constant_series
+Czech Republic,47,Male,<5 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Male,10-14 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Male,5-9 years,30,,,,,not_estimable_constant_series
+Democratic People's Republic of Korea,7,Male,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Male,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Male,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Sao Tome and Principe,215,Male,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Male,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Male,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of Timor-Leste,19,Male,<5 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Male,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Male,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Republic of the Congo,171,Male,<5 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Male,10-14 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Male,5-9 years,30,,,,,not_estimable_constant_series
+Democratic Socialist Republic of Sri Lanka,17,Male,<5 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Male,10-14 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Male,5-9 years,30,,,,,not_estimable_constant_series
+Dominican Republic,111,Male,<5 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Male,10-14 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Male,5-9 years,30,,,,,not_estimable_constant_series
+Eastern Republic of Uruguay,99,Male,<5 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Ethiopia,179,Male,<5 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federal Democratic Republic of Nepal,164,Male,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Germany,81,Male,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Nigeria,214,Male,<5 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federal Republic of Somalia,187,Male,<5 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federated States of Micronesia,25,Male,<5 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Male,10-14 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Male,5-9 years,30,,,,,not_estimable_constant_series
+Federative Republic of Brazil,135,Male,<5 years,30,,,,,not_estimable_constant_series
+French Republic,80,Male,10-14 years,30,,,,,not_estimable_constant_series
+French Republic,80,Male,5-9 years,30,,,,,not_estimable_constant_series
+French Republic,80,Male,<5 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Male,10-14 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Male,5-9 years,30,,,,,not_estimable_constant_series
+Gabonese Republic,173,Male,<5 years,30,,,,,not_estimable_constant_series
+Georgia,35,Male,10-14 years,30,,,,,not_estimable_constant_series
+Georgia,35,Male,5-9 years,30,,,,,not_estimable_constant_series
+Georgia,35,Male,<5 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Male,10-14 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Male,5-9 years,30,,,,,not_estimable_constant_series
+Grand Duchy of Luxembourg,87,Male,<5 years,30,,,,,not_estimable_constant_series
+Greenland,349,Male,10-14 years,30,,,,,not_estimable_constant_series
+Greenland,349,Male,5-9 years,30,,,,,not_estimable_constant_series
+Greenland,349,Male,<5 years,30,,,,,not_estimable_constant_series
+Grenada,112,Male,10-14 years,30,,,,,not_estimable_constant_series
+Grenada,112,Male,5-9 years,30,,,,,not_estimable_constant_series
+Grenada,112,Male,<5 years,30,,,,,not_estimable_constant_series
+Guam,351,Male,10-14 years,30,,,,,not_estimable_constant_series
+Guam,351,Male,5-9 years,30,,,,,not_estimable_constant_series
+Guam,351,Male,<5 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Male,10-14 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Male,5-9 years,30,,,,,not_estimable_constant_series
+Hashemite Kingdom of Jordan,144,Male,<5 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Male,10-14 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Male,5-9 years,30,,,,,not_estimable_constant_series
+Hellenic Republic,82,Male,<5 years,30,,,,,not_estimable_constant_series
+Hungary,48,Male,10-14 years,30,,,,,not_estimable_constant_series
+Hungary,48,Male,5-9 years,30,,,,,not_estimable_constant_series
+Hungary,48,Male,<5 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Male,10-14 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Male,5-9 years,30,,,,,not_estimable_constant_series
+Independent State of Papua New Guinea,26,Male,<5 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Male,10-14 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Male,5-9 years,30,,,,,not_estimable_constant_series
+Independent State of Samoa,27,Male,<5 years,30,,,,,not_estimable_constant_series
+Ireland,84,Male,10-14 years,30,,,,,not_estimable_constant_series
+Ireland,84,Male,5-9 years,30,,,,,not_estimable_constant_series
+Ireland,84,Male,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Male,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Male,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Afghanistan,160,Male,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Male,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Male,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Iran,142,Male,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Male,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Male,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Mauritania,212,Male,<5 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Male,10-14 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Male,5-9 years,30,,,,,not_estimable_constant_series
+Islamic Republic of Pakistan,165,Male,<5 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Male,10-14 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Male,5-9 years,30,,,,,not_estimable_constant_series
+Jamaica,115,Male,<5 years,30,,,,,not_estimable_constant_series
+Japan,67,Male,10-14 years,30,,,,,not_estimable_constant_series
+Japan,67,Male,5-9 years,30,,,,,not_estimable_constant_series
+Japan,67,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Bahrain,140,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Belgium,76,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Bhutan,162,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Cambodia,10,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Denmark,78,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Eswatini,197,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Lesotho,194,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Morocco,148,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Norway,90,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Saudi Arabia,152,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Spain,92,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Sweden,93,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Thailand,18,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of Tonga,29,Male,<5 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kingdom of the Netherlands,89,Male,<5 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Male,10-14 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Male,5-9 years,30,,,,,not_estimable_constant_series
+Kyrgyz Republic,37,Male,<5 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Male,10-14 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Male,5-9 years,30,,,,,not_estimable_constant_series
+Lao People's Democratic Republic,12,Male,<5 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Male,10-14 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Male,5-9 years,30,,,,,not_estimable_constant_series
+Lebanese Republic,146,Male,<5 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Male,10-14 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Male,5-9 years,30,,,,,not_estimable_constant_series
+Malaysia,13,Male,<5 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Male,10-14 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Male,5-9 years,30,,,,,not_estimable_constant_series
+Mongolia,38,Male,<5 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Male,10-14 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Male,5-9 years,30,,,,,not_estimable_constant_series
+Montenegro,50,Male,<5 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Male,10-14 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Male,5-9 years,30,,,,,not_estimable_constant_series
+New Zealand,72,Male,<5 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Male,10-14 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Male,5-9 years,30,,,,,not_estimable_constant_series
+North Macedonia,49,Male,<5 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Male,10-14 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Male,5-9 years,30,,,,,not_estimable_constant_series
+Northern Mariana Islands,376,Male,<5 years,30,,,,,not_estimable_constant_series
+Palestine,149,Male,10-14 years,30,,,,,not_estimable_constant_series
+Palestine,149,Male,5-9 years,30,,,,,not_estimable_constant_series
+Palestine,149,Male,<5 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Male,10-14 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Male,5-9 years,30,,,,,not_estimable_constant_series
+People's Democratic Republic of Algeria,139,Male,<5 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Male,10-14 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Male,5-9 years,30,,,,,not_estimable_constant_series
+People's Republic of Bangladesh,161,Male,<5 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Male,10-14 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Male,5-9 years,30,,,,,not_estimable_constant_series
+People's Republic of China,6,Male,<5 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Male,10-14 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Male,5-9 years,30,,,,,not_estimable_constant_series
+Plurinational State of Bolivia,121,Male,<5 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Male,10-14 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Male,5-9 years,30,,,,,not_estimable_constant_series
+Portuguese Republic,91,Male,<5 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Male,10-14 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Male,5-9 years,30,,,,,not_estimable_constant_series
+Principality of Andorra,74,Male,<5 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Male,10-14 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Male,5-9 years,30,,,,,not_estimable_constant_series
+Principality of Monaco,367,Male,<5 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Male,10-14 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Male,5-9 years,30,,,,,not_estimable_constant_series
+Puerto Rico,385,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Albania,43,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Angola,168,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Armenia,33,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Austria,75,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Azerbaijan,34,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Belarus,57,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Benin,200,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Botswana,193,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Bulgaria,45,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Burundi,175,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Côte d'Ivoire,205,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cabo Verde,203,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cameroon,202,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Chad,204,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Chile,98,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Colombia,125,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Costa Rica,126,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Croatia,46,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cuba,109,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Cyprus,77,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Djibouti,177,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Ecuador,122,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of El Salvador,127,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Equatorial Guinea,172,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Estonia,58,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Fiji,22,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Finland,79,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Ghana,207,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guatemala,128,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guinea,208,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guinea-Bissau,209,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Guyana,113,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Haiti,114,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Honduras,129,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Iceland,83,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of India,163,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Indonesia,11,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Iraq,143,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Italy,86,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kazakhstan,36,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kenya,180,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Kiribati,23,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Korea,68,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Latvia,59,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Liberia,210,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Lithuania,60,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Madagascar,181,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Malawi,182,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Maldives,14,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mali,211,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Malta,88,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mauritius,183,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Moldova,61,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Mozambique,184,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Namibia,195,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Nauru,369,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Nicaragua,131,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Niue,374,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Palau,380,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Panama,132,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Paraguay,136,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Peru,123,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Poland,51,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Rwanda,185,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of San Marino,396,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Senegal,216,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Serbia,53,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Seychelles,186,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Sierra Leone,217,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Singapore,69,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Slovenia,55,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of South Africa,196,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of South Sudan,435,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Sudan,522,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Suriname,118,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Tajikistan,39,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Trinidad and Tobago,119,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Tunisia,154,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Turkey,155,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Uganda,190,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Uzbekistan,41,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Vanuatu,30,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Yemen,157,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Zambia,191,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of Zimbabwe,198,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Congo,170,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Gambia,206,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Marshall Islands,24,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Niger,213,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Philippines,16,Male,<5 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Male,10-14 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Male,5-9 years,30,,,,,not_estimable_constant_series
+Republic of the Union of Myanmar,15,Male,<5 years,30,,,,,not_estimable_constant_series
+Romania,52,Male,10-14 years,30,,,,,not_estimable_constant_series
+Romania,52,Male,5-9 years,30,,,,,not_estimable_constant_series
+Romania,52,Male,<5 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Male,10-14 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Male,5-9 years,30,,,,,not_estimable_constant_series
+Russian Federation,62,Male,<5 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Male,10-14 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Male,5-9 years,30,,,,,not_estimable_constant_series
+Saint Kitts and Nevis,393,Male,<5 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Male,10-14 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Male,5-9 years,30,,,,,not_estimable_constant_series
+Saint Lucia,116,Male,<5 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Male,10-14 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Male,5-9 years,30,,,,,not_estimable_constant_series
+Saint Vincent and the Grenadines,117,Male,<5 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Male,10-14 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Male,5-9 years,30,,,,,not_estimable_constant_series
+Slovak Republic,54,Male,<5 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Male,10-14 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Male,5-9 years,30,,,,,not_estimable_constant_series
+Socialist Republic of Viet Nam,20,Male,<5 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Male,10-14 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Male,5-9 years,30,,,,,not_estimable_constant_series
+Solomon Islands,28,Male,<5 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Male,10-14 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Male,5-9 years,30,,,,,not_estimable_constant_series
+State of Eritrea,178,Male,<5 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Male,10-14 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Male,5-9 years,30,,,,,not_estimable_constant_series
+State of Israel,85,Male,<5 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Male,10-14 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Male,5-9 years,30,,,,,not_estimable_constant_series
+State of Kuwait,145,Male,<5 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Male,10-14 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Male,5-9 years,30,,,,,not_estimable_constant_series
+State of Libya,147,Male,<5 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Male,10-14 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Male,5-9 years,30,,,,,not_estimable_constant_series
+State of Qatar,151,Male,<5 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Male,10-14 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Male,5-9 years,30,,,,,not_estimable_constant_series
+Sultanate of Oman,150,Male,<5 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Male,10-14 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Male,5-9 years,30,,,,,not_estimable_constant_series
+Swiss Confederation,94,Male,<5 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Male,10-14 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Male,5-9 years,30,,,,,not_estimable_constant_series
+Syrian Arab Republic,153,Male,<5 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Male,10-14 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Male,5-9 years,30,,,,,not_estimable_constant_series
+Taiwan (Province of China),8,Male,<5 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Male,10-14 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Male,5-9 years,30,,,,,not_estimable_constant_series
+Togolese Republic,218,Male,<5 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Male,10-14 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Male,5-9 years,30,,,,,not_estimable_constant_series
+Tokelau,413,Male,<5 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Male,10-14 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Male,5-9 years,30,,,,,not_estimable_constant_series
+Turkmenistan,40,Male,<5 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Male,10-14 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Male,5-9 years,30,,,,,not_estimable_constant_series
+Tuvalu,416,Male,<5 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Male,10-14 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Male,5-9 years,30,,,,,not_estimable_constant_series
+Ukraine,63,Male,<5 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Male,10-14 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Male,5-9 years,30,,,,,not_estimable_constant_series
+Union of the Comoros,176,Male,<5 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Male,10-14 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Male,5-9 years,30,,,,,not_estimable_constant_series
+United Arab Emirates,156,Male,<5 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Male,10-14 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Male,5-9 years,30,,,,,not_estimable_constant_series
+United Kingdom of Great Britain and Northern Ireland,95,Male,<5 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Male,10-14 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Male,5-9 years,30,,,,,not_estimable_constant_series
+United Mexican States,130,Male,<5 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Male,10-14 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Male,5-9 years,30,,,,,not_estimable_constant_series
+United Republic of Tanzania,189,Male,<5 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Male,10-14 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Male,5-9 years,30,,,,,not_estimable_constant_series
+United States Virgin Islands,422,Male,<5 years,30,,,,,not_estimable_constant_series
+United States of America,102,Male,10-14 years,30,,,,,not_estimable_constant_series
+United States of America,102,Male,5-9 years,30,,,,,not_estimable_constant_series
+United States of America,102,Male,<5 years,30,,,,,not_estimable_constant_series

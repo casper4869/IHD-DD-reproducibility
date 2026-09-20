@@ -1,0 +1,11 @@
+check,value
+candidate_count,29
+finn_b_exposures,0
+non_ivw_IHD,0
+non_ivw_DD,0
+IHD_q_ge_0.05,0
+DD_q_ge_0.05,0
+discordant_direction,0
+positive_direction,20
+negative_direction,9
+trait_group_count,4

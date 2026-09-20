@@ -1,0 +1,120 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Warning messages:
+1: package 'data.table' was built under R version 4.5.2 
+2: package 'sp' was built under R version 4.5.1 
+3: package 'spgwr' was built under R version 4.5.1 
+4: package 'spData' was built under R version 4.5.1 
+5: package 'car' was built under R version 4.5.1 
+6: package 'carData' was built under R version 4.5.1 
+7: package 'openxlsx' was built under R version 4.5.1 
+8: package 'digest' was built under R version 4.5.2 
+9: package 'countrycode' was built under R version 4.5.2 
+10: package 'rworldmap' was built under R version 4.5.2 
+Warning messages:
+1: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part7_source/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+2: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part7_source/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+3: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part7_source/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+4: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_PM25_Matched.csv': 帐户名与安全标识间无任何映射完成。
+5: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_LatLon_Matched.csv': 帐户名与安全标识间无任何映射完成。
+6: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+7: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+8: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+9: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_PM25_Matched.csv': 帐户名与安全标识间无任何映射完成。
+10: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_LatLon_Matched.csv': 帐户名与安全标识间无任何映射完成。
+There were 11 warnings (use warnings() to see them)
+                                                  analysis     n
+                                                    <char> <int>
+1:                       Full 204: DD association with IHD   204
+2:                       Full 204: IHD association with DD   204
+3: Cartographic/SIDS-excluded 159: DD association with IHD   159
+4: Cartographic/SIDS-excluded 159: IHD association with DD   159
+   max_absolute_difference mean_absolute_difference  tolerance   pass
+                     <num>                    <num>      <num> <lgcl>
+1:                       0                        0 0.00000001   TRUE
+2:                       0                        0 0.00000001   TRUE
+3:                       0                        0 0.00000001   TRUE
+4:                       0                        0 0.00000001   TRUE
+
+GWR model summaries:
+                                                  analysis     n outcome
+                                                    <char> <int>  <char>
+1:                       Full 204: DD association with IHD   204   IHD_z
+2:                       Full 204: IHD association with DD   204    DD_z
+3: Cartographic/SIDS-excluded 159: DD association with IHD   159   IHD_z
+4: Cartographic/SIDS-excluded 159: IHD association with DD   159    DD_z
+   exposure                   kernel            bandwidth_selection
+     <char>                   <char>                         <char>
+1:     DD_z Gaussian fixed bandwidth leave-one-out cross-validation
+2:    IHD_z Gaussian fixed bandwidth leave-one-out cross-validation
+3:     DD_z Gaussian fixed bandwidth leave-one-out cross-validation
+4:    IHD_z Gaussian fixed bandwidth leave-one-out cross-validation
+   bandwidth_km local_beta_min local_beta_q1 local_beta_median local_beta_q3
+          <num>          <num>         <num>             <num>         <num>
+1:     942.5653     -0.3822069   -0.03209627        0.07290897     0.2868472
+2:    1996.2631     -1.6070775    0.03954958        0.17728744     0.2320373
+3:     930.0639     -0.3822690   -0.02161345        0.16659214     0.2945785
+4:    1962.1078     -4.6611109    0.06322381        0.18402603     0.2207727
+   local_beta_max local_beta_negative_n local_beta_positive_n
+            <num>                 <int>                 <int>
+1:      1.0448869                    70                   134
+2:      0.7569492                    46                   158
+3:      0.8847420                    43                   116
+4:      0.8543099                    34                   125
+   local_abs_t_gt_1_96_n local_se_available_n global_OLS_beta global_OLS_p
+                   <int>                <int>           <num>        <num>
+1:                    54                  204       0.1271947  0.048081642
+2:                    90                  204       0.1524745  0.048081642
+3:                     0                    0       0.2235946  0.005522004
+4:                    77                  159       0.2174289  0.005522004
+   global_OLS_adjusted_R2 global_OLS_max_VIF gwr_AIC gwr_AICc gwr_effective_df
+                    <num>              <num>   <num>    <num>            <num>
+1:             0.22018331           1.405595      NA 528.7905         102.5295
+2:             0.06519558           1.749071      NA 489.5403         163.7294
+3:             0.23963467           1.569825      NA       NA               NA
+4:             0.09029379           1.873244      NA 404.5715         124.4983
+
+Small-island sensitivity comparison:
+                 direction retained_n full_bandwidth_km
+                    <char>      <int>             <num>
+1: DD association with IHD        159          942.5653
+2: IHD association with DD        159         1996.2631
+   SID_excluded_bandwidth_km bandwidth_percent_change local_beta_Pearson_r
+                       <num>                    <num>                <num>
+1:                  930.0639                -1.326315            0.8822424
+2:                 1962.1078                -1.710962            0.8292720
+   median_absolute_beta_change max_absolute_beta_change sign_agreement_n
+                         <num>                    <num>            <int>
+1:                 0.004948672                 1.150433              140
+2:                 0.006861456                 3.054033              148
+   sign_agreement_percent
+                    <num>
+1:               88.05031
+2:               93.08176
+
+Independent coefficient reconstruction:
+                                                  analysis     n
+                                                    <char> <int>
+1:                       Full 204: DD association with IHD   204
+2:                       Full 204: IHD association with DD   204
+3: Cartographic/SIDS-excluded 159: DD association with IHD   159
+4: Cartographic/SIDS-excluded 159: IHD association with DD   159
+   max_absolute_difference mean_absolute_difference  tolerance   pass
+                     <num>                    <num>      <num> <lgcl>
+1:                       0                        0 0.00000001   TRUE
+2:                       0                        0 0.00000001   TRUE
+3:                       0                        0 0.00000001   TRUE
+4:                       0                        0 0.00000001   TRUE

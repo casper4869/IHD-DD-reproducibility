@@ -1,0 +1,95 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+[1] "English_United States.utf8"
+Warning messages:
+1: package 'tidyr' was built under R version 4.5.2 
+2: package 'forecast' was built under R version 4.5.1 
+3: package 'MTS' was built under R version 4.5.1 
+4: package 'ggplot2' was built under R version 4.5.3 
+5: package 'patchwork' was built under R version 4.5.3 
+Warning messages:
+1: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+2: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+3: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+4: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+5: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+6: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+04:10:50 Baseline comparison: 
+   model reproduced_2030_count saved_2030_count max_IHD_abs_difference max_DD_abs_difference country_set_equal
+1   VARX                    19               19           5.002221e-12          4.911271e-11              TRUE
+2 ARIMAX                    13               14           4.164270e+01          2.617127e+03              TRUE
+Warning messages:
+1: Removed 5 rows containing missing values or values outside the scale range (`geom_line()`). 
+2: Removed 1 row containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+Warning messages:
+1: Removed 5 rows containing missing values or values outside the scale range (`geom_line()`). 
+2: Removed 1 row containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+Warning messages:
+1: Removed 5 rows containing missing values or values outside the scale range (`geom_line()`). 
+2: Removed 1 row containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+Warning messages:
+1: Removed 5 rows containing missing values or values outside the scale range (`geom_line()`). 
+2: Removed 1 row containing missing values or values outside the scale range (`geom_point()`). 
+null device 
+          1 
+
+2030 counts:
+# A tibble: 4 × 6
+  specification model   year n_countries n_valid n_high
+  <chr>         <chr>  <int>       <int>   <int>  <int>
+1 Harmonized    ARIMAX  2030         204     204     15
+2 Harmonized    VARX    2030         204     191     NA
+3 Original      ARIMAX  2030         204     204     13
+4 Original      VARX    2030         204     204     19
+
+Validation summary:
+# A tibble: 5 × 13
+  specification model       n_country_origin_hori…¹ IHD_RMSE IHD_MAE IHD_MAPE DD_RMSE DD_MAE DD_MAPE high_high_agreement
+  <chr>         <chr>                         <int>    <dbl>   <dbl>    <dbl>   <dbl>  <dbl>   <dbl>               <dbl>
+1 Benchmark     Persistence                    3672     13.2    7.33     2.18    476.   272.    5.66               0.995
+2 Harmonized    ARIMAX                         3672     17.6    8.75     2.50    480.   270.    5.62               0.993
+3 Harmonized    VARX                           3672     30.1   11.6      3.38    559.   304.    6.34               0.991
+4 Original      ARIMAX                         3672     16.8    8.56     2.48    485.   273.    5.70               0.992
+5 Original      VARX                           3672     26.3    9.92     2.74    477.   275.    5.78               0.993
+# ℹ abbreviated name: ¹​n_country_origin_horizon
+# ℹ 3 more variables: count_MAE <dbl>, count_max_absolute_error <int>, n_origin_horizons <int>
+
+Full-fit diagnostics:
+# A tibble: 5 × 13
+  origin specification model           n n_failed n_unstable_VARX maximum_VARX_root IHD_lower_clips IHD_upper_clips
+   <int> <chr>         <chr>       <int>    <int>           <int>             <dbl>           <int>           <int>
+1   2021 Benchmark     Persistence   204        0               0             NA                  0               0
+2   2021 Harmonized    ARIMAX        204        0               0             NA                  0               0
+3   2021 Harmonized    VARX          204       14             176              3.98               0               0
+4   2021 Original      ARIMAX        204        0               0             NA                  0               0
+5   2021 Original      VARX          204        0             176              3.98             732             285
+# ℹ 4 more variables: DD_lower_clips <int>, DD_upper_clips <int>, IHD_zero_floors <int>, DD_zero_floors <int>
+Warning messages:
+1: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+2: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+3: In file.info(files) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+4: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+5: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+6: In file.info(object) :
+  cannot resolve owner of file '<LOCAL_PROJECT_ROOT>/Part5/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+04:10:53 DONE 

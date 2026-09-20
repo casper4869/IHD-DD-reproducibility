@@ -1,0 +1,7 @@
+sex_name,analysis,stratum,n_estimates,min_estimate,median_estimate,max_estimate,q_lt_0_05,changed_vs_submitted
+Female,Table S1 corrected,Female,204,-0.522880482037174,0.381791777320662,0.835071837139161,46,
+Male,Table S1 corrected,Male,204,-0.468547389720686,0.541855576357074,0.890956515335011,109,
+Female,Table S1 significance comparison,Female,204,,,,46,6
+Male,Table S1 significance comparison,Male,204,,,,109,0
+Female,Figure 2E-F corrected,Female,3468,-0.983370899520429,0.179943483265908,0.993879350823944,1777,
+Male,Figure 2E-F corrected,Male,3468,-0.98895939479271,0.0313017602948875,0.988392812361311,1790,

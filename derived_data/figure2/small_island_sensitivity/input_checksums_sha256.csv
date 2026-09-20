@@ -1,0 +1,4 @@
+input,path,bytes,sha256
+S1,<LOCAL_PROJECT_ROOT>/文章撰写/International Journal of Health Geographics/Revision_2026-09-18/02_analysis/figure2_s1/Supplementary_Table_S1_corrected.csv,68924,b8e20608b7fe238db959076129fe9d18805f50e394bd1f87438656e9172645ce
+weighted,<LOCAL_PROJECT_ROOT>/文章撰写/International Journal of Health Geographics/Revision_2026-09-18/02_analysis/figure2_s1/Figure2_EF_weighted_correlations_corrected.csv,1970659,4b6a14d9d66c85f9e4781f0e2388714a9a3ff216bdeae471ea586ae75fa9c783
+SID_list,<LOCAL_PROJECT_ROOT>/文章撰写/International Journal of Health Geographics/Revision_2026-09-18/02_analysis/gwr_sensitivity/small_island_exclusion_list.csv,3487,b061ecc403f88b0084111ae1b2fdb627fa08e9677bec7b0e6ffb42d738380db7

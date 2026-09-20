@@ -1,0 +1,475 @@
+# HISTORICAL REFERENCE ONLY — DO NOT USE AS A CORRECTED ENTRY POINT
+# This copy is supplied for transparent code provenance. Machine-specific
+# paths were replaced with placeholders. Scientific and workflow limitations
+# are documented in the adjacent README and the repository audit reports.
+
+library(dplyr)
+library(tidyr)
+
+# 正确读取并删除第一列
+dd_raw <- read.csv("grouped_countries_Male_DD.csv", header = FALSE)
+dd_raw <- dd_raw[-1, ]   # 删除第一列
+
+ihd_raw <- read.csv("grouped_countries_Male_IHD.csv", header = FALSE)
+ihd_raw <- ihd_raw[-1, ]  # 删除第一列
+
+# 添加档位编号
+colnames(dd_raw) <- paste0("DD_", 1:4)
+colnames(ihd_raw) <- paste0("IHD_", 1:4)
+
+# 转为长格式 + 添加分档编号
+dd_long <- dd_raw %>%
+  pivot_longer(cols = everything(), names_to = "group", values_to = "location_name") %>%
+  mutate(mark1 = as.integer(gsub("DD_", "", group))) %>%
+  select(location_name, mark1)
+
+ihd_long <- ihd_raw %>%
+  pivot_longer(cols = everything(), names_to = "group", values_to = "location_name") %>%
+  mutate(mark2 = as.integer(gsub("IHD_", "", group))) %>%
+  select(location_name, mark2)
+
+# 合并两个数据框
+match_df <- full_join(dd_long, ihd_long, by = "location_name")
+
+# 输出 CSV
+write.csv(match_df, "Match_Male.csv", row.names = FALSE)
+
+# 提示成功
+cat("✅ Match.csv 已生成！\n")
+
+
+# Load the necessary library 疾病1记录为mark1 疾病2记录为mark2 1-4 代表发病率从低到高
+data <- read.csv("Match_Male.csv")
+
+# Create the 'result' column based on the conditions
+data$result <- ifelse(data$mark1 == data$mark2, 1,
+                      ifelse(data$mark1 > data$mark2, 2, 0))
+
+# Write the updated data to a new CSV file (if needed)
+write.csv(data, "Match_updated_Male.csv", row.names = FALSE)
+
+data1 <- read.csv("Match_updated_Male.csv")
+
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
+library(ggmap)
+library(maps)
+library(dplyr)
+library(RColorBrewer)
+
+####  map for ASMR
+worldData <- map_data('world')  #####使用map包提取世界·范围内的地图
+country_asr <- data1         
+country_asr$location <- as.character(data1$location_name) 
+
+###让country_asr$location的国家名称与worldData的国家名称一致
+
+country_asr$location[country_asr$location == "Republic of the Union of Myanmar"] = 'Myanmar'
+country_asr$location[country_asr$location == "Taiwan (Province of China)"] = 'Taiwan'
+country_asr$location[country_asr$location == "Republic of the Marshall Islands"] = 'Marshall Islands'
+country_asr$location[country_asr$location == "Turkmenistan"] = 'Turkmenistan'
+country_asr$location[country_asr$location == "Kingdom of Cambodia"] = 'Cambodia'
+country_asr$location[country_asr$location == "Democratic Socialist Republic of Sri Lanka"] = 'Sri Lanka'
+country_asr$location[country_asr$location == "Republic of Armenia"] = 'Armenia'
+country_asr$location[country_asr$location == "Independent State of Papua New Guinea"] = 'Papua New Guinea'
+country_asr$location[country_asr$location == "Democratic Republic of Timor-Leste"] = 'Timor-Leste'
+country_asr$location[country_asr$location == "Georgia"] = 'Georgia'
+country_asr$location[country_asr$location == "Lao People's Democratic Republic"] = 'Laos'
+country_asr$location[country_asr$location == "Solomon Islands"] = 'Solomon Islands'
+country_asr$location[country_asr$location == "Bosnia and Herzegovina"] = 'Bosnia and Herzegovina'
+country_asr$location[country_asr$location == "Republic of Maldives"] = 'Maldives'
+country_asr$location[country_asr$location == "Republic of the Philippines"] = 'Philippines'
+country_asr$location[country_asr$location == "Kyrgyz Republic"] = 'Kyrgyzstan'
+country_asr$location[country_asr$location == "Republic of Kiribati"] = 'Kiribati'
+country_asr$location[country_asr$location == "Democratic People's Republic of Korea"] = 'North Korea'
+country_asr$location[country_asr$location == "Republic of Croatia"] = 'Croatia'
+country_asr$location[country_asr$location == "Republic of Vanuatu"] = 'Vanuatu'
+country_asr$location[country_asr$location == "Republic of Tajikistan"] = 'Tajikistan'
+country_asr$location[country_asr$location == "Republic of Uzbekistan"] = 'Uzbekistan'
+country_asr$location[country_asr$location == "Republic of Indonesia"] = 'Indonesia'
+country_asr$location[country_asr$location == "Federated States of Micronesia"] = 'Micronesia'
+country_asr$location[country_asr$location == "Independent State of Samoa"] = 'Samoa'
+country_asr$location[country_asr$location == "Kingdom of Thailand"] = 'Thailand'
+country_asr$location[country_asr$location == "Republic of Azerbaijan"] = 'Azerbaijan'
+country_asr$location[country_asr$location == "Republic of Kazakhstan"] = 'Kazakhstan'
+country_asr$location[country_asr$location == "Socialist Republic of Viet Nam"] = 'Vietnam'
+country_asr$location[country_asr$location == "Kingdom of Tonga"] = 'Tonga'
+country_asr$location[country_asr$location == "Republic of Albania"] = 'Albania'
+country_asr$location[country_asr$location == "Malaysia"] = 'Malaysia'
+country_asr$location[country_asr$location == "Principality of Andorra"] = 'Andorra'
+country_asr$location[country_asr$location == "Federal Republic of Germany"] = 'Germany'
+country_asr$location[country_asr$location == "Kingdom of Belgium"] = 'Belgium'
+country_asr$location[country_asr$location == "Republic of Iceland"] = 'Iceland'
+country_asr$location[country_asr$location == "State of Israel"] = 'Israel'
+country_asr$location[country_asr$location == "Republic of Austria"] = 'Austria'
+country_asr$location[country_asr$location == "Republic of Cyprus"] = 'Cyprus'
+country_asr$location[country_asr$location == "Hellenic Republic"] = 'Greece'
+country_asr$location[country_asr$location == "Commonwealth of the Bahamas"] = 'Bahamas'
+country_asr$location[country_asr$location == "Dominican Republic"] = 'Dominican Republic'
+country_asr$location[country_asr$location == "Republic of El Salvador"] = 'El Salvador'
+country_asr$location[country_asr$location == "Grenada"] = 'Grenada'
+country_asr$location[country_asr$location == "Republic of Cuba"] = 'Cuba'
+country_asr$location[country_asr$location == "Republic of Ecuador"] = 'Ecuador'
+country_asr$location[country_asr$location == "Republic of Italy"] = 'Italy'
+country_asr$location[country_asr$location == "Republic of Chile"] = 'Chile'
+country_asr$location[country_asr$location == "Republic of Costa Rica"] = 'Costa Rica'
+country_asr$location[country_asr$location == "Ireland"] = 'Ireland'
+country_asr$location[country_asr$location == "Republic of Guatemala"] = 'Guatemala'
+country_asr$location[country_asr$location == "Republic of Panama"] = 'Panama'
+country_asr$location[country_asr$location == "Bolivarian Republic of Venezuela"] = 'Venezuela'
+country_asr$location[country_asr$location == "Saint Lucia"] = 'Saint Lucia'
+country_asr$location[country_asr$location == "Commonwealth of Dominica"] = 'Dominica'
+country_asr$location[country_asr$location == "United Mexican States"] = 'Mexico'
+country_asr$location[country_asr$location == "People's Republic of China"] = 'China'
+country_asr$location[country_asr$location == "Republic of Fiji"] = 'Fiji'
+country_asr$location[country_asr$location == "Republic of Iraq"] = 'Iraq'
+country_asr$location[country_asr$location == "Kingdom of Saudi Arabia"] = 'Saudi Arabia'
+country_asr$location[country_asr$location == "Republic of Finland"] = 'Finland'
+country_asr$location[country_asr$location == "Ukraine"] = 'Ukraine'
+country_asr$location[country_asr$location == "United Kingdom of Great Britain and Northern Ireland"] = 'UK'
+country_asr$location[country_asr$location == "Republic of Malta"] = 'Malta'
+country_asr$location[country_asr$location == "Republic of Singapore"] = 'Singapore'
+country_asr$location[country_asr$location == "Mongolia"] = 'Mongolia'
+country_asr$location[country_asr$location == "Republic of Slovenia"] = 'Slovenia'
+country_asr$location[country_asr$location == "Palestine"] = 'Palestine'
+country_asr$location[country_asr$location == "Republic of Poland"] = 'Poland'
+country_asr$location[country_asr$location == "Republic of Yemen"] = 'Yemen'
+country_asr$location[country_asr$location == "Republic of Lithuania"] = 'Lithuania'
+country_asr$location[country_asr$location == "Kingdom of Bahrain"] = 'Bahrain'
+country_asr$location[country_asr$location == "Hashemite Kingdom of Jordan"] = 'Jordan'
+country_asr$location[country_asr$location == "Republic of Paraguay"] = 'Paraguay'
+country_asr$location[country_asr$location == "Kingdom of Denmark"] = 'Denmark'
+country_asr$location[country_asr$location == "Syrian Arab Republic"] = 'Syria'
+country_asr$location[country_asr$location == "Australia"] = 'Australia'
+country_asr$location[country_asr$location == "Republic of Turkey"] = 'Turkey'
+country_asr$location[country_asr$location == "Republic of Bulgaria"] = 'Bulgaria'
+country_asr$location[country_asr$location == "Republic of Tunisia"] = 'Tunisia'
+country_asr$location[country_asr$location == "People's Republic of Bangladesh"] = 'Bangladesh'
+country_asr$location[country_asr$location == "State of Qatar"] = 'Qatar'
+country_asr$location[country_asr$location == "Islamic Republic of Afghanistan"] = 'Afghanistan'
+country_asr$location[country_asr$location == "North Macedonia"] = 'North Macedonia'
+country_asr$location[country_asr$location == "Hungary"] = 'Hungary'
+country_asr$location[country_asr$location == "Federal Democratic Republic of Nepal"] = 'Nepal'
+country_asr$location[country_asr$location == "Republic of Estonia"] = 'Estonia'
+country_asr$location[country_asr$location == "Russian Federation"] = 'Russia'
+country_asr$location[country_asr$location == "Japan"] = 'Japan'
+country_asr$location[country_asr$location == "Republic of Peru"] = 'Peru'
+country_asr$location[country_asr$location == "Republic of Serbia"] = 'Serbia'
+country_asr$location[country_asr$location == "Republic of Angola"] = 'Angola'
+country_asr$location[country_asr$location == "Republic of Belarus"] = 'Belarus'
+country_asr$location[country_asr$location == "Republic of Korea"] = 'South Korea'
+country_asr$location[country_asr$location == "Kingdom of Norway"] = 'Norway'
+country_asr$location[country_asr$location == "Slovak Republic"] = 'Slovakia'
+country_asr$location[country_asr$location == "Eastern Republic of Uruguay"] = 'Uruguay'
+country_asr$location[country_asr$location == "Montenegro"] = 'Montenegro'
+country_asr$location[country_asr$location == "Romania"] = 'Romania'
+country_asr$location[country_asr$location == "Brunei Darussalam"] = 'Brunei'
+country_asr$location[country_asr$location == "Republic of Latvia"] = 'Latvia'
+country_asr$location[country_asr$location == "Republic of Moldova"] = 'Moldova'
+country_asr$location[country_asr$location == "Argentine Republic"] = 'Argentina'
+country_asr$location[country_asr$location == "Central African Republic"] = 'Central African Republic'
+country_asr$location[country_asr$location == "Sultanate of Oman"] = 'Oman'
+country_asr$location[country_asr$location == "Saint Vincent and the Grenadines"] = 'Saint Vincent'
+country_asr$location[country_asr$location == "Belize"] = 'Belize'
+country_asr$location[country_asr$location == "Portuguese Republic"] = 'Portugal'
+country_asr$location[country_asr$location == "Kingdom of Sweden"] = 'Sweden'
+country_asr$location[country_asr$location == "United States of America"] = 'USA'
+country_asr$location[country_asr$location == "Barbados"] = 'Barbados'
+country_asr$location[country_asr$location == "Plurinational State of Bolivia"] = 'Bolivia'
+country_asr$location[country_asr$location == "Kingdom of Spain"] = 'Spain'
+country_asr$location[country_asr$location == "Swiss Confederation"] = 'Switzerland'
+country_asr$location[country_asr$location == "Canada"] = 'Canada'
+country_asr$location[country_asr$location == "Jamaica"] = 'Jamaica'
+country_asr$location[country_asr$location == "Republic of Guyana"] = 'Guyana'
+country_asr$location[country_asr$location == "Grand Duchy of Luxembourg"] = 'Luxembourg'
+country_asr$location[country_asr$location == "Kingdom of the Netherlands"] = 'Netherlands'
+country_asr$location[country_asr$location == "United Republic of Tanzania"] = 'Tanzania'
+country_asr$location[country_asr$location == "Republic of Guinea-Bissau"] = 'Guinea-Bissau'
+country_asr$location[country_asr$location == "Togolese Republic"] = 'Togo'
+country_asr$location[country_asr$location == "Republic of Sierra Leone"] = 'Sierra Leone'
+country_asr$location[country_asr$location == "Republic of San Marino"] = 'San Marino'
+country_asr$location[country_asr$location == "Republic of Guinea"] = 'Guinea'
+country_asr$location[country_asr$location == "Federal Republic of Nigeria"] = 'Nigeria'
+country_asr$location[country_asr$location == "Cook Islands"] = 'Cook Islands'
+country_asr$location[country_asr$location == "Islamic Republic of Mauritania"] = 'Mauritania'
+country_asr$location[country_asr$location == "Republic of Burundi"] = 'Burundi'
+country_asr$location[country_asr$location == "Republic of Palau"] = 'Palau'
+country_asr$location[country_asr$location == "Republic of Djibouti"] = 'Djibouti'
+country_asr$location[country_asr$location == "Republic of Chad"] = 'Chad'
+country_asr$location[country_asr$location == "Republic of Niue"] = 'Niue'
+country_asr$location[country_asr$location == "Puerto Rico"] = 'Puerto Rico'
+country_asr$location[country_asr$location == "Republic of Madagascar"] = 'Madagascar'
+country_asr$location[country_asr$location == "Union of the Comoros"] = 'Comoros'
+country_asr$location[country_asr$location == "Republic of Malawi"] = 'Malawi'
+country_asr$location[country_asr$location == "Republic of Mali"] = 'Mali'
+country_asr$location[country_asr$location == "Republic of Sudan"] = 'Sudan'
+country_asr$location[country_asr$location == "Republic of Zimbabwe"] = 'Zimbabwe'
+country_asr$location[country_asr$location == "Republic of Kenya"] = 'Kenya'
+country_asr$location[country_asr$location == "Northern Mariana Islands"] = 'Northern Mariana Islands'
+country_asr$location[country_asr$location == "Republic of Senegal"] = 'Senegal'
+country_asr$location[country_asr$location == "Greenland"] = 'Greenland'
+country_asr$location[country_asr$location == "Republic of Haiti"] = 'Haiti'
+country_asr$location[country_asr$location == "Republic of Honduras"] = 'Honduras'
+country_asr$location[country_asr$location == "Republic of Nicaragua"] = 'Nicaragua'
+country_asr$location[country_asr$location == "Republic of Suriname"] = 'Suriname'
+country_asr$location[country_asr$location == "Federative Republic of Brazil"] = 'Brazil'
+country_asr$location[country_asr$location == "Republic of Colombia"] = 'Colombia'
+country_asr$location[country_asr$location == "Bermuda"] = 'Bermuda'
+country_asr$location[country_asr$location == "Republic of Equatorial Guinea"] = 'Equatorial Guinea'
+country_asr$location[country_asr$location == "Burkina Faso"] = 'Burkina Faso'
+country_asr$location[country_asr$location == "Republic of Botswana"] = 'Botswana'
+country_asr$location[country_asr$location == "Saint Kitts and Nevis"] = 'Saint Kitts and Nevis'
+country_asr$location[country_asr$location == "Republic of Nauru"] = 'Nauru'
+country_asr$location[country_asr$location == "Republic of Mozambique"] = 'Mozambique'
+country_asr$location[country_asr$location == "Republic of Rwanda"] = 'Rwanda'
+country_asr$location[country_asr$location == "Republic of Côte d'Ivoire"] = 'Ivory Coast'
+country_asr$location[country_asr$location == "Republic of the Gambia"] = 'Gambia'
+country_asr$location[country_asr$location == "State of Kuwait"] = 'Kuwait'
+country_asr$location[country_asr$location == "Lebanese Republic"] = 'Lebanon'
+country_asr$location[country_asr$location == "State of Libya"] = 'Libya'
+country_asr$location[country_asr$location == "Kingdom of Morocco"] = 'Morocco'
+country_asr$location[country_asr$location == "Republic of the Niger"] = 'Niger'
+country_asr$location[country_asr$location == "State of Eritrea"] = 'Eritrea'
+country_asr$location[country_asr$location == "Democratic Republic of Sao Tome and Principe"] = 'Sao Tome and Principe'
+country_asr$location[country_asr$location == "Republic of Benin"] = 'Benin'
+country_asr$location[country_asr$location == "Republic of India"] = 'India'
+country_asr$location[country_asr$location == "People's Democratic Republic of Algeria"] = 'Algeria'
+country_asr$location[country_asr$location == "Arab Republic of Egypt"] = 'Egypt'
+country_asr$location[country_asr$location == "Islamic Republic of Iran"] = 'Iran'
+country_asr$location[country_asr$location == "Republic of the Congo"] <- "Republic of Congo"
+country_asr$location[country_asr$location == "Kingdom of Bhutan"] = 'Bhutan'
+country_asr$location[country_asr$location == "Islamic Republic of Pakistan"] = 'Pakistan'
+country_asr$location[country_asr$location == "Republic of Seychelles"] = 'Seychelles'
+country_asr$location[country_asr$location == "Republic of Cabo Verde"] = 'Cape Verde'
+country_asr$location[country_asr$location == "Republic of Cameroon"] = 'Cameroon'
+country_asr$location[country_asr$location == "American Samoa"] = 'American Samoa'
+country_asr$location[country_asr$location == "United States Virgin Islands"] = 'Virgin Islands'
+country_asr$location[country_asr$location == "Principality of Monaco"] = 'Monaco'
+country_asr$location[country_asr$location == "Republic of Ghana"] = 'Ghana'
+country_asr$location[country_asr$location == "Federal Republic of Somalia"] = 'Somalia'
+country_asr$location[country_asr$location == "Republic of Uganda"] = 'Uganda'
+country_asr$location[country_asr$location == "Republic of South Sudan"] = 'South Sudan'
+country_asr$location[country_asr$location == "Guam"] = 'Guam'
+country_asr$location[country_asr$location == "Republic of Liberia"] = 'Liberia'
+country_asr$location[country_asr$location == "Republic of South Africa"] = 'South Africa'
+country_asr$location[country_asr$location == "Kingdom of Lesotho"] = 'Lesotho'
+country_asr$location[country_asr$location == "Tuvalu"] = 'Tuvalu'
+country_asr$location[country_asr$location == "Republic of Namibia"] = 'Namibia'
+country_asr$location[country_asr$location == "Republic of Zambia"] = 'Zambia'
+country_asr$location[country_asr$location == "Gabonese Republic"] = 'Gabon'
+country_asr$location[country_asr$location == "Republic of Mauritius"] = 'Mauritius'
+country_asr$location[country_asr$location == "Federal Democratic Republic of Ethiopia"] = 'Ethiopia'
+country_asr$location[country_asr$location == "Kingdom of Eswatini"] = "Swaziland"
+# 手动修正
+# 第一部：将所有 location 列值为 "Antigua and Barbuda" 的记录，替换成 "Antigua"
+country_asr$location[country_asr$location == "Antigua and Barbuda"] = 'Antigua'
+# 第二部：将修改过后的 "Antigua" 所在的行添加到 country_asr 数据框中（复制这些行并重新绑定到数据框中）
+country_asr <- rbind(country_asr, country_asr[country_asr$location == "Antigua",])
+# 第三部：将其中一列 location 列为 "Antigua" 的记录改为 "Barbuda"，另一列保留原状
+country_asr$location[country_asr$location == "Antigua" & duplicated(country_asr$location)] = 'Barbuda'
+# 第一部：将所有 location 列值为 "Saint Kitts and Nevis" 的记录，替换成 "Saint Kitts"
+country_asr$location[country_asr$location == "Saint Kitts and Nevis"] = 'Saint Kitts'
+# 第二部：将修改过后的 "Saint Kitts" 所在的行添加到 country_asr 数据框中（复制这些行并重新绑定到数据框中）
+country_asr <- rbind(country_asr, country_asr[country_asr$location == "Saint Kitts",])
+# 第三部：将其中一列 location 列为 "Saint Kitts" 的记录改为 "Nevis"，另一列保留原状
+country_asr$location[country_asr$location == "Saint Kitts" & duplicated(country_asr$location)] = 'Nevis'
+country_asr$location[country_asr$location == "Côte d'Ivoire"] = 'Ivory Coast'
+# 第一部：将所有 location 列值为 "Saint Vincent and the Grenadines" 的记录，替换成 "Saint Vincent"
+country_asr$location[country_asr$location == "Saint Vincent and the Grenadines"] = 'Saint Vincent'
+# 第二部：将修改过后的 "Saint Vincent" 所在的行添加到 country_asr 数据框中（复制这些行并重新绑定到数据框中）
+country_asr <- rbind(country_asr, country_asr[country_asr$location == "Saint Vincent",])
+# 第三部：将其中一列 location 列为 "Saint Vincent" 的记录改为 "Grenadines"，另一列保留原状
+country_asr$location[country_asr$location == "Saint Vincent" & duplicated(country_asr$location)] = 'Grenadines'
+# 第一步：将所有 location 列值为 "French Republic" 的记录，替换成 "France"
+country_asr$location[country_asr$location == "French Republic"] = 'France'
+# 第二步：将修改过后的 "France" 所在的行添加到 country_asr 数据框中（复制这些行并重新绑定到数据框中）
+country_asr <- rbind(country_asr, country_asr[country_asr$location == "France",])
+# 第三步：将其中一列 location 列为 "France" 的记录改为 "French Guiana"，另一列保留原状
+country_asr$location[country_asr$location == "France" & duplicated(country_asr$location)] = 'French Guiana'
+# 第一步：将所有 location 列值为 "Republic of Trinidad and Tobago" 的记录，替换成 "Trinidad"
+country_asr$location[country_asr$location == "Republic of Trinidad and Tobago"] = 'Trinidad'
+# 第二步：将修改过后的 "Trinidad" 所在的行添加到 country_asr 数据框中（复制这些行并重新绑定到数据框中）
+country_asr <- rbind(country_asr, country_asr[country_asr$location == "Trinidad",])
+# 第三步：将其中一列 location 列为 "Trinidad" 的记录改为 "Tobago"，另一列保留原状
+country_asr$location[country_asr$location == "Trinidad" & duplicated(country_asr$location)] = 'Tobago'
+
+write.csv(country_asr,"ASMR_204_Male.csv")
+
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
+
+# 合并数据，以地图为主表
+
+total <- left_join(worldData, country_asr, by = c('region' = 'location'))
+
+# Tokelau 主要岛屿坐标
+total <- total %>%
+  mutate(location_name = ifelse(subregion == 13 & region == "New Zealand",
+                                "Tokelau", location_name)) %>%
+  mutate(region = ifelse(location_name == "Tokelau" & region == "New Zealand",
+                         "Tokelau", region))
+
+# Tuvalu 主要岛屿坐标
+tuvalu_islands <- data.frame(
+  long = c(176.08, 177.20, 176.32, 177.15, 178.41, 178.37, 179.13, 179.84, 179.30),
+  lat  = c(-5.65,  -6.10,  -6.28,  -7.22,  -7.47,  -8.00,  -8.52,  -9.38,  -10.75),
+  region = "Tuvalu",
+  subregion = NA,
+  location_name = "Tuvalu",   # 所有岛屿同名
+  val = NA,
+  lower = NA,
+  upper = NA,
+  group = 8888  # 让这些点属于同一个 group，便于绘图
+)
+
+# 合并到 total 数据
+total <- bind_rows(total, tuvalu_islands)
+
+# 设定不同结果的颜色
+mycolors <- c("0" = "#49c2d9",  # DD dominant (浅绿色)
+              "1" = "#e85e62",  # Consistent (红色)
+              "2" = "#a2c986")  # IHD dominant (绿色)
+
+# 创建地图 - 优化版本
+p <- ggplot() +
+  geom_polygon(
+    data = total[!is.na(total$result), ],  # 仅显示有结果的区域
+    aes(x = long, y = lat, group = group, fill = factor(result)),
+    color = "black", size = 0.1) +  # 添加边界线
+  
+  scale_fill_manual(
+    values = mycolors, 
+    name = "Result", 
+    labels = c("DD dominant", "Consistent", "IHD dominant"),
+    na.translate = FALSE) +  # 确保NA值不被转换或显示
+  
+  theme_void() +  # 去除背景网格
+  theme(
+    legend.position = "right", 
+    legend.title = element_text(face = "bold", size = 10),
+    legend.text = element_text(size = 9),
+    panel.background = element_rect(fill = "white", color = NA)
+  ) +
+  coord_fixed(1.3)  # 保持地图比例
+
+# 显示图形
+print(p)
+
+# 保存为高质量PDF
+ggsave("Result_Map_Male.pdf", plot = p, 
+       width = 12, height = 6, 
+       device = cairo_pdf, bg = "white")
+
+# 加载必要的包
+library(readr)
+
+# 读取CSV文件
+data <- read.csv("Match_Male.csv")
+
+# 查看数据结构
+head(data)
+
+# 创建新的列，每列表示 mark1 和 mark2 组合的条件
+data$`(1,1)` <- ifelse(data$mark1 == 1 & data$mark2 == 1, 1, 0)
+data$`(2,2)` <- ifelse(data$mark1 == 2 & data$mark2 == 2, 1, 0)
+data$`(3,3)` <- ifelse(data$mark1 == 3 & data$mark2 == 3, 1, 0)
+data$`(4,4)` <- ifelse(data$mark1 == 4 & data$mark2 == 4, 1, 0)
+
+data$`(2,1)` <- ifelse(data$mark1 == 2 & data$mark2 == 1, 1, 0)
+data$`(3,1)` <- ifelse(data$mark1 == 3 & data$mark2 == 1, 1, 0)
+data$`(4,1)` <- ifelse(data$mark1 == 4 & data$mark2 == 1, 1, 0)
+
+data$`(3,2)` <- ifelse(data$mark1 == 3 & data$mark2 == 2, 1, 0)
+data$`(4,2)` <- ifelse(data$mark1 == 4 & data$mark2 == 2, 1, 0)
+
+data$`(4,3)` <- ifelse(data$mark1 == 4 & data$mark2 == 3, 1, 0)
+
+data$`(1,2)` <- ifelse(data$mark1 == 1 & data$mark2 == 2, 1, 0)
+data$`(1,3)` <- ifelse(data$mark1 == 1 & data$mark2 == 3, 1, 0)
+data$`(1,4)` <- ifelse(data$mark1 == 1 & data$mark2 == 4, 1, 0)
+
+data$`(2,3)` <- ifelse(data$mark1 == 2 & data$mark2 == 3, 1, 0)
+data$`(2,4)` <- ifelse(data$mark1 == 2 & data$mark2 == 4, 1, 0)
+
+data$`(3,4)` <- ifelse(data$mark1 == 3 & data$mark2 == 4, 1, 0)
+# 查看更新后的数据
+head(data)
+
+# 保存更新后的数据到新的 CSV 文件
+write.csv(data, "Match_updated_with_columns_Male.csv", row.names = FALSE)
+
+# 选择要统计的列
+cols_to_check <- c("(1,1)", "(2,2)", "(3,3)", "(4,4)", "(2,1)", "(3,1)", "(4,1)", 
+                   "(3,2)", "(4,2)", "(4,3)", "(1,2)", "(1,3)", "(1,4)", "(2,3)", 
+                   "(2,4)", "(3,4)")
+
+# 统计每一列中有多少个 1
+counts <- colSums(data[cols_to_check] == 1)
+
+# 查看统计结果
+counts
+
+# 加载必要的包
+library(ggplot2)
+library(reshape2)
+
+# 正确顺序的列名
+correct_order <- c("(1,1)", "(1,2)", "(1,3)", "(1,4)",
+                   "(2,1)", "(2,2)", "(2,3)", "(2,4)",
+                   "(3,1)", "(3,2)", "(3,3)", "(3,4)",
+                   "(4,1)", "(4,2)", "(4,3)", "(4,4)")
+
+# 按正确顺序提取计数
+ordered_counts <- counts[correct_order]
+
+# 创建4x4矩阵
+heatmap_data <- matrix(ordered_counts, nrow=4, ncol=4, byrow=TRUE)
+rownames(heatmap_data) <- c("1", "2", "3", "4")
+colnames(heatmap_data) <- c("1", "2", "3", "4")
+
+# 创建类别矩阵（逻辑不变）
+color_matrix <- matrix(NA, nrow=4, ncol=4)
+rownames(color_matrix) <- c("1", "2", "3", "4")
+colnames(color_matrix) <- c("1", "2", "3", "4")
+
+for(i in 1:4) {
+  for(j in 1:4) {
+    if (i == j) {
+      color_matrix[i, j] <- "Consistent"
+    } else if (i > j) {
+      color_matrix[i, j] <- "IHD dominant"
+    } else {
+      color_matrix[i, j] <- "DD dominant"
+    }
+  }
+}
+
+# 转换数据框并合并
+heatmap_df <- as.data.frame(as.table(heatmap_data))
+colnames(heatmap_df) <- c("IHD percentile", "DD percentile", "Count")
+color_df <- as.data.frame(as.table(color_matrix))
+colnames(color_df) <- c("IHD percentile", "DD percentile", "Category")
+heatmap_df <- merge(heatmap_df, color_df)
+
+# 绘图（标签修正为百分比）
+ggplot(heatmap_df, aes(x=`IHD percentile`, y=`DD percentile`, fill=Category)) +
+  geom_tile(color="black", linewidth=0.3) +
+  geom_text(aes(label=Count), color="black", size=5) +
+  theme_minimal() +
+  coord_fixed() +
+  scale_x_discrete(labels=c("1"="0-25%", "2"="26-50%", "3"="51-75%", "4"="76-100%")) +
+  scale_y_discrete(labels=c("1"="0-25%", "2"="26-50%", "3"="51-75%", "4"="76-100%")) +
+  scale_fill_manual(values=c(
+    "IHD dominant" = "#49c2d9",  # 青色
+    "Consistent"   = "#e85e62",  # 红色
+    "DD dominant"  = "#a2c986"   # 浅绿色
+  )) +
+  labs(x="IHD Percentile Group", y="DD Percentile Group", 
+       title="Disease Dominance by Percentile Groups") +
+  theme(axis.text = element_text(size=12),
+        axis.title = element_text(size=14))
+
+
+

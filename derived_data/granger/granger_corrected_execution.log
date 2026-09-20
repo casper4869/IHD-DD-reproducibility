@@ -1,0 +1,172 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+There were 14 warnings (use warnings() to see them)
+Warning messages:
+1: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part4_source/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+2: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part4_source/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+3: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part4_source/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+4: In file.info(input_files) :
+  cannot resolve owner of file 'immutable_part4_source/IHD_DD_SDI_VAR_Granger_Results_NoSex.csv': 帐户名与安全标识间无任何映射完成。
+5: In file.info(object) :
+  cannot resolve owner of file 'immutable_part4_source/IHD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+6: In file.info(object) :
+  cannot resolve owner of file 'immutable_part4_source/DD_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+7: In file.info(object) :
+  cannot resolve owner of file 'immutable_part4_source/SDI_1992_2021_matrix.csv': 帐户名与安全标识间无任何映射完成。
+8: In file.info(object) :
+  cannot resolve owner of file 'immutable_part4_source/IHD_DD_SDI_VAR_Granger_Results_NoSex.csv': 帐户名与安全标识间无任何映射完成。
+
+Corrected Granger classification counts:
+                                                                                     analysis
+                                                                                       <char>
+ 1: Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction
+ 2: Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction
+ 3: Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction
+ 4:                          Covariance sensitivity: same BIC models, HC3, BH n=204/direction
+ 5:                          Covariance sensitivity: same BIC models, HC3, BH n=204/direction
+ 6:   Sensitivity: log changes, fixed lag 1, SDI exogenous, Newey-West(2), BH n=204/direction
+ 7:   Sensitivity: log changes, fixed lag 1, SDI exogenous, Newey-West(2), BH n=204/direction
+ 8:   Sensitivity: log changes, fixed lag 2, SDI exogenous, Newey-West(2), BH n=204/direction
+ 9:   Sensitivity: log changes, fixed lag 2, SDI exogenous, Newey-West(2), BH n=204/direction
+10:                 Small-island sensitivity: primary after SID exclusion, BH n=159/direction
+11:                 Small-island sensitivity: primary after SID exclusion, BH n=159/direction
+12:                 Small-island sensitivity: primary after SID exclusion, BH n=159/direction
+13:                                               Submitted model: SDI incorrectly endogenous
+14:                                               Submitted model: SDI incorrectly endogenous
+15:                                               Submitted model: SDI incorrectly endogenous
+16:                                               Submitted model: SDI incorrectly endogenous
+    classification     N denominator    percent
+            <char> <int>       <int>      <num>
+ 1:      DD_to_IHD   182         204 89.2156863
+ 2:        Neither    21         204 10.2941176
+ 3:  Bidirectional     1         204  0.4901961
+ 4:        Neither   193         204 94.6078431
+ 5:      DD_to_IHD    11         204  5.3921569
+ 6:        Neither    47         204 23.0392157
+ 7:      DD_to_IHD   157         204 76.9607843
+ 8:      DD_to_IHD   186         204 91.1764706
+ 9:        Neither    18         204  8.8235294
+10:      DD_to_IHD   147         159 92.4528302
+11:        Neither    11         159  6.9182390
+12:  Bidirectional     1         159  0.6289308
+13:  Bidirectional    94         204 46.0784314
+14:        Neither    20         204  9.8039216
+15:      DD_to_IHD    70         204 34.3137255
+16:      IHD_to_DD    20         204  9.8039216
+
+Diagnostics:
+                                            metric value
+                                            <char> <int>
+1:                                       Countries   204
+2:         Primary fits failed in either direction     0
+3: BG serial-correlation flags in either direction    84
+4:                 Influence flags without BG flag   120
+5:                No pre-specified diagnostic flag     0
+6:                     Small-island units excluded    45
+7:     Primary vs submitted classification changed   128
+
+Small-island exclusions (45):
+                                   location_name   ISO3
+                                          <char> <char>
+ 1:                               American Samoa    ASM
+ 2:                          Antigua and Barbuda    ATG
+ 3:                                     Barbados    BRB
+ 4:                                       Belize    BLZ
+ 5:                     Commonwealth of Dominica    DMA
+ 6:                  Commonwealth of the Bahamas    BHS
+ 7:                                 Cook Islands    COK
+ 8: Democratic Republic of Sao Tome and Principe    STP
+ 9:                           Dominican Republic    DOM
+10:               Federated States of Micronesia    FSM
+11:                                      Grenada    GRD
+12:                                         Guam    GUM
+13:        Independent State of Papua New Guinea    PNG
+14:                   Independent State of Samoa    WSM
+15:                                      Jamaica    JAM
+16:                           Kingdom of Bahrain    BHR
+17:                             Kingdom of Tonga    TON
+18:                     Northern Mariana Islands    MNP
+19:                                  Puerto Rico    PRI
+20:                       Republic of Cabo Verde    CPV
+21:                             Republic of Cuba    CUB
+22:                             Republic of Fiji    FJI
+23:                    Republic of Guinea-Bissau    GNB
+24:                           Republic of Guyana    GUY
+25:                            Republic of Haiti    HTI
+26:                         Republic of Kiribati    KIR
+27:                         Republic of Maldives    MDV
+28:                        Republic of Mauritius    MUS
+29:                            Republic of Nauru    NRU
+30:                             Republic of Niue    NIU
+31:                            Republic of Palau    PLW
+32:                       Republic of Seychelles    SYC
+33:                        Republic of Singapore    SGP
+34:                         Republic of Suriname    SUR
+35:              Republic of Trinidad and Tobago    TTO
+36:                          Republic of Vanuatu    VUT
+37:             Republic of the Marshall Islands    MHL
+38:                        Saint Kitts and Nevis    KNA
+39:                                  Saint Lucia    LCA
+40:             Saint Vincent and the Grenadines    VCT
+41:                              Solomon Islands    SLB
+42:                                      Tokelau    TKL
+43:                                       Tuvalu    TUV
+44:                         Union of the Comoros    COM
+45:                 United States Virgin Islands    VIR
+                                   location_name   ISO3
+                                          <char> <char>
+                                                                 exclusion_rule
+                                                                         <char>
+ 1:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 2:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 3:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 4:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 5:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 6:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 7:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 8:                          rworldmap/Natural Earth SID attribute equals 'SID'
+ 9:                          rworldmap/Natural Earth SID attribute equals 'SID'
+10:                          rworldmap/Natural Earth SID attribute equals 'SID'
+11:                          rworldmap/Natural Earth SID attribute equals 'SID'
+12:                          rworldmap/Natural Earth SID attribute equals 'SID'
+13:                          rworldmap/Natural Earth SID attribute equals 'SID'
+14:                          rworldmap/Natural Earth SID attribute equals 'SID'
+15:                          rworldmap/Natural Earth SID attribute equals 'SID'
+16:                          rworldmap/Natural Earth SID attribute equals 'SID'
+17:                          rworldmap/Natural Earth SID attribute equals 'SID'
+18:                          rworldmap/Natural Earth SID attribute equals 'SID'
+19:                          rworldmap/Natural Earth SID attribute equals 'SID'
+20:                          rworldmap/Natural Earth SID attribute equals 'SID'
+21:                          rworldmap/Natural Earth SID attribute equals 'SID'
+22:                          rworldmap/Natural Earth SID attribute equals 'SID'
+23:                          rworldmap/Natural Earth SID attribute equals 'SID'
+24:                          rworldmap/Natural Earth SID attribute equals 'SID'
+25:                          rworldmap/Natural Earth SID attribute equals 'SID'
+26:                          rworldmap/Natural Earth SID attribute equals 'SID'
+27:                          rworldmap/Natural Earth SID attribute equals 'SID'
+28:                          rworldmap/Natural Earth SID attribute equals 'SID'
+29:                          rworldmap/Natural Earth SID attribute equals 'SID'
+30:                          rworldmap/Natural Earth SID attribute equals 'SID'
+31:                          rworldmap/Natural Earth SID attribute equals 'SID'
+32:                          rworldmap/Natural Earth SID attribute equals 'SID'
+33:                          rworldmap/Natural Earth SID attribute equals 'SID'
+34:                          rworldmap/Natural Earth SID attribute equals 'SID'
+35:                          rworldmap/Natural Earth SID attribute equals 'SID'
+36:                          rworldmap/Natural Earth SID attribute equals 'SID'
+37:                          rworldmap/Natural Earth SID attribute equals 'SID'
+38:                          rworldmap/Natural Earth SID attribute equals 'SID'
+39:                          rworldmap/Natural Earth SID attribute equals 'SID'
+40:                          rworldmap/Natural Earth SID attribute equals 'SID'
+41:                          rworldmap/Natural Earth SID attribute equals 'SID'
+42: Tokelau: no country feature in the bundled rworldmap/Natural Earth geometry
+43:                          rworldmap/Natural Earth SID attribute equals 'SID'
+44:                          rworldmap/Natural Earth SID attribute equals 'SID'
+45:                          rworldmap/Natural Earth SID attribute equals 'SID'
+                                                                 exclusion_rule
+                                                                         <char>

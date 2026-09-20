@@ -1,0 +1,153 @@
+# REFERENCE ONLY; DO NOT EXECUTE
+# Safety-disabled by .txt extension. This is the located DD-configured reference
+# script with two local output paths replaced. It has no embedded credential.
+# The exact earlier IHD-configured script was not retained. See PROVENANCE.md.
+
+getwd()
+library(TwoSampleMR)
+library(GagnonMR)
+library(utils)
+library(dplyr)
+library(data.table)
+
+if (!exists("ao")) {
+  ao <- fread("ao.csv")
+}
+
+find_exposure <- function(outcome_id = NULL,
+                          outcome_file = NULL,
+                          outcome_full = NULL,
+                          outcome_name,
+                          num1 = 1,
+                          num2 = 66666,
+                          pval = 5e-06,
+                          clump_r2 = 0.001,
+                          clump_kb = 10000,
+                          proxies = TRUE,
+                          pop = "European",
+                          renew_id = FALSE,
+                          action = 2,
+                          save_path,
+                          missing_snps_file = "missing_SNPs_ID.txt") {
+  
+  if (renew_id) {
+    ao <- TwoSampleMR::available_outcomes()
+  }
+  
+  mrbase_id <- ao %>%
+    arrange(id) %>%
+    filter(population == pop)
+  
+  eqtl_id <- mrbase_id[grep("eqtl-a-*", mrbase_id$id), ]
+  mrbase_id <- mrbase_id[!mrbase_id$id %in% eqtl_id$id, ]
+  
+  if (!is.null(outcome_id)) {
+    mrbase_id <- mrbase_id[!mrbase_id$id %in% outcome_id, ]
+  }
+  
+  id <- mrbase_id %>%
+    arrange(id) %>%
+    select(id) %>%
+    filter(id != "finn-b-F5_DEPRESSIO")
+  
+  cat("IDs with insufficient SNPs:\n", file = missing_snps_file)
+  
+  i <- num1
+  while (i <= num2) {
+    cat(paste0(i, ": ", id$id[i], "\n"))
+    
+    exp <- tryCatch(
+      TwoSampleMR::extract_instruments(outcomes = id$id[i],
+                                       p1 = pval,
+                                       r2 = clump_r2,
+                                       kb = clump_kb,
+                                       clump = TRUE),
+      error = function(e) {
+        if (grepl("503|timed out", e$message)) {
+          cat("Network issue detected. Pausing for 5 minutes...\n")
+          Sys.sleep(300)
+          return(NULL)
+        }
+        return(NULL)
+      }
+    )
+    
+    if (is.null(exp) || nrow(exp) == 0) {
+      cat(paste0(id$id[i], "\n"), file = missing_snps_file, append = TRUE)
+      i <- i + 1
+      next
+    }
+    
+    out <- NULL
+    
+    if (!is.null(outcome_id)) {
+      out <- tryCatch(
+        TwoSampleMR::extract_outcome_data(
+          snps = exp$SNP,
+          outcomes = outcome_id,
+          proxies = proxies
+        ),
+        error = function(e) {
+          if (grepl("503|timed out", e$message)) {
+            cat("Network issue detected. Pausing for 10 minutes...\n")
+            Sys.sleep(600)
+            return(NULL)
+          }
+          return(NULL)
+        }
+      )
+    } else if (!is.null(outcome_file)) {
+      outcome_full <- readRDS(outcome_file)
+      out <- merge(outcome_full, exp, by = "SNP") %>%
+        select(SNP, grep("outcome", colnames(.)))
+    } else if (!is.null(outcome_full)) {
+      out <- merge(outcome_full, exp, by = "SNP") %>%
+        select(SNP, grep("outcome", colnames(.)))
+    }
+    
+    if (is.null(out) || nrow(out) == 0) {
+      cat(paste0(id$id[i], "\n"), file = missing_snps_file, append = TRUE)
+      i <- i + 1
+      next
+    }
+    
+    dat <- TwoSampleMR::harmonise_data(exposure_dat = exp,
+                                       outcome_dat = out,
+                                       action = action)
+    dat <- subset(dat, mr_keep == TRUE)
+    
+    if (nrow(dat) == 0) {
+      cat(paste0(id$id[i], "\n"), file = missing_snps_file, append = TRUE)
+      i <- i + 1
+      next
+    }
+    
+    res <- GagnonMR::primary_MR_analysis(dat = dat)
+    
+    if (nrow(res) != 0) {
+      print(res)
+      write.table(res,
+                  file = paste0(save_path, "/", i, ".txt"),
+                  sep = "\t",
+                  row.names = FALSE)
+    }
+    i <- i + 1
+  }
+}
+
+find_exposure(outcome_id = "finn-b-F5_DEPRESSIO",
+              outcome_file = NULL,
+              outcome_full = NULL,
+              outcome_name = "T2DM",
+              num1 = 1,
+              num2 = 66666,
+              pval = 5e-06,
+              clump_r2 = 0.001,
+              clump_kb = 10000,
+              proxies = FALSE,
+              pop = "European",
+              renew_id = FALSE,
+              action = 2,
+              save_path = "<LOCAL_OUTPUT_DIRECTORY>",
+              missing_snps_file = "<LOCAL_MISSING_STATUS_FILE>")
+

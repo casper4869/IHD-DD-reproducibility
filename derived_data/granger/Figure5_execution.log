@@ -1,0 +1,30 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Warning messages:
+1: package 'data.table' was built under R version 4.5.2 
+2: package 'ggplot2' was built under R version 4.5.3 
+3: package 'patchwork' was built under R version 4.5.3 
+4: package 'svglite' was built under R version 4.5.3 
+5: package 'digest' was built under R version 4.5.2 
+null device 
+          1 
+null device 
+          1 
+Warning messages:
+1: In file.info(files) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_LatLon_Matched.csv': 帐户名与安全标识间无任何映射完成。
+2: In file.info(object) :
+  cannot resolve owner of file 'immutable_part7_source/Country_with_LatLon_Matched.csv': 帐户名与安全标识间无任何映射完成。
+Figure 5 written to <LOCAL_PROJECT_ROOT>/文章撰写/International Journal of Health Geographics/Revision_2026-09-18/03_figures/figure5_corrected
+   direction_primary     N
+              <fctr> <int>
+1:         DD -> IHD   182
+2:           Neither    21
+3:     Bidirectional     1
+   direction_HC3     N
+          <fctr> <int>
+1:       Neither   193
+2:     DD -> IHD    11

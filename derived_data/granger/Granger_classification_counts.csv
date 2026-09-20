@@ -1,0 +1,17 @@
+analysis,classification,N,denominator,percent
+"Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction",DD_to_IHD,182,204,89.2156862745098
+"Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction",Neither,21,204,10.2941176470588
+"Primary: log changes, joint BIC lag 1-3, SDI exogenous, Newey-West(2), BH n=204/direction",Bidirectional,1,204,0.490196078431373
+"Covariance sensitivity: same BIC models, HC3, BH n=204/direction",Neither,193,204,94.6078431372549
+"Covariance sensitivity: same BIC models, HC3, BH n=204/direction",DD_to_IHD,11,204,5.3921568627451
+"Sensitivity: log changes, fixed lag 1, SDI exogenous, Newey-West(2), BH n=204/direction",Neither,47,204,23.0392156862745
+"Sensitivity: log changes, fixed lag 1, SDI exogenous, Newey-West(2), BH n=204/direction",DD_to_IHD,157,204,76.9607843137255
+"Sensitivity: log changes, fixed lag 2, SDI exogenous, Newey-West(2), BH n=204/direction",DD_to_IHD,186,204,91.1764705882353
+"Sensitivity: log changes, fixed lag 2, SDI exogenous, Newey-West(2), BH n=204/direction",Neither,18,204,8.82352941176471
+"Small-island sensitivity: primary after SID exclusion, BH n=159/direction",DD_to_IHD,147,159,92.4528301886792
+"Small-island sensitivity: primary after SID exclusion, BH n=159/direction",Neither,11,159,6.91823899371069
+"Small-island sensitivity: primary after SID exclusion, BH n=159/direction",Bidirectional,1,159,0.628930817610063
+Submitted model: SDI incorrectly endogenous,Bidirectional,94,204,46.078431372549
+Submitted model: SDI incorrectly endogenous,Neither,20,204,9.80392156862745
+Submitted model: SDI incorrectly endogenous,DD_to_IHD,70,204,34.3137254901961
+Submitted model: SDI incorrectly endogenous,IHD_to_DD,20,204,9.80392156862745

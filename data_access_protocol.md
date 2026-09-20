@@ -1,0 +1,131 @@
+# Data access and reconstruction protocol
+
+This protocol distinguishes files that the authors can share, third-party data that readers must retrieve from the provider, and evidence that remains pending. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
+
+## 1. GBD 2021 disease incidence estimates
+
+**Access class:** third-party, account-based retrieval.  
+**Provider:** Institute for Health Metrics and Evaluation (IHME), Global Health Data Exchange.  
+**Official entry point:** https://vizhub.healthdata.org/gbd-results/  
+**User guide:** https://ghdx.healthdata.org/sites/default/files/ihme_query_tool/GBD_Results_Tool_User_Guide_2019.pdf
+
+1. Create or use an IHME/GHDx account and sign in to the GBD Results Tool.
+2. Select the GBD 2021 results release.
+3. Retrieve the cause results separately for `Ischaemic heart disease` and `Depressive disorders`.
+4. For the age-standardised country analyses, select:
+   - measure: `Incidence`;
+   - metric: `Rate`;
+   - age: `Age-standardized`;
+   - sex: `Male` and `Female` (and `Both` only where explicitly required by a corrected script);
+   - years: `1992` through `2021`;
+   - locations: the 204 countries and territories represented in the analysis.
+5. For the age-specific analyses, repeat the query using the 20 five-year age bands from `<5 years` through `95+ years`, retaining sex-specific estimates for 1992–2021.
+6. Download CSV output rather than copying rounded values from the web display. Retain the provider-generated archive, query summary/codebook, download date, and GBD terms applying on that date.
+7. Do not rename or overwrite the raw downloads. Record their SHA-256 values, then run the preprocessing that generates the long files and 204 × 30 analysis matrices.
+
+The local project contains large combined GBD extracts (`Part0/IHD_country.csv` and `Part0/DD_country.csv`) with additional measures and metrics. Corrected downstream scripts filter the required incidence-rate records. Their local hashes are in `manifests/input_data_inventory.csv`; the files are not copied into this package because redistribution rights have not been confirmed.
+
+The legacy-source audit did not locate a valid consolidated raw-to-final IHD/DD preprocessing script. The project file named `Part0/Data preprocessing.R` is an unrelated rheumatoid-arthritis/anxiety-disorders example. Exact located artifacts and this limitation are recorded in `manifests/legacy_source_artifact_inventory.csv` and `reports/legacy_source_artifact_audit.md`.
+
+## 2. GBD population estimates
+
+**Access class:** third-party, account-based retrieval.  
+**Provider:** IHME/GHDx.  
+**Official entry point:** https://vizhub.healthdata.org/gbd-results/
+
+1. In the same GBD release, select measure `Population` and metric `Number`.
+2. Select the same 204 locations, male and female sex strata, the age bands required by Figure 2, and years 1992–2021.
+3. Download the full-precision CSV results. The local analysis received 21 provider CSV files; their individual byte counts and SHA-256 values are preserved in `derived_data/figure2/input_checksums_sha256.csv`.
+4. The Figure 2 correction joins population to disease data by immutable GBD `location_id`, sex, age, and year. It does not join on country name alone. The generated merge-coverage and duplicate-key reports are included in `derived_data/figure2/`.
+
+## 3. Socio-demographic Index
+
+**Access class:** third-party GBD covariate.  
+**Provider:** IHME/GHDx.
+
+Retrieve the GBD 2021 SDI series for the same 204 locations and years 1992–2021. Preserve the provider file and query metadata, then generate the 204 × 30 matrix used by the temporal analyses. The current local source and matrices are fingerprinted as `SDI-*` in the input inventory.
+
+## 4. PM2.5 and geographic coordinates
+
+**Access class:** processed local inputs with incomplete source metadata.
+
+The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. Before public deposition, the author must add:
+
+- the provider and stable landing page;
+- dataset/release version and retrieval date;
+- PM2.5 definition and unit;
+- country-matching and exclusion rules;
+- licence or terms of use;
+- a reproducible script that reconstructs both processed files.
+
+Until these fields are supplied, these inputs should be described as `[PENDING_SOURCE_METADATA]`, not as independently retrievable data.
+
+## 5. Map boundaries and small-island display
+
+Analytical observations remain one row per GBD location. Any polygon replication used only for display occurs after statistical estimation and does not add observations to Pearson, Granger, forecast, or GWR models. Figure 2A–B uses `rworldmap::getMap(resolution = "low")` (Natural Earth-derived geometry), maps the 204 analysis names to ISO3 using `countrycode` plus three explicit manual overrides, and applies each country value to every polygon part in the matched feature. The exact row-level mapping, feature names/indices, match status, polygon-part counts, and multipart flags are in `derived_data/figure2/Figure2_AB_mapping_coverage.csv`; the six-step procedure is in `derived_data/figure2/Figure2_AB_cartographic_procedure.md`. Geometry is available for 203/204 study units, with Tokelau explicitly unmatched.
+
+Before inspecting outcomes, the corrected correlation, Granger, and GWR sensitivities exclude the same 45 units: the 44 locations marked `SID` in the bundled `rworldmap`/Natural Earth metadata plus Tokelau. The correlation sensitivity readjusts S1 within 159 tests per sex and compares the 17 estimable age-specific Figure 2E-F distributions with the full analysis. Granger recomputes both directional BH families over the remaining 159 units. GWR refits both fixed-bandwidth models over the remaining 159 units while retaining the full-sample standardisation scale. Exact exclusion lists and results are in the component directories under `derived_data/`.
+
+## 6. IEU OpenGWAS and exploratory two-sample MR
+
+**Access class:** third-party GWAS summary data accessed through IEU OpenGWAS; preserved local catalogue and aggregate outputs are included where permitted.  
+**Catalogue and API:** https://opengwas.io and https://api.opengwas.io/  
+**Authentication and allowance guidance:** https://api.opengwas.io/api/  
+**`ieugwasr` guide:** https://mrcieu.github.io/ieugwasr/articles/guide.html  
+**TwoSampleMR documentation:** https://mrcieu.github.io/TwoSampleMR/
+
+### Preserved evidence included in this package
+
+1. `source_data/mr/ao.csv` is the 15,703-row catalogue snapshot used by the preserved workflow. It was created by `TwoSampleMR::available_outcomes()` when the cache was absent and loaded from disk on later runs. It contains 11,989 European-ancestry records. The count describes catalogue metadata, not completed MR analyses, and a current catalogue request may differ.
+2. `source_data/mr/IHD/bb.csv` and `source_data/mr/DD/bb.csv` are exact compact concatenations of the saved one-row aggregate results. They contain 5,880 IHD and 11,775 DD estimates, respectively. The companion `END.csv` files are also preserved.
+3. `derived_data/mr/manifest/01_gwas_catalog_manifest_15703.csv` contains one row per catalogue record, its technical ancestry scope, outcome-specific scheduling position/status, saved-result status, exact result fields where available, and the literal status `no saved estimate; exact reason not recorded` where no result was retained. These are automated technical statuses, not author judgements about phenotype relevance.
+4. `derived_data/mr/manifest/02_candidate_dual_outcome_summary_11988_IHD_anchor.csv` represents the 11,988-record IHD exposure schedule; `02b_common_candidate_dual_outcome_summary_11987.csv` is the common-ID set. Each outcome-specific run omits its own outcome from the exposure schedule, so there is no natural 11,988-ID common set.
+5. `derived_data/mr/manifest/07_input_sha256.csv` fingerprints all 17,666 preserved source files, including the 17,655 numbered one-row result files. Those redundant numbered files are not duplicated in this package because `bb.csv` preserves their exact concatenated aggregate estimates; the audit verified matching exposure IDs, numeric estimates, methods, and instrument-count fields.
+6. The preserved scripts used an exposure-instrument threshold of `P < 5 × 10^-6`, LD clumping at `r² = 0.001` within 10,000 kb, no outcome proxies, and harmonisation action 2. These are the reconstructed historical settings reported in the revision. The submitted manuscript's former `P < 5 × 10^-8` description was inconsistent with the located scripts and has been corrected.
+7. IHD outcome `finn-b-I9_IHD` had 31,640 cases and 187,152 controls; DD outcome `finn-b-F5_DEPRESSIO` had 23,424 cases and 192,220 controls in the retained catalogue metadata.
+
+### Exploratory scope and post-analysis reporting
+
+No phenotype was manually included or excluded before analysis according to its name, clinical relevance, modifiability, expected direction, or result. The automated technical scope retained records labelled European, applied the stored `eqtl-a-*` data-class rule (zero matches in this snapshot), omitted the target outcome itself, sorted IDs, and scheduled every remaining exposure.
+
+Benjamini-Hochberg adjustment was performed separately for IHD and DD with a fixed family size of 11,988 per outcome; missing saved estimates were represented by `P = 1`. Set A required q < 0.05 for both outcomes, concordant non-zero effect direction, and IVW for both outcomes (49 candidates). Set B additionally excluded all `finn-b-*` exposures after the exploratory screen to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets (29 candidates; 20 positive and 9 negative directions). Set B is the final Table 1/Figure 7 reporting set. This safeguard is not a claim that MR exposure and outcome GWAS must always originate from separate databases. Set C further excluded 11 obvious downstream clinical, diagnosis, medication, health-status, or healthcare-use markers and is supplied only as a descriptive sensitivity set (18 candidates), not as an unreported pre-screen.
+
+These files reconstruct a transparent aggregate-result screen; they do not recover the complete historical SNP-level analysis. The exact DD run underlying the submitted 50-row table is absent, and the preserved DD aggregate run does not reproduce those DD effects. The archive establishes a run mismatch but does not establish either run's date relative to journal submission. Accordingly, the revised 29-candidate set replaces the old table. Instruments, harmonised data, F statistics, MR-Egger, weighted-median, heterogeneity, pleiotropy-intercept, leave-one-out, MR-PRESSO and Steiger outputs cannot be recreated from the retained files and are not claimed.
+
+### Online-access safeguards
+
+No OpenGWAS request was made while preparing this revision package. `code/mr/00_catalogue_snapshot_provenance.R` validates `ao.csv` offline by default; its explicitly enabled refresh mode makes one catalogue request to a new path and never overwrites the historical snapshot. `code/mr/opengwas_sensitivity_rerun_RATE_LIMITED.R` is an optional future workflow for the 29 candidates and is disabled unless the user explicitly sets `RUN_OPENGWAS_SENSITIVITY=YES`. It must not be used as a crawler. It runs sequentially, caches completed exposure results, resumes without repeating completed work, paces every top-level API operation at a default 90-second interval plus jitter (minimum 60 seconds), prevents back-to-back exposure/outcome requests, calls the allowance check without overriding HTTP 429 protection, and stops immediately on `429` or `Retry-After` signals. Before use, the operator must review the current provider documentation and comply with the then-current allowance, authentication, licensing, and access rules. Tokens must remain in the user's environment and must never be placed in code, logs, or an archive.
+
+See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
+
+## 7. FinnGen/Risteys CodeWAS context
+
+**Access class:** public web interface; release-specific endpoint snapshots pending.  
+**Official interface:** https://risteys.finngen.fi/
+
+1. Select and record a fixed FinnGen/Risteys release rather than relying on the moving default interface.
+2. Open endpoints `I9_IHD` and `F5_DEPRESSIO` within that release.
+3. Save the endpoint definition, release number, access date, matched case/control counts, and downloadable CodeWAS table where the interface permits it.
+4. Record that CodeWAS constructs a case/control cohort matched on year of birth and sex and applies code-level association testing. These results provide observational clinical context; they are not MR estimates and do not establish causation.
+5. Preserve the Finnish/European ancestry limitation when interpreting transferability to the 204-location ecological analysis.
+
+## 8. Provisional repository plan
+
+1. Curate clean parameterised raw-to-final, Figure 1, and Figure 3 entry points from the fingerprinted legacy evidence.
+2. Complete the PM2.5, coordinate, and release-specific FinnGen/Risteys provenance metadata.
+3. Replace remaining absolute local paths in legacy scripts with documented arguments/configuration where a clean rerun is required.
+4. Add a code licence and a data-rights statement that does not relicense third-party GBD/OpenGWAS/FinnGen content.
+5. Create a versioned GitHub Release and archive that exact release in Zenodo to obtain a permanent DOI.
+6. Upload scripts, derived output tables, figure source data, manifests, README files, and permitted data. For restricted provider data, upload metadata and this retrieval protocol instead of the files.
+7. Test the archived offline commands in a clean environment, verify `package_file_manifest_sha256.csv`, then add the final GitHub URL, Zenodo DOI, version, and licence below.
+
+GitHub repository/release URL: `[PENDING_REPOSITORY_URL]`  
+Zenodo permanent DOI: `[PENDING_DOI]`  
+Release version: `[PENDING_RELEASE_VERSION]`  
+Code licence: `[PENDING_CODE_LICENCE]`
+
+## 9. Provisional Data and Code Availability text
+
+> The Global Burden of Disease 2021 estimates used in this study are third-party data available through the IHME GBD Results Tool (https://vizhub.healthdata.org/gbd-results/) subject to the provider's registration and terms of use. The exact query settings, file fingerprints, preprocessing steps, analysis scripts, derived source tables, and figure-generation code will be archived at [PENDING_REPOSITORY_URL], [PENDING_DOI]. IEU OpenGWAS data are accessible through https://opengwas.io subject to the applicable access terms. The archived release includes the preserved 15,703-record catalogue snapshot, the complete reconstructed catalogue-to-analysis status manifest, OpenGWAS identifiers, compact saved aggregate IHD and DD results, post-analysis candidate-set rules, source-file SHA-256 fingerprints, and final 29-candidate reporting tables. The catalogue count is not presented as the number of completed MR analyses. The historical DD SNP-level run and harmonised instrument data were not retained; consequently, SNP-level pleiotropy and sensitivity analyses cannot be reconstructed and are not claimed. FinnGen CodeWAS endpoint information is available through the release-specific Risteys interface (https://risteys.finngen.fi/). Third-party source files are not redistributed where the authors do not hold redistribution rights; step-by-step retrieval instructions and SHA-256 fingerprints are provided in the repository.
+
+This wording becomes submission-ready after the repository URL, DOI, release version, licence, and remaining non-MR source-provenance fields are completed. The disclosed absence of the historical DD SNP-level objects is a permanent analysis limitation, not a repository placeholder.

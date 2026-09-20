@@ -1,0 +1,7 @@
+# GWR verification and small-island sensitivity
+
+The 2021 cross-section contained all 204 study locations with complete IHD, DD, SDI, PM2.5, latitude, and longitude data. Each 2021 variable was z-standardised across the included locations. Two Gaussian fixed-bandwidth GWRs were fitted with great-circle distances (spgwr, longlat=TRUE): IHD ~ DD + SDI + PM2.5 and DD ~ IHD + SDI + PM2.5. Bandwidths were selected separately by leave-one-out cross-validation. Coordinates are country/territory representative points supplied in the original analysis, so coefficients describe local ecological associations, not individual effects.
+
+The sensitivity analysis removed 45 locations, leaving 159: locations classified by the bundled rworldmap/Natural Earth SID attribute plus Tokelau, which has no country feature in that geometry. SID is a Small Island Developing States metadata classification, not a polygon-area or land-size threshold, and includes several coastal states. The exclusion list was determined before examining GWR coefficients. All variables were re-standardised only once in the full 204-country input, matching the submitted analysis; the sensitivity therefore isolates geographic-unit removal rather than changing the measurement scale.
+
+Local t ratios are exported only as descriptive diagnostics. They are not interpreted as multiplicity-corrected country-level significance tests.
