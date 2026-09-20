@@ -1,6 +1,6 @@
 # Data access and reconstruction protocol
 
-This protocol distinguishes files that the authors can share, third-party data that readers must retrieve from the provider, and evidence that remains pending. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
+This protocol distinguishes files present in `v1.0.0`, third-party data that readers must retrieve from the provider, and evidence that was not recovered. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
 
 ## 1. GBD 2021 disease incidence estimates
 
@@ -49,7 +49,7 @@ Retrieve the GBD 2021 SDI series for the same 204 locations and years 1992–202
 
 **Access class:** processed local inputs with incomplete source metadata.
 
-The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. Before public deposition, the author must add:
+The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. These provenance fields could not be recovered for `v1.0.0`. Any future update should add:
 
 - the provider and stable landing page;
 - dataset/release version and retrieval date;
@@ -58,7 +58,7 @@ The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_
 - licence or terms of use;
 - a reproducible script that reconstructs both processed files.
 
-Until these fields are supplied, these inputs should be described as `[PENDING_SOURCE_METADATA]`, not as independently retrievable data.
+Until these fields are supplied, these inputs are disclosed as processed local inputs with incomplete source metadata, not as independently retrievable data.
 
 ## 5. Map boundaries and small-island display
 
@@ -100,7 +100,7 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 
 ## 7. FinnGen/Risteys CodeWAS context
 
-**Access class:** public web interface; release-specific endpoint snapshots pending.  
+**Access class:** public web interface; release-specific endpoint snapshots were not retained for `v1.0.0`.<br>
 **Official interface:** https://risteys.finngen.fi/
 
 1. Select and record a fixed FinnGen/Risteys release rather than relying on the moving default interface.
@@ -109,23 +109,20 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 4. Record that CodeWAS constructs a case/control cohort matched on year of birth and sex and applies code-level association testing. These results provide observational clinical context; they are not MR estimates and do not establish causation.
 5. Preserve the Finnish/European ancestry limitation when interpreting transferability to the 204-location ecological analysis.
 
-## 8. Provisional repository plan
+## 8. Repository release and archive
 
-1. Curate clean parameterised raw-to-final, Figure 1, and Figure 3 entry points from the fingerprinted legacy evidence.
-2. Complete the PM2.5, coordinate, and release-specific FinnGen/Risteys provenance metadata.
-3. Replace remaining absolute local paths in legacy scripts with documented arguments/configuration where a clean rerun is required.
-4. Add a code licence and a data-rights statement that does not relicense third-party GBD/OpenGWAS/FinnGen content.
-5. Create a versioned GitHub Release and archive that exact release in Zenodo to obtain a permanent DOI.
-6. Upload scripts, derived output tables, figure source data, manifests, README files, and permitted data. For restricted provider data, upload metadata and this retrieval protocol instead of the files.
-7. Test the archived offline commands in a clean environment, verify `package_file_manifest_sha256.csv`, then add the final GitHub URL, Zenodo DOI, version, and licence below.
+The public repository contains scripts, derived output tables, figure source data, manifests, README files, and permitted source data. Where redistribution rights were not established, it supplies provider retrieval instructions and local fingerprints instead of the third-party files. Sanitised historical Figure 1/Figure 3/SDI references remain clearly quarantined and are not presented as clean raw-to-final entry points. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance gaps remain explicitly disclosed.
 
-GitHub repository/release URL: `[PENDING_REPOSITORY_URL]`  
-Zenodo permanent DOI: `[PENDING_DOI]`  
-Release version: `[PENDING_RELEASE_VERSION]`  
-Code licence: `[PENDING_CODE_LICENCE]`
+- GitHub repository: https://github.com/casper4869/IHD-DD-reproducibility
+- Prepared GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.0
+- Zenodo permanent DOI: to be added after Zenodo archives `v1.0.0`
+- Release version: `1.0.0`
+- Repository-wide reuse licence: none; author-created rights are retained unless a file states otherwise
+- Zenodo rights identifier: `Other (Not Open)` with public file access
+- Third-party material: original provider and dataset-owner terms; see `RIGHTS_AND_LICENSING.md`
 
-## 9. Provisional Data and Code Availability text
+## 9. Data and Code Availability text before DOI insertion
 
-> The Global Burden of Disease 2021 estimates used in this study are third-party data available through the IHME GBD Results Tool (https://vizhub.healthdata.org/gbd-results/) subject to the provider's registration and terms of use. The exact query settings, file fingerprints, preprocessing steps, analysis scripts, derived source tables, and figure-generation code will be archived at [PENDING_REPOSITORY_URL], [PENDING_DOI]. IEU OpenGWAS data are accessible through https://opengwas.io subject to the applicable access terms. The archived release includes the preserved 15,703-record catalogue snapshot, the complete reconstructed catalogue-to-analysis status manifest, OpenGWAS identifiers, compact saved aggregate IHD and DD results, post-analysis candidate-set rules, source-file SHA-256 fingerprints, and final 29-candidate reporting tables. The catalogue count is not presented as the number of completed MR analyses. The historical DD SNP-level run and harmonised instrument data were not retained; consequently, SNP-level pleiotropy and sensitivity analyses cannot be reconstructed and are not claimed. FinnGen CodeWAS endpoint information is available through the release-specific Risteys interface (https://risteys.finngen.fi/). Third-party source files are not redistributed where the authors do not hold redistribution rights; step-by-step retrieval instructions and SHA-256 fingerprints are provided in the repository.
+> The Global Burden of Disease 2021 estimates used in this study are third-party data available through the IHME GBD Results Tool (https://vizhub.healthdata.org/gbd-results/) subject to the provider's registration and terms of use. The exact query settings, file fingerprints, preprocessing records, available analysis scripts, derived source tables, and figure-generation code are provided in release 1.0.0 at https://github.com/casper4869/IHD-DD-reproducibility; the version-specific Zenodo DOI will be inserted here after archiving. IEU OpenGWAS data are accessible through https://opengwas.io subject to the applicable access terms. The archived release includes the preserved 15,703-record catalogue snapshot, the complete reconstructed catalogue-to-analysis status manifest, OpenGWAS identifiers, compact saved aggregate IHD and DD results, post-analysis candidate-set rules, source-file SHA-256 fingerprints, and final 29-candidate reporting tables. The catalogue count is not presented as the number of completed MR analyses. The historical DD SNP-level run and harmonised instrument data were not retained; consequently, SNP-level pleiotropy and sensitivity analyses cannot be reconstructed and are not claimed. FinnGen CodeWAS endpoint information is available through the release-specific Risteys interface (https://risteys.finngen.fi/). Third-party source files are not redistributed where the authors do not hold redistribution rights; step-by-step retrieval instructions and SHA-256 fingerprints are provided in the repository.
 
-This wording becomes submission-ready after the repository URL, DOI, release version, licence, and remaining non-MR source-provenance fields are completed. The disclosed absence of the historical DD SNP-level objects is a permanent analysis limitation, not a repository placeholder.
+After Zenodo mints the DOI, replace the DOI-insertion phrase with the version-specific DOI. The disclosed absence of the historical DD SNP-level objects and the stated non-MR provenance gaps are analysis limitations, not repository placeholders.

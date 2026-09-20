@@ -23,13 +23,12 @@
 - Legacy scripts with unresolved or mismatched specifications appear only as non-executable, path-redacted `.R.txt` provenance records and are not offered as the revised code path.
 - OpenGWAS credentials, account information, and tokens are never included.
 
-## Blocking gaps
+## Known scope gaps
 
 - The exact submitted-table DD SNP-level run, harmonised instruments, and pleiotropy/sensitivity estimators were not retained. This is a disclosed permanent limitation; the aggregate 15,703-record catalogue-to-analysis status manifest itself is included.
 - Curated parameterised raw-to-final, Figure 1, and Figure 3 entry points; private-original fingerprints and the path-redacted reference records remain insufficient for clean reruns.
 - Verified external source metadata and generation code for PM2.5 and coordinates.
 - Release-specific FinnGen/Risteys endpoint metadata and exports.
 - Parameterised release paths and a clean-environment rerun.
-- Public repository record, DOI, release version, and licences.
 
-This audit supports public deposition of the current aggregate-result reconstruction with its stated limits once the repository, DOI, licence, and remaining non-MR provenance fields are completed. It does not support wording that the historical SNP-level DD run or MR sensitivity analyses are reproducible, and it does not support claiming public availability before the archive is deposited.
+This audit supports public deposition of the current aggregate-result reconstruction at https://github.com/casper4869/IHD-DD-reproducibility with the stated limits and rights-retained terms. The version `1.0.0` Zenodo DOI will be added after archival. The audit does not support wording that the historical SNP-level DD run or MR sensitivity analyses are reproducible; unresolved non-MR provenance remains explicitly disclosed.

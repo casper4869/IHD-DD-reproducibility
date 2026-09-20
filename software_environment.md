@@ -59,4 +59,4 @@ The submitted manuscript stated R 4.3.2 for the original analysis. No complete l
 
 ## Environment reconstruction
 
-No `renv.lock` has yet been generated. Before DOI deposition, create a clean R environment, install the recorded versions where available, rerun all corrected analyses, and archive the resulting lockfile plus fresh `sessionInfo()` output. If exact historical package versions cannot be installed, record the substitution and verify numerical equality against the archived source tables and checksums.
+No `renv.lock` is included in `v1.0.0`. Reproducibility relies on the archived `sessionInfo()` records, package-version tables, source tables, independent reruns, and checksums. This is a disclosed environment limitation. A future release may add a clean-environment lockfile and document any package substitutions after numerical comparison with the archived outputs.

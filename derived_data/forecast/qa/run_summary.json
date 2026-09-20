@@ -38,5 +38,5 @@
   "uncertainty_bands": false,
   "figure_mm": [183, 103],
   "tiff_dpi": 600,
-  "independent_review": "pending"
+  "independent_review": "recorded separately in qa/independent_review.md"
 }

@@ -330,7 +330,8 @@ write_csv(data.frame(check = c("inputs_immutable", "204_country_denominator", "r
   passed = TRUE), "qa/deterministic_gates.csv")
 jsonlite::write_json(list(completed_at = format(Sys.time(), "%Y-%m-%d %H:%M:%S %z"), seed = 20260918,
   origin_years = c(2012, 2015, 2018), endpoint_counts = endpoint, uncertainty_bands = FALSE,
-  figure_mm = c(width_mm, height_mm), tiff_dpi = 600, independent_review = "pending"),
+  figure_mm = c(width_mm, height_mm), tiff_dpi = 600,
+  independent_review = "recorded separately in qa/independent_review.md"),
   file.path(out_dir, "qa", "run_summary.json"), pretty = TRUE, auto_unbox = TRUE)
 all_outputs <- c(list.files(out_dir, recursive = TRUE, full.names = TRUE), paste0(stem, c(".svg", ".pdf", ".tiff", ".png")))
 all_outputs <- all_outputs[file.exists(all_outputs) & !basename(all_outputs) %in% c("output_checksums.csv", "execution.log")]

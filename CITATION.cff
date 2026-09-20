@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the version-specific Zenodo record."
+title: "Reproducibility materials for ‘Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits’"
+type: software
+version: 1.0.0
+date-released: 2026-09-20
+repository-code: "https://github.com/casper4869/IHD-DD-reproducibility"
+abstract: >-
+  Analysis scripts, derived outputs, figure-source material, software records,
+  checksums, and data-access instructions supporting a global ecological study
+  of ischaemic heart disease and depressive disorders and an exploratory screen
+  of shared genetically associated traits.
+authors:
+  - given-names: Zhengqi
+    family-names: Qiu
+    affiliation: "Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, 510370, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, 510370, Guangdong, China"
+  - given-names: Yunzhi Emma
+    family-names: Huang
+    affiliation: "Nutrilite Health Institute, Amway R&D Center, 720 Cailun Road, 201203, Shanghai, China"
+  - given-names: Xingya
+    family-names: Lei
+    affiliation: "Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, 510370, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, 510370, Guangdong, China"
+  - given-names: Juntao
+    family-names: Kan
+    affiliation: "Nutrilite Health Institute, Amway R&D Center, 720 Cailun Road, 201203, Shanghai, China"
+keywords:
+  - ischaemic heart disease
+  - depressive disorders
+  - Global Burden of Disease
+  - spatial epidemiology
+  - geographically weighted regression
+  - temporal predictive association
+  - Mendelian randomisation
+  - IEU OpenGWAS
+  - reproducibility

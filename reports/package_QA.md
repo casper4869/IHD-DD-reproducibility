@@ -1,4 +1,4 @@
-# Public-repository staging QA
+# Public repository v1.0.0 QA
 
 QA date: 2026-09-20
 
@@ -8,6 +8,7 @@ QA date: 2026-09-20
 - All three packaged Python scripts passed AST parsing.
 - All 114 packaged CSV files were read with a standards-compliant parser; zero row-width failures.
 - The packaged supplementary DOCX passed ZIP/XML relationship checks and the independent 204-row S1/204-row S2 content validator. Four nonportable XLSX convenience exports with broken drawing relationships were excluded; their authoritative CSV tables and generation code remain included.
+- `.zenodo.json` passed JSON parsing with four creators, version `1.0.0`, open file access, and the conservative `other-closed` rights identifier. `CITATION.cff` passed YAML parsing with the same four creators and version.
 - The largest file is `figures/Figure2_EF_corrected.tif` at 26,220,552 bytes, below GitHub's per-file limit.
 - A byte-level scan found no GitHub token, literal JWT, private key, or quoted password assignment.
 - No `__pycache__` file is present.
@@ -45,6 +46,6 @@ QA date: 2026-09-20
 
 ## Scope limits and remaining author actions
 
-The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance still require author confirmation. Repository URL, DOI, version, creators/ORCIDs, and code/data-rights licences remain pending until GitHub and Zenodo publication.
+The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The Zenodo DOI is added after archival.
 
-The final staging tree contains 249 files including the manifest; its 248 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
+The final `v1.0.0` tree contains 251 files including the manifest; its 250 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.

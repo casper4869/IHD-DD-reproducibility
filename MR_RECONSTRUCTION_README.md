@@ -79,6 +79,6 @@ Current official guidance:
 - OpenGWAS API authentication and allowance: https://api.opengwas.io/api/
 - `ieugwasr` access guide: https://mrcieu.github.io/ieugwasr/articles/guide.html
 
-## Public-release action
+## Public archive
 
-The repository URL, permanent DOI, release version, and code/data-rights licences remain author actions. Replace the placeholders in `data_access_protocol.md` after depositing this package in a durable repository. The absence of the historical DD SNP-level objects must remain disclosed; it cannot be repaired by silently substituting a current database rerun.
+Version `1.0.0` is prepared at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.0 for permanent Zenodo archiving. The resulting version-specific DOI will be recorded on the repository landing page after minting. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.

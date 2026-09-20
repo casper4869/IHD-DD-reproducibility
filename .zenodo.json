@@ -1,0 +1,40 @@
+{
+  "title": "Reproducibility materials for ‘Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits’",
+  "description": "This release contains analysis scripts, derived outputs, figure-source material, software records, checksums, and step-by-step access instructions supporting a global ecological analysis of ischaemic heart disease and depressive disorders. It includes a preserved 15,703-record IEU OpenGWAS catalogue metadata snapshot, outcome-specific scheduling and status records, 5,880 saved IHD and 11,775 saved DD aggregate estimates, an exploratory 49-trait aggregate screen, and the final 29-trait reporting set after a post-screen FinnGen exposure restriction to reduce participant overlap and same-biobank dependence. The included catalogue metadata and aggregate analytical outputs do not transfer rights in the underlying GWAS datasets. Other third-party files are represented by provider access routes and local fingerprints where redistribution rights were not established. The MR screen is exploratory and does not establish causal effects.",
+  "creators": [
+    {
+      "name": "Qiu, Zhengqi",
+      "affiliation": "Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, 510370, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, 510370, Guangdong, China"
+    },
+    {
+      "name": "Huang, Yunzhi Emma",
+      "affiliation": "Nutrilite Health Institute, Amway R&D Center, 720 Cailun Road, 201203, Shanghai, China"
+    },
+    {
+      "name": "Lei, Xingya",
+      "affiliation": "Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, 510370, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, 510370, Guangdong, China"
+    },
+    {
+      "name": "Kan, Juntao",
+      "affiliation": "Nutrilite Health Institute, Amway R&D Center, 720 Cailun Road, 201203, Shanghai, China"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-09-20",
+  "access_right": "open",
+  "license": "other-closed",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "ischaemic heart disease",
+    "depressive disorders",
+    "Global Burden of Disease",
+    "spatial epidemiology",
+    "geographically weighted regression",
+    "temporal predictive association",
+    "Mendelian randomisation",
+    "IEU OpenGWAS",
+    "reproducibility"
+  ],
+  "notes": "Files are publicly accessible for transparency and independent verification. The record uses Zenodo's Other (Not Open) rights identifier because no repository-wide reuse licence has been granted. Rights vary by file and source: author-written code, author-generated documentation and derived outputs, and third-party material may be subject to different permissions or provider terms. The included historical OpenGWAS catalogue metadata snapshot and author-generated aggregate analytical outputs do not grant rights in the underlying GWAS datasets. See RIGHTS_AND_LICENSING.md. No ORCID or funding metadata are asserted because none were verified for this release."
+}

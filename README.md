@@ -4,9 +4,11 @@
 **Journal:** International Journal of Health Geographics  
 **Submission ID:** 61a39b35-8588-492a-bc38-1640628b2633  
 **Package date:** 2026-09-20  
-**Status:** `REVISION_RELEASE_CANDIDATE_WITH_DISCLOSED_LIMITATIONS`
+**Repository:** https://github.com/casper4869/IHD-DD-reproducibility<br>
+**Prepared release:** `v1.0.0`<br>
+**Status:** `PUBLIC_REPOSITORY; VERSIONED_RELEASE_AND_ZENODO_DOI_PENDING`
 
-This directory is the reviewed staging tree for a later GitHub release and Zenodo archive. It collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions that are presently available for the revision. No public repository URL or DOI has yet been assigned, and none is claimed here. The graphical abstract is intentionally absent because it will not be submitted.
+This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.0.0` is prepared for permanent Zenodo archiving; the DOI will be added after Zenodo mints it. The graphical abstract is intentionally absent because it will not be submitted.
 
 ## What is reproducible now
 
@@ -18,7 +20,7 @@ This directory is the reviewed staging tree for a later GitHub release and Zenod
 | SDI-adjusted temporal-precedence analysis / Supplementary Table S2 / Figure 5 | Available with exploratory interpretation | Corrected directional equations with SDI as exogenous control, unrounded directional BH families, lag, covariance-estimator and 45-unit cartographic/SID sensitivities, diagnostics, checksums, session information, and corrected Figure 5; the final reporting explicitly leads with the large Newey–West/HC3 difference |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
 | SNP-level MR sensitivity analyses | Not reconstructable from the preserved historical files | The exact historical DD run used for the submitted 50-row table and SNP-level instruments/harmonised objects were not retained; MR-Egger, weighted median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger and instrument-strength analyses therefore cannot be recreated from this archive |
-| Public archival record | Pending author action | A versioned repository release and permanent DOI must be created before the final response is submitted |
+| Public archival record | Repository public; DOI pending | The reviewed files are public on GitHub. Release `v1.0.0` will be archived by Zenodo and the resulting version-specific DOI will be added before the final response is submitted |
 
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 
@@ -37,7 +39,7 @@ The MR component is explicitly exploratory. There was no manual pre-screening of
 - `MR_RECONSTRUCTION_README.md`: MR reconstruction, selection rules, source-file map, online-access safeguards, and remaining limitations.
 - `MR_SCREEN_FLOW.md`: plain-language accounting of the 15,703 → 11,988 → 5,880/11,775 → 49 → 29 flow and the absence of manual phenotype pre-selection.
 - `SECURITY_AND_ACCESS.md`: credential handling and OpenGWAS no-crawling rules.
-- `RELEASE_CHECKLIST.md` and `ZENODO_METADATA_DRAFT.md`: author actions before GitHub/Zenodo publication.
+- `RELEASE_CHECKLIST.md` and `ZENODO_METADATA.md`: release status and the metadata supplied to GitHub/Zenodo.
 
 ## Run order
 
@@ -166,7 +168,7 @@ With no enabling environment variable, this command only validates the included 
 
 `manifests/package_file_manifest_sha256.csv` covers every package file except itself; self-inclusion would make a stable checksum impossible. The checksum of any distributed ZIP archive should be stored beside the ZIP.
 
-## Remaining release blockers
+## Disclosed limitations and remaining archive steps
 
 - The complete historical DD SNP-level run used for the submitted 50-row table is unavailable. The revised analysis therefore replaces that table with the traceable 29-candidate aggregate reconstruction and explicitly withholds SNP-level pleiotropy/sensitivity claims.
 - Curate raw-to-final preprocessing and Figure 1/Figure 3 into clean parameterised scripts. Sanitised historical Figure 1, Figure 3, and SDI `.R.txt` references are included with original hashes and limitations, but they are not corrected release entry points and must not be executed as the reproducible workflow.
@@ -174,5 +176,9 @@ With no enabling environment variable, this command only validates the included 
 - Confirm the source gazetteer/geocoder, coordinate definition, version, retrieval date, licence, and matching code for the 204-row coordinate file.
 - Record release-specific FinnGen/Risteys endpoint exports, release number, and access date.
 - Parameterise any remaining archival local paths needed for clean reruns and verify the release commands in a clean environment.
-- Replace the remaining `[PENDING_*]` repository, DOI, licence, and non-MR source-provenance fields in `data_access_protocol.md` with verified information.
-- Select the code/data-rights licences, deposit the final package in a durable repository, mint a DOI, and test the public or reviewer link outside the depositor account.
+- Add the Zenodo DOI to this repository and the manuscript-facing Data and Code Availability statement after Zenodo archives `v1.0.0`.
+- Test the version-specific DOI and public file download outside the depositor account before resubmission.
+
+## Rights
+
+This is a publicly accessible, mixed-rights archive. No repository-wide reuse licence is granted in `v1.0.0`; author-created material retains its existing rights unless a file states otherwise, and third-party material remains subject to its original provider terms. The Zenodo record therefore uses `Other (Not Open)` while keeping the files publicly accessible for transparency and independent verification. See `RIGHTS_AND_LICENSING.md`.
