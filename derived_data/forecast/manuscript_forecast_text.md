@@ -1,6 +1,6 @@
 # Internal forecast-audit interpretation draft
 
-> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+> **Scope:** Historical post-submission audit/sensitivity draft only. It is not approved manuscript text and its `Figure 4a/4b` references concern the internal audit display, not the revised minimal Figure 4.
 
 
 ## Results
@@ -13,4 +13,4 @@ Exploratory projections were sensitive to model specification; instability in co
 
 ## Required reporting correction
 
-The former +/-15% count bands were not statistical confidence intervals and have been removed. Forecasts are conditional on constant future SDI. No joint uncertainty interval for the country count has been validated. The archived ARIMAX count of 14 is not reproduced by the raw-scale trend implementation in the recorded environment, so it should not be retained without resolving the historical version discrepancy.
+The former +/-15% count bands were not statistical confidence intervals and have been removed. Forecasts are conditional on constant future SDI. No joint uncertainty interval for the country count has been validated. The revised minimal Figure 4 preserves the archived ARIMAX trajectory ending at 14 because that value appears in both the submitted artwork and archived classification, while the current raw-scale rerun ending at 13 is disclosed as implementation uncertainty. Neither value should be treated as a precise expected count.

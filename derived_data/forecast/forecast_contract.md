@@ -1,6 +1,6 @@
 # Forecast and Figure 4 contract
 
-> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+> **Scope:** This contract governs the post-submission internal forecast audit. The revised manuscript Figure 4 is a separate minimal redraw from `results/Figure4_minimal_source.csv`, preserving the archived A=VARX/B=ARIMAX trajectories and 2030 endpoints of 19/14. The audit specification below does not replace those archived trajectories.
 
 
 Locked before execution, 18 September 2026.

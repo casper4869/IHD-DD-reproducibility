@@ -1,6 +1,18 @@
-# Internal forecast audit and sensitivity report
+# Figure 4 redraw and internal forecast audit report
 
-> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+## Revised manuscript Figure 4
+
+The main manuscript Figure 4 is the minimal R redraw in `../../figures/Figure4.*`. Panel A shows the archived VARX trajectory and panel B shows the archived ARIMAX trajectory. Both panels retain the identical historical counts for 1992–2021; the projected counts for 2022–2030 are 17/16/21/19/20/18/19/20/19 for VARX and 15/14/14/14/15/14/14/14/14 for ARIMAX, preserving the archived 2030 endpoints of 19 and 14.
+
+The figure is rendered from `results/Figure4_minimal_source.csv` by `../../code/forecast/02_draw_figure4_minimal.R` without refitting either model. Titles, subtitles, model names, legends, prose annotations, endpoint callouts, and the heuristic ±15% ribbon were removed from the graphic. Panel/model mapping, visual encodings, model assumptions, endpoint values, and uncertainty limitations are carried in the figure legend. Automated and visual QA are recorded in `qa/Figure4_minimal_QA_REPORT.md` and `qa/Figure4_minimal_QA_checks.csv`.
+
+The archived ARIMAX 2030 classification and submitted figure report 14 countries; a current raw-scale `auto.arima` rerun returns 13. The retained materials do not determine the cause; unrecorded software or model-selection state is one possible explanation. The redraw locks the archived manuscript trajectory and explicitly retains the 13-country rerun and 15-country log-scale sensitivity below as implementation uncertainty. No result was silently substituted.
+
+The byte-identical original submitted artwork is preserved under `../../figures/original_submitted_not_for_resubmission/`; the additional common-scale display is retained under `../../figures/internal_audit_not_for_submission/`.
+
+## Internal audit and sensitivity analysis
+
+> **Scope:** The remaining sections describe post-submission audit/sensitivity analyses. They do not define the main Figure 4 trajectory.
 
 
 ## Decision
@@ -9,7 +21,7 @@ The original VARX count of 19 for 2030 is computationally reproducible, but it i
 
 The current reproducible raw-scale ARIMAX implementation yields 13 countries in 2030, compared with 14 in the archived table. The common log1p sensitivity yields 15. The later log1p/clipped ARIMAX block in the legacy script can produce the same archived count, but does not recover its rate vectors; matching an aggregate count does not establish provenance. Historical model/software state is not documented sufficiently to explain this discrepancy.
 
-The internal audit display documents specification sensitivity and should not be used to replace the submitted Figure 4 or restore a confident policy prediction. Keep scenario language, remove the unsupported 95% bands and all implications of precise forecasts. A replacement stabilized VARX model would be a separately disclosed methodology change and has not been silently substituted.
+The internal audit display documents specification sensitivity and should not be used to replace the archived trajectory in the minimal manuscript Figure 4 or restore a confident policy prediction. Keep scenario language, omit unsupported interval bands, and avoid implications of precise forecasts. A replacement stabilised VARX model would be a separately disclosed methodology change and has not been silently substituted.
 
 ## Inputs and target
 

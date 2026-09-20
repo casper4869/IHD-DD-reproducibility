@@ -14,12 +14,14 @@
 
 This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.0.0` is permanently archived at Zenodo under the version-specific DOI above. The graphical abstract is intentionally absent because it will not be submitted.
 
+> **Unreleased working-tree update:** the minimal Figure 4 redraw documented below was added after `v1.0.0`. The immutable Zenodo version still contains the earlier artwork. A new repository release is required before citing this corrected working-tree state as an archived version.
+
 ## What is reproducible now
 
 | Component | Package status | Main evidence |
 |---|---|---|
 | Figure 2 and Supplementary Table S1 | Available and independently checked | Panels A–B regenerated from unrounded sex-specific BH q values (46/204 female and 109/204 male locations displayed), C–D retained from the submitted source, E–F regenerated from corrected weighted correlations, exact 204-row display crosswalk, population merge checks, 45-unit cartographic/SID sensitivity, hashes, session information, and final-state independent review |
-| Figure 4 submitted artwork and forecast audit | Submitted TIFF restored; audit available separately | `figures/Figure4.tif` is the byte-identical submitted figure. Forecast reconstruction, validation, instability/clipping diagnostics and the extra common-scale display are retained only as internal audit/sensitivity records under the explicitly non-submission directory. |
+| Figure 4 minimal redraw and forecast audit | Revised manuscript figure available in four formats; audit available separately | `figures/Figure4.tif/.pdf/.png/.svg` are an R-only minimal redraw of the archived A=VARX and B=ARIMAX trajectories, preserving the identical 1992–2021 history and archived 2030 endpoints of 19/14. Source CSV, renderer, QA, and checksums are included. The original submitted artwork and the extra common-scale sensitivity display are isolated in separate non-resubmission/internal-audit directories. |
 | Exploratory MR reconstruction and final 29-candidate reporting set | Available from preserved aggregate results | Complete 15,703-row catalogue-to-analysis status manifest, 11,988-row outcome-specific schedules, 11,987-row common-candidate table, saved aggregate estimates, source hashes, alternative candidate sets, final 29-candidate Table 1/Figure 7 source tables, and session information |
 | Figure 5 submitted artwork and temporal-precedence audit | Submitted TIFF restored; audit available separately | `figures/Figure5.tif` is the byte-identical submitted figure. Alternative directional equations, covariance estimators and the two-map display are retained as internal audit/sensitivity records and do not replace the manuscript figure. |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
@@ -29,13 +31,13 @@ This public repository collects the corrected scripts, machine-readable outputs,
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 
 
-> **Figure 4/5 scope.** The files `figures/Figure4.tif` and `figures/Figure5.tif` are exact copies of the submitted artwork. Additional forecast and temporal-precedence displays are internal audit/sensitivity artifacts and are isolated under `figures/internal_audit_not_for_submission/`; they are not replacement manuscript figures.
+> **Figure 4/5 scope.** `figures/Figure4.*` is the revised minimal Figure 4; `figures/Figure5.tif` remains the byte-identical submitted Figure 5. The byte-identical original Figure 4 is retained under `figures/original_submitted_not_for_resubmission/`. Additional forecast and temporal-precedence displays are isolated under `figures/internal_audit_not_for_submission/` and are not manuscript figures.
 
 ## Directory contents
 
 - `code/`: corrected analysis scripts currently available, including offline MR audit/reporting scripts, an offline-by-default catalogue provenance check, and the disabled-by-default rate-limited optional OpenGWAS sensitivity script. Path-redacted Figure 1, Figure 3, and SDI `.R.txt` files are quarantined under `code/historical_reference/` as non-executable records with explicit limitations.
 - `derived_data/`: machine-readable outputs and QA evidence produced by the corrected scripts.
-- `figures/`: the byte-identical submitted Figure 4 and Figure 5 TIFFs, other revision figures, and an explicitly separated `internal_audit_not_for_submission/` directory for additional sensitivity displays. Historical Figure 1/Figure 3 TIFF and Illustrator assets are omitted because their embedded metadata retains machine-specific source paths.
+- `figures/`: the revised minimal Figure 4 in TIFF/PDF/PNG/SVG, the byte-identical submitted Figure 5 TIFF, other revision figures, the original Figure 4 in `original_submitted_not_for_resubmission/`, and additional sensitivity displays in `internal_audit_not_for_submission/`. Historical Figure 1/Figure 3 TIFF and Illustrator assets are omitted because their embedded metadata retains machine-specific source paths.
 - `reports/`: cross-component audit material added during packaging.
 - `environment/`: software and session records.
 - `manifests/`: script, input, legacy-artifact, and package-file inventories.
@@ -104,9 +106,19 @@ Rscript code/gwr/05_build_figure6.R `
   derived_data/figure6
 ```
 
-### 4. Run the optional internal forecast audit
+### 4. Rebuild Figure 4 and, optionally, run the internal forecast audit
 
-This post-submission audit does not regenerate or replace the manuscript Figure 4. The submitted artwork remains `figures/Figure4.tif`; the common-scale diagnostic display belongs under `figures/internal_audit_not_for_submission/`.
+The main Figure 4 is rendered offline from the locked archived count trajectories and does not refit either model:
+
+```powershell
+Rscript code/forecast/02_draw_figure4_minimal.R `
+  derived_data/forecast/results/Figure4_minimal_source.csv `
+  '<review-output-directory>/Figure4'
+```
+
+The expected projected counts for 2022–2030 are `17,16,21,19,20,18,19,20,19` for VARX and `15,14,14,14,15,14,14,14,14` for ARIMAX. The archived 2030 endpoints are therefore 19 and 14. The original submitted artwork is retained only under `figures/original_submitted_not_for_resubmission/`.
+
+The following post-submission audit is optional. It does not regenerate or replace the main Figure 4; its common-scale diagnostic display belongs under `figures/internal_audit_not_for_submission/`.
 
 Required inputs are the three 204-country matrices listed as `FC-*` in the input inventory.
 

@@ -4,9 +4,9 @@ QA date: 2026-09-20
 
 ## Structural and safety checks
 
-- All 16 release `.R` scripts and all 12 quarantined historical `.R.txt` references parsed successfully under R 4.5.0; zero parse failures. The 12 references comprise 10 Figure 1/Figure 3/SDI records and two MR provenance records.
+- All 18 release `.R` scripts and all 12 quarantined historical `.R.txt` references parsed successfully under R 4.5.0; zero parse failures. The 12 references comprise 10 Figure 1/Figure 3/SDI records and two MR provenance records.
 - All three packaged Python scripts passed AST parsing.
-- All 114 packaged CSV files were read with a standards-compliant parser; zero row-width failures.
+- All 119 packaged CSV files were read with a standards-compliant parser; zero row-width failures.
 - The packaged supplementary DOCX passed ZIP/XML relationship checks and the independent 204-row S1/204-row S2 content validator. Four nonportable XLSX convenience exports with broken drawing relationships were excluded; their authoritative CSV tables and generation code remain included.
 - `.zenodo.json` passed JSON parsing with four creators, version `1.0.0`, open file access, and the conservative `other-closed` rights identifier. `CITATION.cff` passed YAML parsing with the same four creators and version.
 - The largest file is `figures/Figure2_EF_corrected.tif` at 26,220,552 bytes, below GitHub's per-file limit.
@@ -48,14 +48,16 @@ QA date: 2026-09-20
 
 The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The verified version DOI is `10.5281/zenodo.22852369`.
 
-The immutable `v1.0.0` archive contained 251 files including its manifest. The current working tree contains 260 files including the manifest; its 259 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
+The immutable `v1.0.0` archive contained 251 files including its manifest. The current unreleased working tree contains 274 files including the manifest; its 273 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
 
 <!-- BEGIN FIGURE4_FIGURE5_ROLE_QA -->
 ## Figure 4 and Figure 5 role-separation checks
 
-- `figures/Figure4.tif` and `figures/Figure5.tif` are byte-identical to the original submitted artifacts. Their SHA-256 values are `2605ef5fa618dc7f20d8cd7af36922ed52bee3983562b39415dd6e05d565240c` and `4563e52bc9e13400f459be8bf750a404e6c0e3f8ef5a0480cb86e888e40b2ac3`, respectively.
-- The submitted Figure 4 is 6,106 × 2,148 pixels at 300 dpi; the submitted Figure 5 is 6,820 × 3,388 pixels at 300 dpi.
-- All post-submission forecast and temporal-precedence displays are isolated under `figures/internal_audit_not_for_submission/`. They are labelled as internal audit/sensitivity artifacts and are not manuscript figures.
+- `figures/Figure4.tif/.pdf/.png/.svg` are the revised minimal Figure 4 exports. The TIFF SHA-256 is `57f90a6f180fd255791d6b37d8109ad9c7f1e22e7854ae689deed4ed764eabf9`; it is 4,322 × 1,842 pixels, RGB/LZW, at 600 dpi.
+- The locked source table retains identical 1992–2021 histories across panels, VARX projections `17,16,21,19,20,18,19,20,19`, ARIMAX projections `15,14,14,14,15,14,14,14,14`, and 2030 endpoints of 19/14. The SVG text whitelist contains only A/B, axes, and tick labels.
+- A clean offline rerun of `code/forecast/02_draw_figure4_minimal.R` from the packaged source CSV reproduced the TIFF, PNG, and SVG byte for byte. The PDF is valid vector output; its byte stream includes device-time metadata and is therefore not used as the deterministic checksum gate.
+- The byte-identical original submitted Figure 4 is preserved under `figures/original_submitted_not_for_resubmission/` with SHA-256 `2605ef5fa618dc7f20d8cd7af36922ed52bee3983562b39415dd6e05d565240c`; it is not the revised manuscript figure.
+- `figures/Figure5.tif` remains byte-identical to the submitted Figure 5, with SHA-256 `4563e52bc9e13400f459be8bf750a404e6c0e3f8ef5a0480cb86e888e40b2ac3`.
+- All additional forecast and temporal-precedence displays are isolated under `figures/internal_audit_not_for_submission/` and are not manuscript figures.
 - `manifests/figure4_figure5_roles_and_checksums.csv` gives a machine-readable role and checksum for every packaged Figure 4/5 artifact.
-- A binary string scan of the two submitted TIFF files found no local Windows project path or user-profile path.
 <!-- END FIGURE4_FIGURE5_ROLE_QA -->

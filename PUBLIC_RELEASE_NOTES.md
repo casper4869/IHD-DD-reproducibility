@@ -14,5 +14,7 @@ The public repository is https://github.com/casper4869/IHD-DD-reproducibility an
 <!-- BEGIN UNRELEASED_FIGURE_ROLE_CLARIFICATION -->
 ## Unreleased Figure 4/Figure 5 role clarification
 
-The working tree restores the byte-identical submitted Figure 4 and Figure 5 TIFF files as the authoritative manuscript artwork. Post-submission forecast and temporal-precedence reanalyses remain available only under `figures/internal_audit_not_for_submission/`; they are sensitivity/audit records and are not replacement manuscript figures. This working-tree change does not alter the immutable Zenodo `v1.0.0` archive.
+The working tree uses an R-only minimal redraw as the revised manuscript Figure 4. It retains the archived A=VARX and B=ARIMAX trajectories, the identical 1992–2021 historical counts, and the archived 2030 endpoints of 19 and 14, while moving explanatory prose to the legend and removing the unsupported ±15% envelope. The exact source CSV, renderer, QA, and four exports are included. The byte-identical original Figure 4 is preserved under `figures/original_submitted_not_for_resubmission/` for provenance only.
+
+Figure 5 remains the byte-identical submitted TIFF. Post-submission forecast and temporal-precedence reanalyses remain under `figures/internal_audit_not_for_submission/`; they are sensitivity/audit records and are not manuscript figures. This working-tree change does not alter the immutable Zenodo `v1.0.0` archive and has not been released as a new version.
 <!-- END UNRELEASED_FIGURE_ROLE_CLARIFICATION -->

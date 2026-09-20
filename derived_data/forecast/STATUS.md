@@ -1,9 +1,11 @@
-# Scope of the forecast files
+# Forecast and Figure 4 status
 
-These files document a **post-submission internal audit and sensitivity analysis**. They do not define or replace the manuscript's Figure 4.
+The main manuscript Figure 4 is now the minimal R redraw in `../../figures/Figure4.tif`, with matching PDF, PNG, and SVG exports. Panel A retains the archived VARX trajectory and panel B retains the archived ARIMAX trajectory. The 1992–2021 historical sequence is identical across panels, and the archived 2030 endpoints are 19 and 14.
 
-The authoritative manuscript artwork is `../../figures/Figure4.tif`, an exact copy of the originally submitted TIFF. The audit display is stored separately under `../../figures/internal_audit_not_for_submission/`.
+The exact 78-row plotting table is `results/Figure4_minimal_source.csv`. `../../code/forecast/02_draw_figure4_minimal.R` renders it without model refitting. `qa/Figure4_minimal_QA_REPORT.md`, `qa/Figure4_minimal_QA_checks.csv`, and the checksum tables document the numerical and visual gates. The TIFF is 4322 × 1842 pixels, RGB/LZW, at 600 dpi; the SVG retains editable text.
 
-In the audit display's common-scale panel, the blue VARX trajectory stops after 2025 because at least one of the 204 country forecasts is non-finite from 2026. The audit code therefore refuses to calculate a count with an incomplete denominator. This is a diagnostic result of the additional sensitivity specification; it is not missing data in the submitted Figure 4.
+The main figure contains no long title, subtitle, legend, prose annotation, endpoint callout, or uncertainty ribbon. The submitted ±15% heuristic envelope was not a model-derived 95% interval and is omitted. The caption explains the panel/model mapping, visual encodings, model assumptions, archived endpoints, and unquantified forecast uncertainty.
 
-Files whose names contain `Figure4_legend`, `Figure4_source`, `forecast_revision`, or `manuscript_forecast_text` are preserved execution artifacts from that audit. The last name is historical and does not make the file approved manuscript text.
+The original submitted Figure 4 remains under `../../figures/original_submitted_not_for_resubmission/` for provenance. The extra common-scale display remains under `../../figures/internal_audit_not_for_submission/`; its VARX count becomes unavailable from 2026 because of non-finite forecasts and is not a manuscript result.
+
+The current raw-scale ARIMAX rerun yields 13 countries in 2030, while the archived classification and submitted figure yield 14. The main redraw transparently locks the archived trajectory; the 13-country rerun and 15-country log-scale sensitivity remain documented in the internal forecast audit.

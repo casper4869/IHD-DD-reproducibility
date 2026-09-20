@@ -1,6 +1,6 @@
 # Independent forecast review
 
-> **Scope:** Post-submission internal audit/sensitivity only. This file does not describe or replace the manuscript Figure 4.
+> **Scope:** Post-submission internal audit/sensitivity review. The revised manuscript Figure 4 separately preserves the archived trajectories in a minimal redraw; this review assesses the additional forecast audit rather than validating the projections as precise forecasts.
 
 
 Reviewer: a separate forecast-checker agent, 18 September 2026. Read-only inspection of the contract, R source, saved CSVs, package source for the VARX coefficient layout, and the audit-only R-generated PNG. The checker independently recomputed consistency checks from saved country-level rows without refitting or editing models.
@@ -17,4 +17,4 @@ Decision: PASS for faithful audit/reporting; FAIL for treating the original VARX
 
 Minor reproducibility limitation: caches are not keyed to input/code hashes. Their present provenance is bound by the delivered manifest, but any future change to inputs, analytic code, package versions or protocol requires a new empty output directory and clean computation. Do not reuse these caches for a modified analysis.
 
-The audit display is retained only as a non-submission reproducibility record. The byte-identical submitted Figure 4 is the manuscript artwork; no replacement stable model was substituted.
+The audit display is retained only as a non-submission reproducibility record. The manuscript Figure 4 is the minimal redraw from the locked archived trajectories; the byte-identical original submitted artwork is retained separately for provenance. No replacement stable model was substituted.
