@@ -46,6 +46,6 @@ QA date: 2026-09-20
 
 ## Scope limits and remaining author actions
 
-The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The Zenodo DOI is added after archival.
+The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The verified version DOI is `10.5281/zenodo.22852369`.
 
 The final `v1.0.0` tree contains 251 files including the manifest; its 250 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.

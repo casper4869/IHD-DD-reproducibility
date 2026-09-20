@@ -5,10 +5,14 @@
 **Submission ID:** 61a39b35-8588-492a-bc38-1640628b2633  
 **Package date:** 2026-09-20  
 **Repository:** https://github.com/casper4869/IHD-DD-reproducibility<br>
-**Prepared release:** `v1.0.0`<br>
-**Status:** `PUBLIC_REPOSITORY; VERSIONED_RELEASE_AND_ZENODO_DOI_PENDING`
+**Published release:** `v1.0.0`<br>
+**Version DOI:** https://doi.org/10.5281/zenodo.22852369<br>
+**Concept DOI:** https://doi.org/10.5281/zenodo.22852368<br>
+**Status:** `PUBLIC_RELEASE_ARCHIVED_WITH_ZENODO_DOI`
 
-This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.0.0` is prepared for permanent Zenodo archiving; the DOI will be added after Zenodo mints it. The graphical abstract is intentionally absent because it will not be submitted.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22852369.svg)](https://doi.org/10.5281/zenodo.22852369)
+
+This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.0.0` is permanently archived at Zenodo under the version-specific DOI above. The graphical abstract is intentionally absent because it will not be submitted.
 
 ## What is reproducible now
 
@@ -20,7 +24,7 @@ This public repository collects the corrected scripts, machine-readable outputs,
 | SDI-adjusted temporal-precedence analysis / Supplementary Table S2 / Figure 5 | Available with exploratory interpretation | Corrected directional equations with SDI as exogenous control, unrounded directional BH families, lag, covariance-estimator and 45-unit cartographic/SID sensitivities, diagnostics, checksums, session information, and corrected Figure 5; the final reporting explicitly leads with the large Newey–West/HC3 difference |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
 | SNP-level MR sensitivity analyses | Not reconstructable from the preserved historical files | The exact historical DD run used for the submitted 50-row table and SNP-level instruments/harmonised objects were not retained; MR-Egger, weighted median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger and instrument-strength analyses therefore cannot be recreated from this archive |
-| Public archival record | Repository public; DOI pending | The reviewed files are public on GitHub. Release `v1.0.0` will be archived by Zenodo and the resulting version-specific DOI will be added before the final response is submitted |
+| Public archival record | Published and archived | GitHub release `v1.0.0` is archived at Zenodo under DOI `10.5281/zenodo.22852369`; the public 82,648,552-byte archive and metadata were verified without depositor credentials |
 
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 
@@ -168,7 +172,7 @@ With no enabling environment variable, this command only validates the included 
 
 `manifests/package_file_manifest_sha256.csv` covers every package file except itself; self-inclusion would make a stable checksum impossible. The checksum of any distributed ZIP archive should be stored beside the ZIP.
 
-## Disclosed limitations and remaining archive steps
+## Disclosed limitations
 
 - The complete historical DD SNP-level run used for the submitted 50-row table is unavailable. The revised analysis therefore replaces that table with the traceable 29-candidate aggregate reconstruction and explicitly withholds SNP-level pleiotropy/sensitivity claims.
 - Curate raw-to-final preprocessing and Figure 1/Figure 3 into clean parameterised scripts. Sanitised historical Figure 1, Figure 3, and SDI `.R.txt` references are included with original hashes and limitations, but they are not corrected release entry points and must not be executed as the reproducible workflow.
@@ -176,8 +180,6 @@ With no enabling environment variable, this command only validates the included 
 - Confirm the source gazetteer/geocoder, coordinate definition, version, retrieval date, licence, and matching code for the 204-row coordinate file.
 - Record release-specific FinnGen/Risteys endpoint exports, release number, and access date.
 - Parameterise any remaining archival local paths needed for clean reruns and verify the release commands in a clean environment.
-- Add the Zenodo DOI to this repository and the manuscript-facing Data and Code Availability statement after Zenodo archives `v1.0.0`.
-- Test the version-specific DOI and public file download outside the depositor account before resubmission.
 
 ## Rights
 

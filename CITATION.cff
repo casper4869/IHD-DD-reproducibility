@@ -4,6 +4,7 @@ title: "Reproducibility materials for ‘Global co-occurrence patterns of ischae
 type: software
 version: 1.0.0
 date-released: 2026-09-20
+doi: "10.5281/zenodo.22852369"
 repository-code: "https://github.com/casper4869/IHD-DD-reproducibility"
 abstract: >-
   Analysis scripts, derived outputs, figure-source material, software records,

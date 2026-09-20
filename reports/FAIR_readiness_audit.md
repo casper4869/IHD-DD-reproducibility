@@ -1,13 +1,13 @@
 # FAIR and repository-readiness audit
 
 Audit date: 2026-09-20  
-Verdict: **ready for a versioned aggregate-result reproducibility release with disclosed scope limitations; not a complete raw-to-final reproduction package**
+Verdict: **published as a versioned aggregate-result reproducibility release with disclosed scope limitations; not a complete raw-to-final reproduction package**
 
 ## Findable
 
 - **Pass:** stable, descriptive component filenames and a top-level README are present.
 - **Pass:** scripts, inputs, and package files are mapped through CSV manifests.
-- **Pass with final archive step pending:** the public GitHub landing page, version `1.0.0` metadata, title, creators, affiliations, and keywords are present; the release tag and Zenodo DOI are verified during publication.
+- **Pass:** the public GitHub landing page, version `1.0.0` tag, title, creators, affiliations, keywords, and Zenodo DOI are present and verified.
 - **Pass with omission:** verified creator names and affiliations are supplied. ORCIDs and funding are omitted because none were verified.
 
 ## Accessible
@@ -17,7 +17,7 @@ Verdict: **ready for a versioned aggregate-result reproducibility release with d
 - **Disclosed limitation:** the PM2.5 and coordinate sources lack verified provider and licence metadata.
 - **Pass with disclosed limitation:** the 15,703-row OpenGWAS catalogue, compact saved IHD/DD aggregate estimates, complete catalogue-to-analysis status manifest, and source hashes are included. The exact DD SNP-level run underlying the submitted table was not retained and cannot be reconstructed from the archive.
 - **Disclosed limitation:** FinnGen release-specific endpoint exports were not recovered for `v1.0.0`.
-- **In progress:** the public GitHub repository is verified; the Zenodo DOI and signed-out download are tested immediately after archival.
+- **Pass:** the GitHub release, Zenodo DOI, and unauthenticated public archive response were verified after archival.
 
 ## Interoperable
 
@@ -45,4 +45,4 @@ Verdict: **ready for a versioned aggregate-result reproducibility release with d
 3. Resolve PM2.5, coordinate, and release-specific FinnGen/Risteys provenance.
 4. Parameterise remaining absolute paths and execute the offline package in a clean environment.
 5. Preserve the rights-retained statement and provider exclusions unless the relevant rightsholders later approve explicit file-level licences.
-6. Verify the `v1.0.0` Zenodo DOI and public download after archival.
+6. Preserve the verified `v1.0.0` DOI `10.5281/zenodo.22852369` in the manuscript-facing availability statement.

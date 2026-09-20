@@ -31,4 +31,4 @@
 - Release-specific FinnGen/Risteys endpoint metadata and exports.
 - Parameterised release paths and a clean-environment rerun.
 
-This audit supports public deposition of the current aggregate-result reconstruction at https://github.com/casper4869/IHD-DD-reproducibility with the stated limits and rights-retained terms. The version `1.0.0` Zenodo DOI will be added after archival. The audit does not support wording that the historical SNP-level DD run or MR sensitivity analyses are reproducible; unresolved non-MR provenance remains explicitly disclosed.
+This audit documents the published aggregate-result reconstruction at https://github.com/casper4869/IHD-DD-reproducibility and https://doi.org/10.5281/zenodo.22852369 with the stated limits and rights-retained terms. The audit does not support wording that the historical SNP-level DD run or MR sensitivity analyses are reproducible; unresolved non-MR provenance remains explicitly disclosed.

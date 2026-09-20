@@ -6,6 +6,8 @@ The machine-readable source for GitHub-to-Zenodo archiving is `.zenodo.json`; `C
 - **Resource type:** Software (mixed reproducibility package; selected as the predominant release type)
 - **Version:** `1.0.0`
 - **Publication date:** `2026-09-20`
+- **Version DOI:** https://doi.org/10.5281/zenodo.22852369
+- **Concept DOI:** https://doi.org/10.5281/zenodo.22852368
 - **Creators, in publication order:** Zhengqi Qiu; Yunzhi Emma Huang; Xingya Lei; Juntao Kan
 - **Affiliations:**
   - Zhengqi Qiu and Xingya Lei: Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, Guangdong, China
@@ -21,4 +23,4 @@ The machine-readable source for GitHub-to-Zenodo archiving is `.zenodo.json`; `C
 - **Related manuscript:** Submission ID `61a39b35-8588-492a-bc38-1640628b2633`; the article DOI can be added after publication
 - **Funding:** omitted because no verified funder or grant metadata were supplied for this release
 
-The version-specific Zenodo DOI will be added to the repository and manuscript-facing availability text after it is minted.
+The published record was verified at https://zenodo.org/records/22852369. Its public source archive is 82,648,552 bytes with MD5 `6756521735b8c1b96d23c8a30a0658c2` as reported by Zenodo.
