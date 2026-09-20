@@ -1,6 +1,6 @@
 {
   "title": "Reproducibility materials for ‘Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits’",
-  "description": "This release contains analysis scripts, derived outputs, figure-source material, software records, checksums, and step-by-step access instructions supporting a global ecological analysis of ischaemic heart disease and depressive disorders. It includes a preserved 15,703-record IEU OpenGWAS catalogue metadata snapshot, outcome-specific scheduling and status records, 5,880 saved IHD and 11,775 saved DD aggregate estimates, an exploratory 49-trait aggregate screen, and the final 29-trait reporting set after a post-screen FinnGen exposure restriction to reduce participant overlap and same-biobank dependence. The included catalogue metadata and aggregate analytical outputs do not transfer rights in the underlying GWAS datasets. Other third-party files are represented by provider access routes and local fingerprints where redistribution rights were not established. The MR screen is exploratory and does not establish causal effects.",
+  "description": "This release contains analysis scripts, derived outputs, figure-source material, software records, checksums, and step-by-step access instructions supporting a global ecological analysis of ischaemic heart disease and depressive disorders. It includes a preserved 15,703-record IEU OpenGWAS catalogue metadata snapshot, outcome-specific scheduling and status records, 5,880 saved IHD and 11,775 saved DD aggregate estimates, an exploratory 49-trait aggregate screen, and the final 29-trait reporting set after a post-screen FinnGen exposure restriction to reduce participant overlap and same-biobank dependence. The included catalogue metadata and aggregate analytical outputs do not transfer rights in the underlying GWAS datasets. Other third-party files are represented by provider access routes and local fingerprints where redistribution rights were not established. The MR screen is exploratory and does not establish causal effects. Version 1.0.1 adds the QA-checked minimal Figure 4 redraw, an offline reconstruction of the submitted three-variable Granger analysis, explicit documentation that its retained arrow labels denote joint system tests rather than disease-to-disease-only tests, and a machine-readable 159-location sensitivity after the prespecified 45-unit cartographic/SID exclusion. MR code provenance is stated as output-fingerprint consistency rather than proof of an exact historical executable snapshot.",
   "creators": [
     {
       "name": "Qiu, Zhengqi",
@@ -19,7 +19,7 @@
       "affiliation": "Nutrilite Health Institute, Amway R&D Center, 720 Cailun Road, 201203, Shanghai, China"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publication_date": "2026-09-20",
   "access_right": "open",
   "license": "other-closed",

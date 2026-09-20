@@ -7,7 +7,7 @@ Verdict: **published as a versioned aggregate-result reproducibility release wit
 
 - **Pass:** stable, descriptive component filenames and a top-level README are present.
 - **Pass:** scripts, inputs, and package files are mapped through CSV manifests.
-- **Pass:** the public GitHub landing page, version `1.0.0` tag, title, creators, affiliations, keywords, and Zenodo DOI are present and verified.
+- **Pass:** the public GitHub landing page, version `1.0.1` tag, title, creators, affiliations, keywords, and Zenodo DOI are present and verified.
 - **Pass with omission:** verified creator names and affiliations are supplied. ORCIDs and funding are omitted because none were verified.
 
 ## Accessible
@@ -16,7 +16,7 @@ Verdict: **published as a versioned aggregate-result reproducibility release wit
 - **Pass:** third-party files that may be restricted are distinguished from shareable author outputs.
 - **Disclosed limitation:** the PM2.5 and coordinate sources lack verified provider and licence metadata.
 - **Pass with disclosed limitation:** the 15,703-row OpenGWAS catalogue, compact saved IHD/DD aggregate estimates, complete catalogue-to-analysis status manifest, and source hashes are included. The exact DD SNP-level run underlying the submitted table was not retained and cannot be reconstructed from the archive.
-- **Disclosed limitation:** FinnGen release-specific endpoint exports were not recovered for `v1.0.0`.
+- **Disclosed limitation:** FinnGen release-specific endpoint exports were not recovered for `v1.0.1`.
 - **Pass:** the GitHub release, Zenodo DOI, and unauthenticated public archive response were verified after archival.
 
 ## Interoperable
@@ -29,13 +29,13 @@ Verdict: **published as a versioned aggregate-result reproducibility release wit
 ## Reusable
 
 - **Pass:** corrected components include session information, package versions, checksums, logs, model diagnostics, and QA outputs.
-- **Pass:** the package states which results are corrected, legacy-only, derived-only, or unavailable in `v1.0.0`.
+- **Pass:** the package states which results are corrected, legacy-only, derived-only, or unavailable in `v1.0.1`.
 - **Pass with rights retained:** `RIGHTS_AND_LICENSING.md` defines public access for verification, no repository-wide reuse licence, and original provider terms for third-party material.
 - **Pass with disclosed archival limitation:** executable release scripts use relative or parameterised paths; quarantined historical `.R.txt` records contain redacted `<LOCAL_...>` placeholders and are not release entry points.
 - **Disclosed limitation:** there is no complete clean-environment lockfile or continuous reproduction test.
 - **Pass for aggregate MR audit:** the full 15,703-record catalogue-to-analysis status manifest, compact aggregate results, source hashes, candidate sets, final 29-candidate reporting tables, and offline code are incorporated.
 - **Permanent MR limitation:** SNP-level instruments/harmonised objects and the exact submitted-table DD run are absent, so pleiotropy and sensitivity estimators cannot be reconstructed and are not claimed.
-- **Pass for the completed temporal analysis:** corrected Granger scripts, independent numerical QA, the exploratory paired-specification Figure 5, calibrated manuscript interpretation, and cartographic/SIDS sensitivity artifacts are incorporated.
+- **Pass for the submitted temporal analysis and audit:** the path-parameterised three-variable VAR reconstruction reproduces all 204 archived classifications and documents that each `vars::causality()` call is a joint system test across both remaining equations. A machine-readable submitted-system sensitivity reapplies both BH families after the prespecified 45-unit exclusion and supplies 159 row-level results plus the 71/13/60/15 category counts. The separate target-specific sensitivity scripts, numerical QA, audit-only paired-specification display, calibrated interpretation, and cartographic/SIDS artifacts are also incorporated.
 - **Pass for the model audit:** corrected GWR and its 45-unit cartographic/SID sensitivity, bandwidth trace, coefficient source tables, independent reconstruction, session record, and checksums are incorporated.
 
 ## Known limitations and post-release checks
@@ -45,4 +45,4 @@ Verdict: **published as a versioned aggregate-result reproducibility release wit
 3. Resolve PM2.5, coordinate, and release-specific FinnGen/Risteys provenance.
 4. Parameterise remaining absolute paths and execute the offline package in a clean environment.
 5. Preserve the rights-retained statement and provider exclusions unless the relevant rightsholders later approve explicit file-level licences.
-6. Preserve the verified `v1.0.0` DOI `10.5281/zenodo.22852369` in the manuscript-facing availability statement.
+6. Preserve the verified `v1.0.1` DOI `10.5281/zenodo.22854090` in the manuscript-facing availability statement.

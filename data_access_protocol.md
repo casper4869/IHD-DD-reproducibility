@@ -1,6 +1,6 @@
 # Data access and reconstruction protocol
 
-This protocol distinguishes files present in `v1.0.0`, third-party data that readers must retrieve from the provider, and evidence that was not recovered. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
+This protocol distinguishes files present in `v1.0.1`, third-party data that readers must retrieve from the provider, and evidence that was not recovered. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
 
 ## 1. GBD 2021 disease incidence estimates
 
@@ -45,11 +45,15 @@ The legacy-source audit did not locate a valid consolidated raw-to-final IHD/DD 
 
 Retrieve the GBD 2021 SDI series for the same 204 locations and years 1992–2021. Preserve the provider file and query metadata, then generate the 204 × 30 matrix used by the temporal analyses. The current local source and matrices are fingerprinted as `SDI-*` in the input inventory.
 
+With the three fingerprinted IHD, DD, and SDI matrices in one local directory, run `code/granger/reproduce_archived_granger_main.R <input-directory> <output-directory> [archived-results.csv]`. This reproduces the submitted three-variable VAR and its two legacy-labelled system tests without a network request. The IHD-labelled call jointly tests lagged IHD terms in the DD and SDI equations; the DD-labelled call jointly tests lagged DD terms in the IHD and SDI equations. The included audit reproduces all 204 archived classifications and records the exact source hashes under `derived_data/granger/archived_main_reconstruction/`.
+
+The package also includes an offline small-island/cartographic sensitivity for these submitted system tests. Run `python code/granger/derive_submitted_system_test_exclusion_sensitivity.py` from the package root. It checks the packaged 45-unit exclusion list against the archived flags, retains 159 locations, and reapplies Benjamini-Hochberg correction separately to the two submitted raw-P-value families. It produces `derived_data/granger/submitted_system_test_small_island_exclusion.csv` and `submitted_system_test_small_island_exclusion_counts.csv`, with counts of 71 both labelled families, 13 IHD-labelled only, 60 DD-labelled only, and 15 neither. It does not refit the VAR or change the joint-system-test interpretation. The later `03_correct_granger_sensitivity.R` script fits separate target-specific equations and is a distinct post-submission sensitivity analysis rather than the submitted primary workflow.
+
 ## 4. PM2.5 and geographic coordinates
 
 **Access class:** processed local inputs with incomplete source metadata.
 
-The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. These provenance fields could not be recovered for `v1.0.0`. Any future update should add:
+The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. These provenance fields could not be recovered for `v1.0.1`. Any future update should add:
 
 - the provider and stable landing page;
 - dataset/release version and retrieval date;
@@ -64,7 +68,7 @@ Until these fields are supplied, these inputs are disclosed as processed local i
 
 Analytical observations remain one row per GBD location. Any polygon replication used only for display occurs after statistical estimation and does not add observations to Pearson, Granger, forecast, or GWR models. Figure 2A–B uses `rworldmap::getMap(resolution = "low")` (Natural Earth-derived geometry), maps the 204 analysis names to ISO3 using `countrycode` plus three explicit manual overrides, and applies each country value to every polygon part in the matched feature. The exact row-level mapping, feature names/indices, match status, polygon-part counts, and multipart flags are in `derived_data/figure2/Figure2_AB_mapping_coverage.csv`; the six-step procedure is in `derived_data/figure2/Figure2_AB_cartographic_procedure.md`. Geometry is available for 203/204 study units, with Tokelau explicitly unmatched.
 
-Before inspecting outcomes, the corrected correlation, Granger, and GWR sensitivities exclude the same 45 units: the 44 locations marked `SID` in the bundled `rworldmap`/Natural Earth metadata plus Tokelau. The correlation sensitivity readjusts S1 within 159 tests per sex and compares the 17 estimable age-specific Figure 2E-F distributions with the full analysis. Granger recomputes both directional BH families over the remaining 159 units. GWR refits both fixed-bandwidth models over the remaining 159 units while retaining the full-sample standardisation scale. Exact exclusion lists and results are in the component directories under `derived_data/`.
+Before inspecting outcomes, the correlation, Granger, and GWR sensitivities use the same 45-unit rule: the 44 locations marked `SID` in the bundled `rworldmap`/Natural Earth metadata plus Tokelau. The correlation sensitivity readjusts S1 within 159 tests per sex and compares the 17 estimable age-specific Figure 2E-F distributions with the full analysis. For Granger analysis, one offline transformation reapplies both submitted legacy-label BH families over the retained 159 locations, while the distinct target-specific sensitivity recomputes its two directional families over the same retained set. GWR refits both fixed-bandwidth models over 159 locations while retaining the full-sample standardisation scale. Exact exclusion lists and machine-readable results are in the component directories under `derived_data/`.
 
 ## 6. IEU OpenGWAS and exploratory two-sample MR
 
@@ -100,7 +104,7 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 
 ## 7. FinnGen/Risteys CodeWAS context
 
-**Access class:** public web interface; release-specific endpoint snapshots were not retained for `v1.0.0`.<br>
+**Access class:** public web interface; release-specific endpoint snapshots were not retained for `v1.0.1`.<br>
 **Official interface:** https://risteys.finngen.fi/
 
 1. Select and record a fixed FinnGen/Risteys release rather than relying on the moving default interface.
@@ -114,17 +118,17 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 The public repository contains scripts, derived output tables, figure source data, manifests, README files, and permitted source data. Where redistribution rights were not established, it supplies provider retrieval instructions and local fingerprints instead of the third-party files. Sanitised historical Figure 1/Figure 3/SDI references remain clearly quarantined and are not presented as clean raw-to-final entry points. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance gaps remain explicitly disclosed.
 
 - GitHub repository: https://github.com/casper4869/IHD-DD-reproducibility
-- Published GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.0
-- Archived release commit: `9885cb8671030cfa2e925fcfa25c7f264f50f457`
-- Zenodo version DOI: https://doi.org/10.5281/zenodo.22852369
+- Published GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.1
+- Archived release tag: `v1.0.1`
+- Zenodo version DOI: https://doi.org/10.5281/zenodo.22854090
 - Zenodo concept DOI: https://doi.org/10.5281/zenodo.22852368
-- Release version: `1.0.0`
+- Release version: `1.0.1`
 - Repository-wide reuse licence: none; author-created rights are retained unless a file states otherwise
 - Zenodo rights identifier: `Other (Not Open)` with public file access
 - Third-party material: original provider and dataset-owner terms; see `RIGHTS_AND_LICENSING.md`
 
 ## 9. Data and Code Availability text
 
-> The Global Burden of Disease 2021 estimates used in this study are third-party data available through the IHME GBD Results Tool (https://vizhub.healthdata.org/gbd-results/) subject to the provider's registration and terms of use. The exact query settings, file fingerprints, preprocessing records, available analysis scripts, derived source tables, and figure-generation code are provided in release 1.0.0 at https://github.com/casper4869/IHD-DD-reproducibility and permanently archived at https://doi.org/10.5281/zenodo.22852369. IEU OpenGWAS data are accessible through https://opengwas.io subject to the applicable access terms. The archived release includes the preserved 15,703-record catalogue snapshot, the complete reconstructed catalogue-to-analysis status manifest, OpenGWAS identifiers, compact saved aggregate IHD and DD results, post-analysis candidate-set rules, source-file SHA-256 fingerprints, and final 29-candidate reporting tables. The catalogue count is not presented as the number of completed MR analyses. The historical DD SNP-level run and harmonised instrument data were not retained; consequently, SNP-level pleiotropy and sensitivity analyses cannot be reconstructed and are not claimed. FinnGen CodeWAS endpoint information is available through the release-specific Risteys interface (https://risteys.finngen.fi/). Third-party source files are not redistributed where the authors do not hold redistribution rights; step-by-step retrieval instructions and SHA-256 fingerprints are provided in the repository.
+> The Global Burden of Disease 2021 estimates used in this study are third-party data available through the IHME GBD Results Tool (https://vizhub.healthdata.org/gbd-results/) subject to the provider's registration and terms of use. The exact query settings, file fingerprints, preprocessing records, available analysis scripts, derived source tables, and figure-generation code are provided in release 1.0.1 at https://github.com/casper4869/IHD-DD-reproducibility and permanently archived at https://doi.org/10.5281/zenodo.22854090. IEU OpenGWAS data are accessible through https://opengwas.io subject to the applicable access terms. The archived release includes the preserved 15,703-record catalogue snapshot, the complete reconstructed catalogue-to-analysis status manifest, OpenGWAS identifiers, compact saved aggregate IHD and DD results, post-analysis candidate-set rules, source-file SHA-256 fingerprints, and final 29-candidate reporting tables. The catalogue count is not presented as the number of completed MR analyses. The historical DD SNP-level run and harmonised instrument data were not retained; consequently, SNP-level pleiotropy and sensitivity analyses cannot be reconstructed and are not claimed. FinnGen CodeWAS endpoint information is available through the release-specific Risteys interface (https://risteys.finngen.fi/). Third-party source files are not redistributed where the authors do not hold redistribution rights; step-by-step retrieval instructions and SHA-256 fingerprints are provided in the repository.
 
 The disclosed absence of the historical DD SNP-level objects and the stated non-MR provenance gaps are analysis limitations, not missing release metadata.

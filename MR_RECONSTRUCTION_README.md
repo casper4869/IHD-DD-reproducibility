@@ -62,7 +62,7 @@ The final candidates are termed **shared genetically associated traits** rather 
 
 The exact DD run used to generate the submitted 50-row table is not present. The retained DD aggregate run uses `finn-b-F5_DEPRESSIO`, but it does not reproduce the former DD odds ratios. For example, extreme old estimates for doxazosin and beclometasone are not supported by the retained run and have been removed from revised reporting.
 
-Offline code/output fingerprinting indicates that the DD folder was produced by the self-developed exposure-screen code family in its saved DD configuration. The IHD folder was produced by an earlier IHD-configured version of that code family. The exact IHD-configured script text was not retained, so the current DD-configured file is not represented as an exact IHD runner. The alternative Grok script and the reverse-direction outcome-screen script do not match the preserved filename, indexing, outcome, or output fingerprints. See `MR_SCREEN_FLOW.md`.
+Offline code/output fingerprinting found that the DD folder is consistent with the self-developed exposure-screen code family in its saved DD configuration, while the IHD folder is consistent with an earlier IHD-configured version of that code family. The exact IHD-configured script text and historical execution records were not retained, so output-fingerprint agreement does not prove the exact executable provenance. The alternative Grok script and the reverse-direction outcome-screen script have incompatible filename, indexing, outcome, or output fingerprints. See `MR_SCREEN_FLOW.md`.
 
 No retained files contain SNP-level exposure data, outcome extractions, harmonised datasets, per-variant F statistics, heterogeneity statistics, MR-Egger results/intercepts, weighted-median results, leave-one-out analyses, MR-PRESSO, or Steiger directionality results. These analyses cannot be reconstructed honestly from aggregate `b`, `se`, `p`, method, and instrument-count fields. Their absence is disclosed in the manuscript and response letter.
 
@@ -81,4 +81,4 @@ Current official guidance:
 
 ## Public archive
 
-Version `1.0.0` is published at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.0 and permanently archived at https://doi.org/10.5281/zenodo.22852369. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.
+Version `1.0.1` is published at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.1 and permanently archived at https://doi.org/10.5281/zenodo.22854090. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.

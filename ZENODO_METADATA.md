@@ -1,26 +1,24 @@
 # Zenodo release metadata
 
-The machine-readable source for GitHub-to-Zenodo archiving is `.zenodo.json`; `CITATION.cff` supplies the matching GitHub citation display.
+The machine-readable metadata source is `.zenodo.json`; `CITATION.cff` supplies the matching citation record.
 
 - **Title:** Reproducibility materials for “Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits”
 - **Resource type:** Software (mixed reproducibility package; selected as the predominant release type)
-- **Version:** `1.0.0`
+- **Version:** `1.0.1`
 - **Publication date:** `2026-09-20`
-- **Version DOI:** https://doi.org/10.5281/zenodo.22852369
+- **Version DOI:** https://doi.org/10.5281/zenodo.22854090
 - **Concept DOI:** https://doi.org/10.5281/zenodo.22852368
 - **Creators, in publication order:** Zhengqi Qiu; Yunzhi Emma Huang; Xingya Lei; Juntao Kan
 - **Affiliations:**
   - Zhengqi Qiu and Xingya Lei: Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, Guangdong, China
   - Yunzhi Emma Huang and Juntao Kan: Nutrilite Health Institute, Amway R&D Center, Shanghai, China
 - **ORCIDs:** omitted because none were verified for this release
-- **Description:** This archive contains analysis scripts, derived outputs, figure-source material, software records, checksums, and step-by-step access instructions supporting a global ecological analysis of ischaemic heart disease and depressive disorders. It includes a preserved 15,703-record IEU OpenGWAS catalogue snapshot, outcome-specific scheduling/status records, 5,880 saved IHD and 11,775 saved DD aggregate estimates, an exploratory 49-trait aggregate screen, and the final 29-trait reporting set after a post-screen FinnGen exposure restriction to reduce participant-overlap and same-biobank dependence. Third-party source data are not redistributed where rights are uncertain; provider access routes and exact local fingerprints are documented. The MR screen is exploratory and does not establish causal effects.
-- **Keywords:** ischaemic heart disease; depressive disorders; Global Burden of Disease; spatial epidemiology; geographically weighted regression; temporal predictive association; Mendelian randomization; IEU OpenGWAS; reproducibility
+- **Description:** This archive contains analysis scripts, derived outputs, figure-source material, software records, checksums, and step-by-step access instructions supporting the study. Version 1.0.1 adds the final minimal Figure 4 redraw and QA, an offline reconstruction of the submitted three-variable Granger analysis, and explicit documentation that its retained arrow labels denote joint system tests rather than disease-to-disease-only tests. It also provides a machine-readable 159-location submitted-system sensitivity after the prespecified 45-unit cartographic/SID exclusion and calibrates MR code provenance to output-fingerprint consistency rather than proof of an exact historical executable snapshot.
+- **Keywords:** ischaemic heart disease; depressive disorders; Global Burden of Disease; spatial epidemiology; geographically weighted regression; temporal predictive association; Mendelian randomisation; IEU OpenGWAS; reproducibility
 - **Access:** open; files are publicly downloadable for transparency and independent verification
 - **Record-level rights identifier:** `Other (Not Open)` (`other-closed`), because no repository-wide reuse licence is granted
-- **Author-created material:** rights retained unless a file states otherwise
-- **Third-party rights:** original provider and dataset-owner terms continue to apply; no relicensing is asserted
-- **GitHub source release:** https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.0; no manual related-identifier field is supplied because the GitHub–Zenodo integration records the source release
+- **GitHub source release:** https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.1
 - **Related manuscript:** Submission ID `61a39b35-8588-492a-bc38-1640628b2633`; the article DOI can be added after publication
-- **Funding:** omitted because no verified funder or grant metadata were supplied for this release
+- **Funding:** omitted because no verified funder or grant metadata were supplied
 
-The published record was verified at https://zenodo.org/records/22852369. Its public source archive is 82,648,552 bytes with MD5 `6756521735b8c1b96d23c8a30a0658c2` as reported by Zenodo.
+The reserved version record is https://zenodo.org/records/22854090. The version DOI becomes registered when the draft is published; the concept DOI continues to identify all versions.

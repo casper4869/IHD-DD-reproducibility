@@ -17,7 +17,7 @@
 - [x] Create the public repository without pasting account credentials into chat or files.
 - [x] Push and independently verify the reviewed analysis package.
 - [x] Push the approved release metadata and refreshed checksum manifest.
-- [x] Create version tag `v1.0.0` and the GitHub Release from commit `9885cb8671030cfa2e925fcfa25c7f264f50f457`.
+- [x] Create version tag `v1.0.1` and the GitHub Release from the final metadata and manifest snapshot.
 - [x] Record the exact release URL and commit/tag in `data_access_protocol.md`.
 
 ## Zenodo archive
@@ -26,7 +26,8 @@
 - [x] Enable only `casper4869/IHD-DD-reproducibility` for Zenodo archiving.
 - [x] Verify the metadata in `ZENODO_METADATA.md` and `.zenodo.json`.
 - [x] Archive the final GitHub Release and verify the published 82,648,552-byte source archive.
-- [x] Record version DOI `10.5281/zenodo.22852369` and concept DOI `10.5281/zenodo.22852368`; cite the version DOI for the exact reviewer release.
+- [x] Record version DOI `10.5281/zenodo.22854090` and concept DOI `10.5281/zenodo.22852368`; cite the version DOI for the exact reviewer release.
 - [x] Test the DOI metadata endpoint and public file response without depositor credentials.
 - [x] Provide the final repository, version DOI, release version, and rights wording in `data_access_protocol.md` for use in the manuscript-facing availability text.
 - [x] Verify that `figures/Figure4.*` is the QA-checked minimal redraw with archived 19/14 endpoints, `figures/Figure5.tif` is the byte-identical submitted Figure 5, the original Figure 4 is isolated under `figures/original_submitted_not_for_resubmission/`, and all additional sensitivity displays remain under `figures/internal_audit_not_for_submission/`.
+- [x] Include the machine-readable submitted-system 45-unit exclusion sensitivity, with 159 retained rows and independently verified 71/13/60/15 category counts.

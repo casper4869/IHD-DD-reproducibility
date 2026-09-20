@@ -1,0 +1,7 @@
+"country","cause","joint_target_equations","lag","expected_joint_restrictions","actual_numerator_df","F_statistic","p_value"
+"American Samoa","IHD_val","DD_val; SDI_val",2,4,4,5.18489994914724,0.00112580445173827
+"American Samoa","DD_val","IHD_val; SDI_val",2,4,4,22.9667013334452,9.76552172460288e-12
+"People's Republic of China","IHD_val","DD_val; SDI_val",2,4,4,7.27006721614254,7.03591977051499e-05
+"People's Republic of China","DD_val","IHD_val; SDI_val",2,4,4,4.74068264158825,0.00208328232160193
+"United States of America","IHD_val","DD_val; SDI_val",2,4,4,7.52504634385065,5.08033205451897e-05
+"United States of America","DD_val","IHD_val; SDI_val",2,4,4,9.82747931164074,3.04923725691353e-06

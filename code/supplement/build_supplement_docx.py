@@ -37,11 +37,11 @@ S1_HEADERS = (
 S1_WIDTHS = (3.10, 0.80, 0.75, 0.65, 0.75, 0.80, 0.75, 0.65, 0.75)
 S2_HEADERS = (
     "Location",
-    "IHD→DD P",
-    "DD→IHD P",
-    "IHD→DD FDR q",
-    "DD→IHD FDR q",
-    "Temporal predictive classification",
+    "Legacy IHD→DD P",
+    "Legacy DD→IHD P",
+    "Legacy IHD→DD FDR q",
+    "Legacy DD→IHD FDR q",
+    "Legacy system-test classification",
 )
 S2_WIDTHS = (3.20, 1.00, 1.00, 1.15, 1.15, 1.90)
 
@@ -186,7 +186,22 @@ def read_s2(path: Path):
     output = []
     with path.open("r", newline="", encoding="utf-8-sig") as handle:
         for row in csv.DictReader(handle):
-            raw_classification = row.get("classification") or row.get("direction") or ""
+            # Granger_submitted_vs_corrected.csv preserves both the submitted
+            # analysis and the later audit analysis.  When those submitted_*
+            # columns are present, Table S2 must reproduce the submitted
+            # results rather than silently substituting the audit analysis.
+            if row.get("submitted_direction"):
+                raw_classification = row["submitted_direction"]
+                p_ihd_to_dd = row["submitted_IHD_to_DD_p"]
+                p_dd_to_ihd = row["submitted_DD_to_IHD_p"]
+                q_ihd_to_dd = row["submitted_IHD_to_DD_q"]
+                q_dd_to_ihd = row["submitted_DD_to_IHD_q"]
+            else:
+                raw_classification = row.get("classification") or row.get("direction") or ""
+                p_ihd_to_dd = row.get("p_ihd_to_dd") or row["IHD_to_DD_p"]
+                p_dd_to_ihd = row.get("p_dd_to_ihd") or row["DD_to_IHD_p"]
+                q_ihd_to_dd = row.get("q_ihd_to_dd") or row["IHD_to_DD_q"]
+                q_dd_to_ihd = row.get("q_dd_to_ihd") or row["DD_to_IHD_q"]
             classification = {
                 "DD_to_IHD": "DD→IHD",
                 "IHD_to_DD": "IHD→DD",
@@ -196,10 +211,10 @@ def read_s2(path: Path):
             output.append(
                 (
                     row["location_name"],
-                    format_p(row.get("p_ihd_to_dd") or row["IHD_to_DD_p"]),
-                    format_p(row.get("p_dd_to_ihd") or row["DD_to_IHD_p"]),
-                    format_p(row.get("q_ihd_to_dd") or row["IHD_to_DD_q"]),
-                    format_p(row.get("q_dd_to_ihd") or row["DD_to_IHD_q"]),
+                    format_p(p_ihd_to_dd),
+                    format_p(p_dd_to_ihd),
+                    format_p(q_ihd_to_dd),
+                    format_p(q_dd_to_ihd),
                     classification,
                 )
             )
@@ -253,8 +268,8 @@ def build(s1_path: Path, s2_path: Path, output_path: Path, rows_per_page: int) -
         page_break(doc)
 
     s2_title = (
-        "Table S2. Country-level Granger temporal predictive precedence between IHD and DD, "
-        "1992–2021: raw and FDR-adjusted P values for IHD→DD and DD→IHD."
+        "Table S2. Submitted country-level Granger system-test classifications, 1992–2021: "
+        "raw and FDR-adjusted P values under the legacy IHD→DD and DD→IHD labels."
     )
     for index, rows in enumerate(s2_pages):
         title = s2_title if index == 0 else "Table S2 (continued)."
@@ -262,14 +277,16 @@ def build(s1_path: Path, s2_path: Path, output_path: Path, rows_per_page: int) -
         if index == len(s2_pages) - 1:
             add_note(
                 doc,
-                "*Models used annual log changes, a common Schwarz-BIC lag of 1–3 per country, SDI "
-                "change as an exogenous covariate, and finite-sample-adjusted Newey–West covariance. "
-                "For each direction, the null hypothesis was that the lagged incidence terms of the "
-                "putative predictor were jointly zero. The 204 P values were adjusted separately for "
-                "the IHD→DD and DD→IHD families using the Benjamini–Hochberg procedure applied to "
-                "unrounded values; classification used q<0.05. An arrow denotes temporal predictive "
-                "precedence and does not imply causation. Fixed-lag, HC3, residual, and influence "
-                "diagnostics are provided in the reproducibility package.",
+                "*Values reproduce the submitted three-variable VAR analysis of IHD incidence, DD incidence, "
+                "and SDI. The legacy IHD→DD column contains the joint Granger F test of lagged IHD terms in "
+                "the DD and SDI equations; DD→IHD contains the joint test of lagged DD terms in the IHD and "
+                "SDI equations. Neither test is confined to the other disease equation. The 204 raw P values "
+                "in each labelled family were adjusted separately using the Benjamini–Hochberg procedure "
+                "applied to unrounded P values. Bidirectional indicates q<0.05 in both labelled families; "
+                "IHD→DD and DD→IHD indicate q<0.05 only in the named family; No evidence indicates q≥0.05 "
+                "in both families. These legacy categories describe system-level predictive classifications "
+                "and do not establish disease-specific temporal direction, causation, or individual-level "
+                "comorbidity. Time-varying confounding and model-specification dependence remain possible.",
             )
         if index != len(s2_pages) - 1:
             page_break(doc)

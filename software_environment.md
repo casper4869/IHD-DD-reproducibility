@@ -51,7 +51,9 @@ Primary attached packages: `data.table 1.18.0`, `ggplot2 4.0.2`, `ggrepel 0.9.6`
 
 ### Supplementary DOCX build and validation
 
-The supplementary builder and validator use Python 3 and `python-docx`. The builder reads corrected S1/S2 CSV files and writes fixed-grid Word tables; the validator imports the builder's formatting functions and compares every displayed cell with the source data. The checked report is `reports/supplement_validation.md`.
+The supplementary builder and validator use Python 3 and `python-docx`. The builder reads the corrected S1 CSV and the submitted-system-test `submitted_*` fields from `Granger_submitted_vs_corrected.csv`, then writes fixed-grid Word tables. The validator imports the builder's formatting functions and compares every displayed cell with those declared source fields. The checked report is `reports/supplement_validation.md`.
+
+The submitted-system 45-unit exclusion sensitivity uses Python 3 standard-library modules only (`argparse`, `csv`, `collections`, and `pathlib`). It performs an offline BH recalculation from packaged aggregate P values and makes no network request.
 
 ## Historical environment caveat
 
@@ -59,4 +61,4 @@ The submitted manuscript stated R 4.3.2 for the original analysis. No complete l
 
 ## Environment reconstruction
 
-No `renv.lock` is included in `v1.0.0`. Reproducibility relies on the archived `sessionInfo()` records, package-version tables, source tables, independent reruns, and checksums. This is a disclosed environment limitation. A future release may add a clean-environment lockfile and document any package substitutions after numerical comparison with the archived outputs.
+No `renv.lock` is included in `v1.0.1`. Reproducibility relies on the archived `sessionInfo()` records, package-version tables, source tables, independent reruns, and checksums. This is a disclosed environment limitation. A future release may add a clean-environment lockfile and document any package substitutions after numerical comparison with the archived outputs.

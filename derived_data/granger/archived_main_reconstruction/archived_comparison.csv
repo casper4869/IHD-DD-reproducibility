@@ -1,0 +1,7 @@
+"field","max_absolute_difference","new_missing","old_missing","pass"
+"IHD_to_DD_p",4.9960036108132e-16,0,0,TRUE
+"DD_to_IHD_p",4.44089209850063e-16,0,0,TRUE
+"lag",0,0,0,TRUE
+"IHD_to_DD_padj",4.9960036108132e-16,0,0,TRUE
+"DD_to_IHD_padj",4.71844785465692e-16,0,0,TRUE
+"all_country_categories",NA,NA,NA,TRUE
