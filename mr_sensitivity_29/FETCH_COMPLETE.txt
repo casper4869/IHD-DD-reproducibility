@@ -1,0 +1,2 @@
+COMPLETE
+Exposure instruments: official API; outcomes: exact-ID official VCFs; no proxies; harmonise action=2.

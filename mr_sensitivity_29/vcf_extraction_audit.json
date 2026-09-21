@@ -1,0 +1,24 @@
+[
+  {
+    "id": "finn-b-I9_IHD",
+    "sha256": "0047a20be8c3ab69dbab6488f6e5479238f647730701948e99621d06e0052f6c",
+    "bytes": 442700837,
+    "records_scanned": 16278248,
+    "requested_unique_snps": 6875,
+    "matched_unique_snps": 6570,
+    "ambiguous_rsids": 14,
+    "retained_unique_snps": 6556,
+    "missing_snps": 305
+  },
+  {
+    "id": "finn-b-F5_DEPRESSIO",
+    "sha256": "5ec263bc7959500b21c7bfd94543b622c418797732272e8106fb9c8357f55458",
+    "bytes": 442154812,
+    "records_scanned": 16278239,
+    "requested_unique_snps": 6875,
+    "matched_unique_snps": 6570,
+    "ambiguous_rsids": 14,
+    "retained_unique_snps": 6556,
+    "missing_snps": 305
+  }
+]

@@ -1,0 +1,5 @@
+fixture 1 n 8 PASS all output components tolerance 1e-10 AND identical RNG state; official_seconds 3.87 fast_seconds 0.05
+fixture 2 n 8 PASS all output components tolerance 1e-10 AND identical RNG state; official_seconds 4.3 fast_seconds 0.15
+fixture 3 n 4 PASS all output components tolerance 1e-10 AND identical RNG state; official_seconds 1.22 fast_seconds 0.02
+fixture 4 n 5 PASS all output components tolerance 1e-10 AND identical RNG state; official_seconds 1.5 fast_seconds 0.03
+fixture 5 n 20 PASS all output components tolerance 1e-10 AND identical RNG state; official_seconds 6.43 fast_seconds 0.06

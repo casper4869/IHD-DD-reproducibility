@@ -16,7 +16,7 @@ This audit searched the existing project tree for evidence that could support th
 
 The only root-level file named `Data preprocessing.R` is an older rheumatoid-arthritis/anxiety-disorders example. It does not preprocess IHD or depressive-disorder data, so it cannot be used to claim an end-to-end IHD/DD pipeline.
 
-The Figure 1 scripts contain absolute local paths, round 2021 rates to two decimals before constructing quartiles, perform extensive manual name/polygon handling, and split the final workflow across several scripts plus an Illustrator file. The bivariate source tables are useful audit evidence, but the disease-axis orientation and display transformations were not independently rerun and therefore are not promoted to corrected release code in `v1.0.1`.
+The Figure 1 scripts contain absolute local paths, round 2021 rates to two decimals before constructing quartiles, perform extensive manual name/polygon handling, and split the final workflow across several scripts plus an Illustrator file. The bivariate source tables are useful audit evidence, but the disease-axis orientation and display transformations were not independently rerun and therefore are not promoted to corrected release code in `v1.0.0`.
 
 The Figure 3 scripts contain obsolete drive-specific paths and combine the temporal typology with unrelated map and correlation code. The saved count tables are structurally coherent, but no clean parameterised script has yet reproduced the exact submitted graphic from immutable inputs.
 

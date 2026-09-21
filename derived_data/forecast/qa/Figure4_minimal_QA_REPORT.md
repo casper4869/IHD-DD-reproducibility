@@ -1,7 +1,7 @@
 # Figure 4 minimal redraw — QA report
 
 Date: 2026-09-20  
-Status: **PASS — packaged as the revised Figure 4 in release v1.0.1.**
+Status: **PASS — packaged as the revised Figure 4 in the unreleased repository working tree; the immutable v1.0.0 archive was not modified.**
 
 ## Figure contract
 

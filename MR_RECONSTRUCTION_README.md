@@ -23,7 +23,8 @@ The two `bb.csv` files are exact compact concatenations of the numbered one-row 
 - `code/mr/01_build_exploratory_mr_audit.R`: reconstructs the catalogue-to-analysis status manifest and cross-checks retained one-row files against the compact aggregates. The executed historical audit used the full local source directory; the generated outputs and complete source hashes are included here. The public package does not duplicate the 17,655 numbered files.
 - `code/mr/alternative_sets/build_alternative_mr_sets.py`: derives Sets A-C from the packaged catalogue and saved aggregate results without a network request.
 - `code/mr/02_build_final_mr_reporting.R`: verifies Set B and creates the final 29-candidate reporting tables and Figure 7 source/exports. This script is fully offline when supplied with the included Set B CSV.
-- `code/mr/opengwas_sensitivity_rerun_RATE_LIMITED.R`: optional future instrument-level sensitivity workflow. It was not executed for this revision and is disabled by default.
+- `mr_sensitivity_29/`: completed targeted instrument-level sensitivity workflow and outputs for the final 29 traits against both outcomes (58 pairs); a self-contained ZIP and readable workbook are also supplied under `documents/`.
+- `code/mr/opengwas_sensitivity_rerun_RATE_LIMITED.R`: retained earlier safe template; the completed current workflow and cached results are in `mr_sensitivity_29/`.
 
 ### Generated evidence
 
@@ -64,15 +65,15 @@ The exact DD run used to generate the submitted 50-row table is not present. The
 
 Offline code/output fingerprinting found that the DD folder is consistent with the self-developed exposure-screen code family in its saved DD configuration, while the IHD folder is consistent with an earlier IHD-configured version of that code family. The exact IHD-configured script text and historical execution records were not retained, so output-fingerprint agreement does not prove the exact executable provenance. The alternative Grok script and the reverse-direction outcome-screen script have incompatible filename, indexing, outcome, or output fingerprints. See `MR_SCREEN_FLOW.md`.
 
-No retained files contain SNP-level exposure data, outcome extractions, harmonised datasets, per-variant F statistics, heterogeneity statistics, MR-Egger results/intercepts, weighted-median results, leave-one-out analyses, MR-PRESSO, or Steiger directionality results. These analyses cannot be reconstructed honestly from aggregate `b`, `se`, `p`, method, and instrument-count fields. Their absence is disclosed in the manuscript and response letter.
+The original historical DD SNP-level objects behind the withdrawn 50-row table were not retained. A new, explicitly labelled targeted current-data follow-up was therefore completed for the locked final 29 traits against IHD and DD (58 pairs). It supplies harmonised instruments, per-variant F statistics, IVW, MR-Egger, weighted-median and weighted-mode estimates, heterogeneity, Egger intercepts, single-SNP, leave-one-out and MR-PRESSO outputs. This follow-up supports sensitivity assessment of the final reported set but is not presented as an exact recreation of the lost historical run or as independent replication.
 
 Predominantly European and Finnish data limit transferability to the manuscript's global ecological analysis. Excluding `finn-b-*` exposures reduces a specific same-cohort overlap concern but does not create cross-ancestry evidence.
 
 ## OpenGWAS access and no-crawling rule
 
-No online request is necessary to inspect or regenerate the included aggregate-result tables. No OpenGWAS request was made while building this release. The historical `ao.csv` was created through `available_outcomes()` when absent and reused from disk thereafter; a current catalogue refresh would not be a reproduction of that dated snapshot.
+No online request is necessary to inspect or regenerate the included aggregate-result tables. No OpenGWAS request is needed to rebuild the included aggregate discovery tables; the separately labelled targeted follow-up used the paced authorised acquisition workflow described below. The historical `ao.csv` was created through `available_outcomes()` when absent and reused from disk thereafter; a current catalogue refresh would not be a reproduction of that dated snapshot.
 
-The optional script is provided only for a future, deliberately slow sensitivity rerun of the 29 candidates. It is **off by default** and makes no request unless `RUN_OPENGWAS_SENSITIVITY=YES` is set explicitly. It must not be used as a crawler or parallelised. It caches every completed exposure, resumes without repeating completed work, paces every top-level API operation at a default 90-second interval plus jitter, rejects delay settings below 60 seconds, prevents back-to-back exposure/outcome requests, calls `ieugwasr::check_reset(override_429 = FALSE)`, and stops immediately on any `429`, allowance, or `Retry-After` signal. The operator must review and follow the current OpenGWAS authentication, allowance, licensing, and access rules before enabling it. Never commit or archive `OPENGWAS_JWT`.
+The earlier optional script is retained as a safe reference. The completed, deliberately paced targeted workflow and its cached analytical objects are provided under `mr_sensitivity_29/`. It is **off by default** and makes no request unless `RUN_OPENGWAS_SENSITIVITY=YES` is set explicitly. It must not be used as a crawler or parallelised. It caches every completed exposure, resumes without repeating completed work, paces every top-level API operation at a default 90-second interval plus jitter, rejects delay settings below 60 seconds, prevents back-to-back exposure/outcome requests, calls `ieugwasr::check_reset(override_429 = FALSE)`, and stops immediately on any `429`, allowance, or `Retry-After` signal. The operator must review and follow the current OpenGWAS authentication, allowance, licensing, and access rules before enabling it. Never commit or archive `OPENGWAS_JWT`.
 
 Current official guidance:
 
@@ -81,4 +82,4 @@ Current official guidance:
 
 ## Public archive
 
-Version `1.0.1` is published at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.1 and permanently archived at https://doi.org/10.5281/zenodo.22854090. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.
+Version `1.1.0` is prepared at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0 and permanently archived at https://doi.org/10.5281/zenodo.22878656. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.

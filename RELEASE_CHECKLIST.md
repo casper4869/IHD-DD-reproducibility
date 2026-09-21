@@ -26,7 +26,7 @@
 - [x] Enable only `casper4869/IHD-DD-reproducibility` for Zenodo archiving.
 - [x] Verify the metadata in `ZENODO_METADATA.md` and `.zenodo.json`.
 - [x] Archive the final GitHub Release and verify the published 82,648,552-byte source archive.
-- [x] Record version DOI `10.5281/zenodo.22854090` and concept DOI `10.5281/zenodo.22852368`; cite the version DOI for the exact reviewer release.
+- [x] Record version DOI `10.5281/zenodo.22878656` and concept DOI `10.5281/zenodo.22878656`; cite the version DOI for the exact reviewer release.
 - [x] Test the DOI metadata endpoint and public file response without depositor credentials.
 - [x] Provide the final repository, version DOI, release version, and rights wording in `data_access_protocol.md` for use in the manuscript-facing availability text.
 - [x] Verify that `figures/Figure4.*` is the QA-checked minimal redraw with archived 19/14 endpoints, `figures/Figure5.tif` is the byte-identical submitted Figure 5, the original Figure 4 is isolated under `figures/original_submitted_not_for_resubmission/`, and all additional sensitivity displays remain under `figures/internal_audit_not_for_submission/`.

@@ -3,16 +3,13 @@
 **Manuscript:** *Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits*  
 **Journal:** International Journal of Health Geographics  
 **Submission ID:** 61a39b35-8588-492a-bc38-1640628b2633  
-**Package date:** 2026-09-20  
+**Package date:** 2026-09-21
 **Repository:** https://github.com/casper4869/IHD-DD-reproducibility<br>
-**Published release:** `v1.0.1`<br>
-**Version DOI:** https://doi.org/10.5281/zenodo.22854090<br>
-**Concept DOI:** https://doi.org/10.5281/zenodo.22852368<br>
-**Status:** `PUBLIC_RELEASE_ARCHIVED_WITH_ZENODO_DOI`
+**Release prepared:** `v1.1.0`<br>
+**Reserved version DOI:** https://doi.org/10.5281/zenodo.22878656<br>
+**Status:** `V1.1.0_PREPARED_FOR_ARCHIVAL`
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22854090.svg)](https://doi.org/10.5281/zenodo.22854090)
-
-This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.0.1` is permanently archived at Zenodo under the version-specific DOI above. The graphical abstract is intentionally absent because it will not be submitted.
+This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.1.0` adds the completed final-29-trait sensitivity analysis and the checked GBD preprocessing chain. The reserved DOI becomes registered when the release is published. The graphical abstract is intentionally absent because it will not be submitted.
 
 ## What is reproducible now
 
@@ -23,8 +20,8 @@ This public repository collects the corrected scripts, machine-readable outputs,
 | Exploratory MR reconstruction and final 29-candidate reporting set | Available from preserved aggregate results | Complete 15,703-row catalogue-to-analysis status manifest, 11,988-row outcome-specific schedules, 11,987-row common-candidate table, saved aggregate estimates, source hashes, alternative candidate sets, final 29-candidate Table 1/Figure 7 source tables, and session information |
 | Figure 5 submitted artwork and Granger analysis | Submitted TIFF restored; submitted main analysis and 45-unit exclusion sensitivity available offline | `code/granger/reproduce_archived_granger_main.R` reproduces every submitted country classification from the three-variable VAR. The archived arrows are documented as joint system-test labels because each source call tests both remaining equations. A separate offline script reapplies both submitted BH families after the prespecified 45-unit exclusion and provides 159 row-level results plus counts of 71/13/60/15. Alternative target-specific equations, covariance estimators and the two-map display remain internal audit records and do not replace the manuscript figure. |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
-| SNP-level MR sensitivity analyses | Not reconstructable from the preserved historical files | The exact historical DD run used for the submitted 50-row table and SNP-level instruments/harmonised objects were not retained; MR-Egger, weighted median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger and instrument-strength analyses therefore cannot be recreated from this archive |
-| Public archival record | Published and archived | GitHub release `v1.0.1` is archived at Zenodo under version DOI `10.5281/zenodo.22854090`; the concept DOI `10.5281/zenodo.22852368` resolves to the latest version |
+| Targeted instrument-level MR sensitivity analyses | Complete for the final 29 reported traits × two outcomes (58 pairs) | 232 estimator rows (IVW, MR-Egger, weighted median, weighted mode), 58 diagnostic rows, instrument-strength, heterogeneity, Egger-intercept, single-SNP, leave-one-out, and 58 MR-PRESSO results; code, cached analytical inputs and validation records are included in `mr_sensitivity_29/`, with readable S2/S3 deliverables under `documents/` |
+| Public archival record | Version 1.1.0 prepared | GitHub/Zenodo release metadata are included; the reserved version DOI is `10.5281/zenodo.22878656` |
 
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 
@@ -39,9 +36,11 @@ The MR component is explicitly exploratory. There was no manual pre-screening of
 - `reports/`: cross-component audit material added during packaging.
 - `environment/`: software and session records.
 - `manifests/`: script, input, legacy-artifact, and package-file inventories.
-- `documents/`: the rebuilt supplementary DOCX checked against the corrected S1 source table and the submitted three-variable Granger results preserved in the `submitted_*` columns of `derived_data/granger/Granger_submitted_vs_corrected.csv`.
+- `documents/`: the rebuilt supplementary DOCX plus `Supplementary_Data_S2_MR_sensitivity.xlsx` and the self-contained `Supplementary_Data_S3_MR_outputs_and_code.zip`.
 - `source_data/mr/`: the preserved 15,703-row OpenGWAS catalogue snapshot and compact IHD/DD aggregate result files (`bb.csv` and `END.csv`).
 - `source_data/legacy_figure1/` and `source_data/legacy_figure3/`: small derived source/count tables retained for historical audit; these are not raw-to-final analysis inputs.
+- `code/preprocessing/`: parameterised GBD Incidence/Rate preprocessing and comparison scripts that regenerate the core 204-location disease inputs from authorised local downloads.
+- `mr_sensitivity_29/`: unpacked, browseable copy of the completed targeted 29-trait × two-outcome sensitivity workflow and outputs; online retrieval is disabled by default, sequential, cached and rate-limited.
 - `data_access_protocol.md`: step-by-step retrieval and reconstruction instructions for third-party data.
 - `MR_RECONSTRUCTION_README.md`: MR reconstruction, selection rules, source-file map, online-access safeguards, and remaining limitations.
 - `MR_SCREEN_FLOW.md`: plain-language accounting of the 15,703 → 11,988 → 5,880/11,775 → 49 → 29 flow and the absence of manual phenotype pre-selection.
@@ -191,9 +190,13 @@ Rscript code/mr/00_catalogue_snapshot_provenance.R
 
 With no enabling environment variable, this command only validates the included `ao.csv` and makes no network request. The preserved 15,703-row file is the analysis snapshot; replacing it with today's catalogue would change the historical analysis universe.
 
-### 8. Optional OpenGWAS sensitivity rerun (not executed for this revision)
+### 8. Reproduce the completed targeted MR sensitivity outputs offline
 
-`code/mr/opengwas_sensitivity_rerun_RATE_LIMITED.R` is an optional future instrument-level sensitivity workflow for the final 29 candidates. It is **off by default** and makes no request unless `RUN_OPENGWAS_SENSITIVITY=YES` is set explicitly. It is not a crawler. It runs sequentially, caches each completed exposure, resumes without repeating completed work, paces every top-level API operation with a default 90-second interval plus jitter, enforces a minimum interval of 60 seconds, prevents back-to-back exposure/outcome requests, honours OpenGWAS allowance checks, does not override HTTP 429 protection, and stops on `429`/`Retry-After` signals. Review the current OpenGWAS authentication and allowance documentation before any future use. No online rerun was performed in preparing this package.
+The completed follow-up is provided in `mr_sensitivity_29/` and as the self-contained archive `documents/Supplementary_Data_S3_MR_outputs_and_code.zip`. It covers the locked final 29 Figure 7 traits against IHD and DD (58 pairs). Start with `mr_sensitivity_29/README.md`; the supplied cached instruments, harmonised data and pair-level results allow the reported tables and diagnostics to be rebuilt without new catalogue-scale requests. The readable workbook is `documents/Supplementary_Data_S2_MR_sensitivity.xlsx`.
+
+The included acquisition code is disabled unless explicitly enabled, runs sequentially, caches completed work, waits at least 95 seconds between top-level requests, and stops on provider allowance or HTTP 429 signals. It must not be parallelised or used as a crawler. Credentials, signed URLs and complete source VCFs are excluded.
+
+The targeted current-data follow-up does not recreate the unavailable historical DD SNP objects behind the withdrawn 50-row table and does not change the historical discovery q values. All 29 selected traits remain reported regardless of sensitivity findings.
 
 ## Integrity rules
 
@@ -209,7 +212,7 @@ With no enabling environment variable, this command only validates the included 
 ## Disclosed limitations
 
 - The complete historical DD SNP-level run used for the submitted 50-row table is unavailable. The revised analysis therefore replaces that table with the traceable 29-candidate aggregate reconstruction and explicitly withholds SNP-level pleiotropy/sensitivity claims.
-- Curate raw-to-final preprocessing and Figure 1/Figure 3 into clean parameterised scripts. Sanitised historical Figure 1, Figure 3, and SDI `.R.txt` references are included with original hashes and limitations, but they are not corrected release entry points and must not be executed as the reproducible workflow.
+- The core raw-disease-extract to analysis-input step is now provided under `code/preprocessing/` and checked against the retained Part 2/4/5/7 inputs. Further historical Figure 1/3 display-source provenance and unavailable PM2.5/coordinate metadata remain documented limitations.
 - Confirm the original source, version, units, retrieval date, and licence for the processed PM2.5 matrix; the two local copies are byte-identical, which verifies local lineage but not external provenance.
 - Confirm the source gazetteer/geocoder, coordinate definition, version, retrieval date, licence, and matching code for the 204-row coordinate file.
 - Record release-specific FinnGen/Risteys endpoint exports, release number, and access date.
@@ -217,4 +220,4 @@ With no enabling environment variable, this command only validates the included 
 
 ## Rights
 
-This is a publicly accessible, mixed-rights archive. No repository-wide reuse licence is granted in `v1.0.1`; author-created material retains its existing rights unless a file states otherwise, and third-party material remains subject to its original provider terms. The Zenodo record therefore uses `Other (Not Open)` while keeping the files publicly accessible for transparency and independent verification. See `RIGHTS_AND_LICENSING.md`.
+This is a publicly accessible, mixed-rights archive. No repository-wide reuse licence is granted in `v1.1.0`; author-created material retains its existing rights unless a file states otherwise, and third-party material remains subject to its original provider terms. The Zenodo record therefore uses `Other (Not Open)` while keeping the files publicly accessible for transparency and independent verification. See `RIGHTS_AND_LICENSING.md`.

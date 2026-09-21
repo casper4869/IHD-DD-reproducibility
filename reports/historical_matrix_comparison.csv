@@ -1,0 +1,7 @@
+comparison,new_rows,old_rows,matched_locations,name_mismatches_before_normalisation,max_abs_diff,different_cells,missing_cells
+IHD full vs Part4,204,204,204,0,4.99999828207365e-08,0,0
+DD full vs Part4,204,204,204,0,4.9499976739753e-07,0,0
+IHD 2dp vs Part5,204,204,204,0,0,0,0
+DD 2dp vs Part5,204,204,204,0,0,0,0
+IHD 2dp vs Part7,204,204,204,0,0,0,0
+DD 2dp vs Part7,204,204,204,1,0,0,0

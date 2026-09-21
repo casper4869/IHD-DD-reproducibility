@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this reproducibility package, please cite the version-specific Zenodo record."
 title: "Reproducibility materials for ‘Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits’"
 type: software
-version: 1.0.1
-date-released: 2026-09-20
-doi: "10.5281/zenodo.22854090"
+version: 1.1.0
+date-released: 2026-09-21
+doi: "10.5281/zenodo.22878656"
 repository-code: "https://github.com/casper4869/IHD-DD-reproducibility"
 abstract: >-
   Analysis scripts, derived outputs, figure-source material, software records,

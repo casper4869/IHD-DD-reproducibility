@@ -1,0 +1,5 @@
+stage,n,rule
+Target locations,204,Country.csv fixed study cohort
+ASIR long rows,36720,Incidence; Rate; Age-standardized; Male/Female/Both; 1992-2021
+Age-specific paired rows,244800,Incidence; Rate; 20 age groups; Male/Female; 1992-2021
+SDI locations,204,"Existing curated 204-location SDI matrix, years 1992-2021"

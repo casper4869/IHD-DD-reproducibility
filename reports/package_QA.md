@@ -1,14 +1,14 @@
-# Public repository v1.0.1 QA
+# Public repository v1.0.0 QA
 
 QA date: 2026-09-20
 
 ## Structural and safety checks
 
-- All 21 release `.R` scripts and all 12 quarantined historical `.R.txt` references parsed successfully under R 4.5.0; zero parse failures. The 12 references comprise 10 Figure 1/Figure 3/SDI records and two MR provenance records.
-- All four packaged Python scripts passed AST parsing.
-- All 125 packaged CSV files were read with a standards-compliant parser; zero row-width failures.
-- The packaged supplementary DOCX passed ZIP/XML relationship checks and the independent 204-row S1/204-row S2 content validator. S2 matches the submitted-system-test `submitted_*` columns in `Granger_submitted_vs_corrected.csv`; the later target-specific sensitivity columns are not substituted into the manuscript table. Four nonportable XLSX convenience exports with broken drawing relationships were excluded; their authoritative CSV tables and generation code remain included.
-- `.zenodo.json` passed JSON parsing with four creators, version `1.0.1`, open file access, and the conservative `other-closed` rights identifier. `CITATION.cff` passed YAML parsing with the same four creators and version.
+- All 18 release `.R` scripts and all 12 quarantined historical `.R.txt` references parsed successfully under R 4.5.0; zero parse failures. The 12 references comprise 10 Figure 1/Figure 3/SDI records and two MR provenance records.
+- All three packaged Python scripts passed AST parsing.
+- All 119 packaged CSV files were read with a standards-compliant parser; zero row-width failures.
+- The packaged supplementary DOCX passed ZIP/XML relationship checks and the independent 204-row S1/204-row S2 content validator. Four nonportable XLSX convenience exports with broken drawing relationships were excluded; their authoritative CSV tables and generation code remain included.
+- `.zenodo.json` passed JSON parsing with four creators, version `1.0.0`, open file access, and the conservative `other-closed` rights identifier. `CITATION.cff` passed YAML parsing with the same four creators and version.
 - The largest file is `figures/Figure2_EF_corrected.tif` at 26,220,552 bytes, below GitHub's per-file limit.
 - A byte-level scan found no GitHub token, literal JWT, private key, or quoted password assignment.
 - No `__pycache__` file is present.
@@ -23,14 +23,6 @@ QA date: 2026-09-20
 - The manifest contains 11,988 scheduled exposures for IHD and 11,988 for DD. Its scope/scheduling fields contain no `inclusion`, `exclusion`, or `decision` column name that could imply a manual phenotype review.
 - Compact aggregate files contribute 5,880 saved IHD and 11,775 saved DD estimates. Missing scheduled outputs remain labelled `no saved estimate; exact reason not recorded`.
 - The documentation states that no phenotype was manually pre-selected by name, relevance, modifiability, expected direction, or result.
-
-## Submitted Granger reconstruction checks
-
-- The concise path-parameterised script reproduced all 204 submitted three-variable VAR classifications. Selected lags matched exactly; raw and Benjamini-Hochberg-adjusted P values agreed within `1e-12`, with a largest absolute difference of `4.996004e-16`.
-- The reproduced legacy-category counts are 94 significant in both labelled families, 20 in the IHD-labelled family only, 70 in the DD-labelled family only, and 20 in neither.
-- The separate scope audit confirmed from the numerator degrees of freedom that `vars::causality()` with IHD as the source jointly tests the DD and SDI equations, while DD as the source jointly tests the IHD and SDI equations. Documentation therefore treats the archived arrows as legacy system-test labels and makes no disease-specific direction or causal claim.
-- The submitted-system exclusion script verified the packaged 45-unit list against the archived flags, retained 159 locations, independently recomputed both BH families, and reproduced the asserted category counts of 71 both families, 13 IHD-labelled only, 60 DD-labelled only, and 15 neither. The two machine-readable CSV outputs contain 159 unique locations and four count rows, respectively.
-- The later target-specific sensitivity script and audit-only two-map display remain explicitly separated from the submitted main analysis and manuscript Figure 5.
 
 ## Candidate-set and final-reporting checks
 
@@ -54,9 +46,9 @@ QA date: 2026-09-20
 
 ## Scope limits and remaining author actions
 
-The exact old-table DD SNP-level run, harmonised instruments, and SNP-level sensitivity outputs were not retained; MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO, Steiger, and F-statistic claims are therefore not reconstructed from aggregate files. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The verified version DOI is `10.5281/zenodo.22854090`.
+The exact old-table DD SNP-level run was not retained. The new targeted final-29-trait follow-up supplies MR-Egger, weighted-median, heterogeneity, pleiotropy, leave-one-out, MR-PRESSO and F-statistic results for 58 pairs; these are explicitly labelled current sensitivity analyses rather than a reconstruction from aggregate files. Steiger was not estimated for the documented metadata/effect-scale reasons. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance remain disclosed limitations. The repository URL, version, creators/affiliations, and rights-retained mixed-rights statement are recorded in the release metadata; ORCIDs and funding are omitted because none were verified. The verified version DOI is `10.5281/zenodo.22878656`.
 
-The previous immutable `v1.0.0` archive contained 251 files including its manifest. The `v1.0.1` package contains 287 files including the manifest; its 286 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
+The immutable `v1.0.0` archive contained 251 files including its manifest. The current unreleased working tree contains 274 files including the manifest; its 273 manifest rows cover every other file, and all recorded byte counts and SHA-256 values passed. `manifests/package_file_manifest_sha256.csv` excludes itself to avoid a recursive self-checksum.
 
 <!-- BEGIN FIGURE4_FIGURE5_ROLE_QA -->
 ## Figure 4 and Figure 5 role-separation checks

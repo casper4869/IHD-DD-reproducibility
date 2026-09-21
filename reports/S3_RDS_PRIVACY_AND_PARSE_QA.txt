@@ -1,0 +1,1 @@
+PASS: 120 RDS files inspected recursively for sensitive strings and object types; 13 R scripts parsed without execution. No network requests.

@@ -1,0 +1,59 @@
+id.exposure,trait,outcome,historical_nsnp,current_retained_count,current_p_lt_5e8_subset_count,current_p_eq_5e6_rounded_records
+ukb-b-6591,Age first had sexual intercourse,IHD,183,385,182,2
+ukb-b-6591,Age first had sexual intercourse,DD,386,385,182,2
+ieu-a-1239,Years of schooling,IHD,293,508,292,1
+ieu-a-1239,Years of schooling,DD,509,508,292,1
+ukb-b-6306,Overall health rating,IHD,100,294,101,0
+ukb-b-6306,Overall health rating,DD,294,294,101,0
+ukb-b-14180,Mood swings,IHD,54,181,55,2
+ukb-b-14180,Mood swings,DD,181,181,55,2
+ukb-b-12405,Age at first live birth,IHD,32,150,32,2
+ukb-b-12405,Age at first live birth,DD,151,150,32,2
+ukb-b-3656,Number of treatments/medications taken,IHD,38,156,39,1
+ukb-b-3656,Number of treatments/medications taken,DD,156,156,39,1
+ukb-b-929,Frequency of tiredness / lethargy in last 2 weeks,IHD,38,160,38,0
+ukb-b-929,Frequency of tiredness / lethargy in last 2 weeks,DD,161,160,38,0
+ukb-b-11615,Qualifications: A levels/AS levels or equivalent,IHD,81,242,81,5
+ukb-b-11615,Qualifications: A levels/AS levels or equivalent,DD,243,242,81,5
+ukb-b-14057,"Non-cancer illness code, self-reported: hypertension",IHD,202,366,200,1
+ukb-b-14057,"Non-cancer illness code, self-reported: hypertension",DD,368,366,200,1
+ukb-b-12493,Diagnoses - secondary ICD10: I10 Essential (primary) hypertension,IHD,61,167,64,2
+ukb-b-12493,Diagnoses - secondary ICD10: I10 Essential (primary) hypertension,DD,167,167,64,2
+ukb-b-14177,Vascular/heart problems diagnosed by doctor: High blood pressure,IHD,213,377,211,2
+ukb-b-14177,Vascular/heart problems diagnosed by doctor: High blood pressure,DD,378,377,211,2
+ukb-b-6134,Age completed full time education,IHD,37,157,37,0
+ukb-b-6134,Age completed full time education,DD,157,157,37,0
+ukb-b-4063,Number of self-reported non-cancer illnesses,IHD,34,166,35,1
+ukb-b-4063,Number of self-reported non-cancer illnesses,DD,166,166,35,1
+ukb-b-17729,Qualifications: None of the above,IHD,86,266,86,0
+ukb-b-17729,Qualifications: None of the above,DD,266,266,86,0
+ukb-b-7408,Average total household income before tax,IHD,43,177,43,1
+ukb-b-7408,Average total household income before tax,DD,178,177,43,1
+ieu-b-102,Major depression,IHD,43,164,45,0
+ieu-b-102,Major depression,DD,164,164,45,0
+ukb-b-18994,Miserableness,IHD,43,145,43,1
+ukb-b-18994,Miserableness,DD,145,145,43,1
+ieu-b-4877,smoking initiation,IHD,83,216,82,1
+ieu-b-4877,smoking initiation,DD,216,216,82,1
+ukb-b-17360,Illnesses of siblings: None of the above (group 1),IHD,11,73,10,1
+ukb-b-17360,Illnesses of siblings: None of the above (group 1),DD,73,73,10,1
+ukb-b-4630,Neuroticism score,IHD,108,264,107,2
+ukb-b-4630,Neuroticism score,DD,265,264,107,2
+ukb-b-13352,Vascular/heart problems diagnosed by doctor: None of the above,IHD,204,365,205,2
+ukb-b-13352,Vascular/heart problems diagnosed by doctor: None of the above,DD,367,365,205,2
+ukb-b-5076,Leisure/social activities: None of the above,IHD,10,78,10,0
+ukb-b-5076,Leisure/social activities: None of the above,DD,78,78,10,0
+ukb-b-20292,Taking other prescription medications,IHD,24,85,23,0
+ukb-b-20292,Taking other prescription medications,DD,85,85,23,0
+ukb-b-16489,Qualifications: College or University degree,IHD,238,474,236,1
+ukb-b-16489,Qualifications: College or University degree,DD,472,474,236,1
+ukb-b-18009,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",IHD,89,195,88,1
+ukb-b-18009,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",DD,195,195,88,1
+ukb-b-19809,Fed-up feelings,IHD,53,180,51,1
+ukb-b-19809,Fed-up feelings,DD,180,180,51,1
+ukb-b-20531,Leg fat percentage (right),IHD,352,562,352,0
+ukb-b-20531,Leg fat percentage (right),DD,563,562,352,0
+ukb-b-7212,Leg fat mass (left),IHD,385,609,378,3
+ukb-b-7212,Leg fat mass (left),DD,611,609,378,3
+ukb-b-18096,Leg fat mass (right),IHD,385,601,381,1
+ukb-b-18096,Leg fat mass (right),DD,602,601,381,1

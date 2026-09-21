@@ -1,0 +1,9 @@
+outcome_code,method,n_pairs,n_finite,nominal_P_below_05
+IHD,Inverse variance weighted,29,29,29
+IHD,MR Egger,29,29,15
+IHD,Weighted median,29,29,27
+IHD,Weighted mode,29,29,2
+DD,Inverse variance weighted,29,29,29
+DD,MR Egger,29,29,9
+DD,Weighted median,29,29,26
+DD,Weighted mode,29,29,0
