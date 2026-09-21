@@ -1,6 +1,6 @@
 # Reproducibility package for the IHD–DD revision
 
-**Manuscript:** *Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits*  
+**Manuscript:** *Co-occurrence Patterns and Shared Genetically Associated Traits of Ischaemic Heart Disease and Depressive Disorders*
 **Journal:** International Journal of Health Geographics  
 **Submission ID:** 61a39b35-8588-492a-bc38-1640628b2633  
 **Package date:** 2026-09-21

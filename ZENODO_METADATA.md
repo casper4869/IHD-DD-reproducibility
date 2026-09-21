@@ -2,7 +2,7 @@
 
 The machine-readable metadata source is `.zenodo.json`; `CITATION.cff` supplies the matching citation record.
 
-- **Title:** Reproducibility materials for “Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits”
+- **Title:** Reproducibility materials for “Co-occurrence Patterns and Shared Genetically Associated Traits of Ischaemic Heart Disease and Depressive Disorders”
 - **Resource type:** Software (mixed reproducibility package; selected as the predominant release type)
 - **Version:** `1.1.0`
 - **Publication date:** `2026-09-21`
