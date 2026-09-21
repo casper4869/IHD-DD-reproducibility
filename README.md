@@ -5,11 +5,12 @@
 **Submission ID:** 61a39b35-8588-492a-bc38-1640628b2633  
 **Package date:** 2026-09-21
 **Repository:** https://github.com/casper4869/IHD-DD-reproducibility<br>
-**Release prepared:** `v1.1.0`<br>
-**Reserved version DOI:** https://doi.org/10.5281/zenodo.22878656<br>
-**Status:** `V1.1.0_PREPARED_FOR_ARCHIVAL`
+**Published release:** [`v1.1.0`](https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0)<br>
+**Version DOI:** https://doi.org/10.5281/zenodo.22878656<br>
+**Concept DOI:** https://doi.org/10.5281/zenodo.22878655<br>
+**Status:** `PUBLIC_RELEASE_ARCHIVED_WITH_ZENODO_DOI`
 
-This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.1.0` adds the completed final-29-trait sensitivity analysis and the checked GBD preprocessing chain. The reserved DOI becomes registered when the release is published. The graphical abstract is intentionally absent because it will not be submitted.
+This public repository collects the corrected scripts, machine-readable outputs, figures, diagnostics, software records, and data-access instructions available for the revision. Release `v1.1.0` adds the completed final-29-trait sensitivity analysis and the checked GBD preprocessing chain. The release was published on GitHub and permanently archived by Zenodo on 21 September 2026. The graphical abstract is intentionally absent because it will not be submitted.
 
 ## What is reproducible now
 
@@ -21,7 +22,7 @@ This public repository collects the corrected scripts, machine-readable outputs,
 | Figure 5 submitted artwork and Granger analysis | Submitted TIFF restored; submitted main analysis and 45-unit exclusion sensitivity available offline | `code/granger/reproduce_archived_granger_main.R` reproduces every submitted country classification from the three-variable VAR. The archived arrows are documented as joint system-test labels because each source call tests both remaining equations. A separate offline script reapplies both submitted BH families after the prespecified 45-unit exclusion and provides 159 row-level results plus counts of 71/13/60/15. Alternative target-specific equations, covariance estimators and the two-map display remain internal audit records and do not replace the manuscript figure. |
 | GWR and cartographic/SID sensitivity / Figure 6 | Available and independently checked | Exact submitted GWR specification, 204-location and 45-unit-excluded fits (retained n = 159), independent local-coefficient reconstruction, bandwidth trace, source tables, checksums, and a minimally revised coordinate-point Figure 6 whose shared colour scale covers the complete coefficient range without truncation |
 | Targeted instrument-level MR sensitivity analyses | Complete for the final 29 reported traits × two outcomes (58 pairs) | 232 estimator rows (IVW, MR-Egger, weighted median, weighted mode), 58 diagnostic rows, instrument-strength, heterogeneity, Egger-intercept, single-SNP, leave-one-out, and 58 MR-PRESSO results; code, cached analytical inputs and validation records are included in `mr_sensitivity_29/`, with readable S2/S3 deliverables under `documents/` |
-| Public archival record | Version 1.1.0 prepared | GitHub/Zenodo release metadata are included; the reserved version DOI is `10.5281/zenodo.22878656` |
+| Public archival record | Version 1.1.0 published and archived | GitHub release `v1.1.0`; Zenodo version DOI `10.5281/zenodo.22878656`; concept DOI `10.5281/zenodo.22878655` |
 
 The MR component is explicitly exploratory. There was no manual pre-screening of phenotypes by name, clinical relevance, expected direction, modifiability, or result. The 15,703 rows are catalogue metadata records; 11,988 exposure jobs were scheduled per outcome after technical ancestry/data-class scoping and removal of the target outcome itself. The preserved archive contains 5,880 IHD and 11,775 DD aggregate estimates. The agnostic Set A contains 49 traits. The final Set B contains 29 traits after a post-screen removal of `finn-b-*` exposures to reduce participant-overlap and same-biobank dependence because both outcomes were FinnGen datasets. This is a reporting safeguard rather than a universal MR requirement. The results support hypothesis generation and do not establish causal effects. See `MR_SCREEN_FLOW.md`.
 

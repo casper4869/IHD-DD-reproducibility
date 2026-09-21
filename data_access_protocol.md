@@ -1,6 +1,6 @@
 # Data access and reconstruction protocol
 
-This protocol distinguishes files present in `v1.0.1`, third-party data that readers must retrieve from the provider, and evidence that was not recovered. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
+This protocol distinguishes files present in `v1.1.0`, third-party data that readers must retrieve from the provider, and evidence that was not recovered. It does not grant redistribution rights for IHME, IEU OpenGWAS, FinnGen, or any other third-party resource.
 
 ## 1. GBD 2021 disease incidence estimates
 
@@ -53,7 +53,7 @@ The package also includes an offline small-island/cartographic sensitivity for t
 
 **Access class:** processed local inputs with incomplete source metadata.
 
-The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. These provenance fields could not be recovered for `v1.0.1`. Any future update should add:
+The current GWR workspace contains `Country_with_PM25_Matched.csv` and `Country_with_LatLon_Matched.csv`. They are fingerprinted in the input inventory, but the originating PM2.5 product, version, unit, extraction date, licence, and coordinate-gazetteer provenance are not recorded in the available files. `Part7/Country_with_PM25_Matched.csv` is byte-identical to `Part6/PM25_1992_2021_matrix.csv` (40,070 bytes; SHA-256 `084290b1f9c24eaf980bcb0a354d496b6f46b6594da8171c6b61a88c0bb311b0`), which verifies a local duplicate lineage only. The coordinate file has 204 `location_name,lat,lng` rows and SHA-256 `620d973717eab5f131290ef56a4be7115a3881f75f57fc9d134557de3d749055`; no upstream generation record was found. These provenance fields could not be recovered for `v1.1.0`. Any future update should add:
 
 - the provider and stable landing page;
 - dataset/release version and retrieval date;
@@ -104,7 +104,7 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 
 ## 7. FinnGen/Risteys CodeWAS context
 
-**Access class:** public web interface; release-specific endpoint snapshots were not retained for `v1.0.1`.<br>
+**Access class:** public web interface; release-specific endpoint snapshots were not retained for `v1.1.0`.<br>
 **Official interface:** https://risteys.finngen.fi/
 
 1. Select and record a fixed FinnGen/Risteys release rather than relying on the moving default interface.
@@ -118,11 +118,11 @@ See `MR_RECONSTRUCTION_README.md` for the package map and interpretation limits.
 The public repository contains scripts, derived output tables, figure source data, manifests, README files, and permitted source data. Where redistribution rights were not established, it supplies provider retrieval instructions and local fingerprints instead of the third-party files. The new minimal preprocessing entry point reconstructs the core disease inputs from the retained GBD combined extracts. Sanitised historical Figure 1/Figure 3/SDI references remain quarantined and are not substituted for that entry point. PM2.5, coordinate, and release-specific FinnGen/Risteys provenance gaps remain explicitly disclosed.
 
 - GitHub repository: https://github.com/casper4869/IHD-DD-reproducibility
-- Published GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.0.1
-- Archived release tag: `v1.0.1`
+- Published GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0
+- Archived release tag: `v1.1.0`
 - Zenodo version DOI: https://doi.org/10.5281/zenodo.22878656
-- Zenodo concept DOI: https://doi.org/10.5281/zenodo.22878656
-- Release version: `1.0.1`
+- Zenodo concept DOI: https://doi.org/10.5281/zenodo.22878655
+- Release version: `1.1.0`
 - Repository-wide reuse licence: none; author-created rights are retained unless a file states otherwise
 - Zenodo rights identifier: `Other (Not Open)` with public file access
 - Third-party material: original provider and dataset-owner terms; see `RIGHTS_AND_LICENSING.md`

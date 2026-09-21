@@ -61,4 +61,4 @@ The submitted manuscript stated R 4.3.2 for the original analysis. No complete l
 
 ## Environment reconstruction
 
-No `renv.lock` is included in `v1.0.1`. Reproducibility relies on the archived `sessionInfo()` records, package-version tables, source tables, independent reruns, and checksums. This is a disclosed environment limitation. A future release may add a clean-environment lockfile and document any package substitutions after numerical comparison with the archived outputs.
+No `renv.lock` is included in `v1.1.0`. Reproducibility relies on the archived `sessionInfo()` records, package-version tables, source tables, independent reruns, and checksums. This is a disclosed environment limitation. A future release may add a clean-environment lockfile and document any package substitutions after numerical comparison with the archived outputs.

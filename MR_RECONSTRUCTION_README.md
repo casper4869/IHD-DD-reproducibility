@@ -82,4 +82,4 @@ Current official guidance:
 
 ## Public archive
 
-Version `1.1.0` is prepared at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0 and permanently archived at https://doi.org/10.5281/zenodo.22878656. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.
+Version `1.1.0` is published at https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0 and permanently archived at https://doi.org/10.5281/zenodo.22878656. Rights and third-party provider terms are defined in `RIGHTS_AND_LICENSING.md`. The absence of the historical DD SNP-level objects remains disclosed and must not be repaired by silently substituting a current database rerun.

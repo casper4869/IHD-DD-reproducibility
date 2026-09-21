@@ -45,4 +45,4 @@ Verdict: **published as a versioned aggregate-result reproducibility release wit
 3. Resolve PM2.5, coordinate, and release-specific FinnGen/Risteys provenance.
 4. Parameterise remaining absolute paths and execute the offline package in a clean environment.
 5. Preserve the rights-retained statement and provider exclusions unless the relevant rightsholders later approve explicit file-level licences.
-6. Preserve the verified `v1.0.0` DOI `10.5281/zenodo.22878656` in the manuscript-facing availability statement.
+6. Preserve the verified `v1.1.0` version DOI `10.5281/zenodo.22878656` in the manuscript-facing availability statement.

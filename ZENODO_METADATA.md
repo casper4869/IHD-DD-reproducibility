@@ -4,10 +4,10 @@ The machine-readable metadata source is `.zenodo.json`; `CITATION.cff` supplies 
 
 - **Title:** Reproducibility materials for “Global co-occurrence patterns of ischaemic heart disease and depressive disorders, with an exploratory screen of shared genetically associated traits”
 - **Resource type:** Software (mixed reproducibility package; selected as the predominant release type)
-- **Version:** `1.0.1`
+- **Version:** `1.1.0`
 - **Publication date:** `2026-09-21`
 - **Version DOI:** https://doi.org/10.5281/zenodo.22878656
-- **Concept DOI:** https://doi.org/10.5281/zenodo.22878656
+- **Concept DOI:** https://doi.org/10.5281/zenodo.22878655
 - **Creators, in publication order:** Zhengqi Qiu; Yunzhi Emma Huang; Xingya Lei; Juntao Kan
 - **Affiliations:**
   - Zhengqi Qiu and Xingya Lei: Center for Sleep and Circadian Medicine, The Affiliated Brain Hospital, Guangzhou Medical University, Guangzhou, Guangdong, China; Guangdong Engineering Technology Research Center for Translational Medicine of Mental Disorders, Guangzhou, Guangdong, China
@@ -21,4 +21,4 @@ The machine-readable metadata source is `.zenodo.json`; `CITATION.cff` supplies 
 - **Related manuscript:** Submission ID `61a39b35-8588-492a-bc38-1640628b2633`; the article DOI can be added after publication
 - **Funding:** omitted because no verified funder or grant metadata were supplied
 
-The reserved version record is https://zenodo.org/records/22878656. The reserved version DOI becomes registered when the draft is published.
+The published version record is https://zenodo.org/records/22878656. It was published on 21 September 2026 with two public files: the 103,003,906-byte release archive and its SHA-256 sidecar.

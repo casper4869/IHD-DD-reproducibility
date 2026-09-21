@@ -15,4 +15,6 @@ Version `v1.1.0` supersedes `v1.0.1` for the manuscript revision.
 The MR analysis remains exploratory. The targeted follow-up does not recreate the unavailable historical DD SNP objects behind the withdrawn table, does not redefine the discovery family, and does not remove traits on the basis of sensitivity results. Online acquisition code is disabled by default, sequential, cached, rate-limited and stops on provider allowance or HTTP 429 signals. Credentials, signed URLs and complete source VCFs are excluded. GBD and GWAS source data remain subject to provider terms.
 
 Repository: https://github.com/casper4869/IHD-DD-reproducibility
-Concept DOI: https://doi.org/10.5281/zenodo.22878656
+GitHub release: https://github.com/casper4869/IHD-DD-reproducibility/releases/tag/v1.1.0
+Version DOI: https://doi.org/10.5281/zenodo.22878656
+Concept DOI: https://doi.org/10.5281/zenodo.22878655
